@@ -4,7 +4,7 @@ import {ChevronUp} from "lucide-react";
 
 export default function NavBar() {
     return (
-        <div className="flex items-center justify-between w-full py-6 px-4 md:px-20 lg:px-24 xl:px-44 2xl:px-60">
+        <div className="flex bg-[#F5F5F5] items-center justify-between w-full py-6 px-12 md:px-20 lg:px-24 xl:px-44 2xl:px-60">
             <Link href={'/'}>
                 <Image src={'/logo.svg'} alt={'Casa Fragola logo'} width={122} height={54} />
             </Link>
