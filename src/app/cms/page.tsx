@@ -1,21 +1,22 @@
 'use client';
 
 import {Suspense, useEffect} from "react";
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const login = searchParams.get('login');
 
     useEffect(() => {
+        const searchParams = new URLSearchParams(window.location.search);
+        const login = searchParams.get('login');
+
         if (login === "success") {
             toast.success("Uspješno ste se prijavili u CMS!");
             router.replace('/cms');
         }
-    }, [login]);
+    }, [router]);
 
     return (
     <Suspense fallback={<div>Loading...</div>}>
