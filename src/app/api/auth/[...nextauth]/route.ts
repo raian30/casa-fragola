@@ -32,7 +32,7 @@ const handler = NextAuth({
 
                     const bcrypt = require ('bcrypt');
 
-                    bcrypt.hash(AdminUser.password, 10, (err: any, hash: any) => {
+                    bcrypt.hash(password, 10, (err: any, hash: any) => {
                         console.log(hash);
                     });
 
