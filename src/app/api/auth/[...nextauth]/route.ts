@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import {z} from "zod";
+import bcrypt from "bcrypt";
 
 const handler = NextAuth({
     session: {
@@ -31,11 +32,14 @@ const handler = NextAuth({
 
                     const bcrypt = require ('bcrypt');
 
-                    const passwordMatches = await bcrypt.compare(password, AdminUser.password)
+                    bcrypt.hash(AdminUser.password, 10, (err: any, hash: any) => {
+                        console.log(hash);
+                    });
 
-                    console.log(AdminUser.password)
+                    const comparePassword = bcrypt.compare(password, AdminUser.password)
 
-                    if(AdminUser.email == email && passwordMatches) {
+                    if(AdminUser.email == email && comparePassword) {
+                        console.log({ message: 'success' });
                         return {
                             id: "1",
                             email: AdminUser.email
@@ -44,6 +48,7 @@ const handler = NextAuth({
 
                     return null
                 }
+
                 return null
             }
         })
