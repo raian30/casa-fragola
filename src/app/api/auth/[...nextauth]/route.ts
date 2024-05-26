@@ -31,10 +31,6 @@ const handler = NextAuth({
 
                     const bcrypt = require ('bcrypt');
 
-                    bcrypt.hash(password, 10, (err: any, hash: any) => {
-                        console.log(hash);
-                    });
-
                     const comparePassword = bcrypt.compare(password, AdminUser.password)
 
                     if(AdminUser.email == email && comparePassword) {
