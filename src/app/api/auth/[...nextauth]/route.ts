@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import {z} from "zod";
+import {compare } from 'bcrypt'
 
 const handler = NextAuth({
     session: {
@@ -29,9 +30,7 @@ const handler = NextAuth({
 
                     const AdminUser = {email: process.env.ADMIN_EMAIL as string, password: process.env.ADMIN_PASSWORD as string }
 
-                    const bcrypt = require ('bcrypt');
-
-                    const comparePassword = bcrypt.compare(password, AdminUser.password)
+                    const comparePassword = await compare(password, AdminUser.password)
 
                     if(AdminUser.email === email && comparePassword) {
                         console.log({ message: 'success' });
