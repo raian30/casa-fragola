@@ -31,6 +31,7 @@ const handler = NextAuth({
                     const AdminUser = {email: process.env.ADMIN_EMAIL as string, password: process.env.ADMIN_PASSWORD as string }
 
                     const comparePassword = await compare(password, AdminUser.password)
+                    console.log({ comparePassword });
 
                     if(AdminUser.email == email && comparePassword) {
                         console.log({ message: 'success' });
