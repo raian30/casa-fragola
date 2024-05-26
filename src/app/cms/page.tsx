@@ -7,7 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
     const router = useRouter();
-    const login = useSearchParams().get('login');
+    const searchParams = useSearchParams();
+    const login = searchParams.get('login');
 
     useEffect(() => {
         if (login === "success") {
