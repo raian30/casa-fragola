@@ -5,7 +5,7 @@ export default function Hero() {
     return (
         <>
             <div className={'bg-[#F5F5F5] relative px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28 h-[calc(100dvh-20px)] w-screen'}>
-                <Image src={'/hero-image.png'} className={'object-cover !relative'} quality={100} alt={'Slika kuce'}
+                <Image loading={'eager'} src={'/hero-image.png'} className={'object-cover !relative'} quality={100} alt={'Slika kuce'}
                        fill/>
                 <h1 className={'z-10 absolute bottom-0 sm:bottom-12 top-0 sm:top-auto right-0 sm:right-auto left-0 m-auto md:m-0 w-fit h-fit sm:left-12 md:left-20 lg:left-24 xl:left-44 2xl:left-60 text-[#FFF1DD] font-[200] md:font-[150] text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5rem] leading-normal lg:leading-[7rem] text-center sm:text-start'}>Udobnost<br/> Istarske
                     Baštine</h1>
