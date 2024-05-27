@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from 'react';
-import {ArrowLeft} from "lucide-react";
 import {signOut} from "next-auth/react";
 import {useRouter} from "next/navigation";
+import Logout from "@/app/cms/_components/Logout";
 
 export default function AdminNavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,11 +50,6 @@ export default function AdminNavBar() {
         };
     }, []);
 
-    const HandleLogout = () => {
-        router.push('/')
-        signOut({ callbackUrl: '/', redirect:true })
-    }
-
     return (
         <>
             <nav className="sticky shadow-[0px_0px_20px_1px_#923E82] z-50 flex bg-[#F5F5F5] items-center justify-between w-screen py-6 px-12 md:px-20 lg:px-24 xl:px-44 2xl:px-60">
@@ -82,17 +77,14 @@ export default function AdminNavBar() {
                 </button>
 
                 <div className={`hidden lg:flex gap-10 items-center`}>
-                    <NavButton onClick={HandleLogout} className={'text-black flex justify-center items-center gap-2 group'} href={'/'}><ArrowLeft className={'text-[#923E82] group-hover:-translate-x-1/3 transition-all'}/> Vratite se na početnu</NavButton>
+                    <Logout/>
                 </div>
             </nav>
             {isMenuOpen && (
                 <div
                     className={`bg-[#F5F5F5] fixed top-0 flex flex-col gap-10 z-20 items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`}
                     style={{opacity}}>
-                    <NavButton onClick={HandleLogout} className={'text-black flex justify-center items-center gap-2 group translate-y-full opacity-0'} href={'/'} style={{
-                        animation: 'popupword 0.5s forwards',
-                        animationDelay: `${100}ms`
-                    }}><ArrowLeft className={'text-[#923E82] group-hover:-translate-x-1/3 transition-all'}/> Vratite se na početnu</NavButton>
+                    <Logout/>
                 </div>
             )}
         </>
