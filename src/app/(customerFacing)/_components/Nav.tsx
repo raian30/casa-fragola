@@ -9,6 +9,8 @@ export default function NavBar() {
     const [isMenuOpenWithNoDelay, setIsMenuOpenWithNoDelay] = useState(false);
     const [opacity, setOpacity] = useState(0)
 
+    const [isLanguageOpened, setIsLanguageOpened] = useState(false)
+
     const links = [
         {
             id: 1,
@@ -106,10 +108,26 @@ export default function NavBar() {
                         <NavButton className={'text-black'} key={id} href={link}>{text}</NavButton>
                     ))}
                     <div className="w-[1px] h-8 bg-black"/>
-                    <div className="flex gap-2 items-center justify-center">
-                        <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                        <p>HR</p>
-                        <ChevronUp/>
+                    <div className={'relative'}>
+                        <div onClick={() => {setIsLanguageOpened(!isLanguageOpened)}} className="flex gap-2 items-center justify-center cursor-pointer">
+                            <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
+                            <p>HR</p>
+                            <ChevronUp/>
+                        </div>
+                        <div className='absolute bg-[#F5F5F5] top-[150%] left-0 items-start justify-start w-max px-5 py-4 flex flex-col gap-4 rounded-md opacity-0'>
+                            <div className="flex gap-2 items-start justify-start cursor-pointer">
+                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
+                                <p>Engleski</p>
+                            </div>
+                            <div className="flex gap-2 items-start justify-start cursor-pointer">
+                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
+                                <p>Taljanski</p>
+                            </div>
+                            <div className="flex gap-2 items-start justify-start cursor-pointer">
+                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
+                                <p>Francuski</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
