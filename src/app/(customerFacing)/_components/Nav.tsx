@@ -13,27 +13,27 @@ export default function NavBar() {
         {
             id: 1,
             text: "Početna",
-            link: "/#home"
+            link: "/#"
         },
         {
             id: 2,
             text: "Značajke",
-            link: "/#projects"
+            link: "/#"
         },
         {
             id: 3,
             text: "Galerija",
-            link: "/#services"
+            link: "/#"
         },
         {
             id: 4,
             text: "Atrakcije",
-            link: "/#skills"
+            link: "/#"
         },
         {
             id: 5,
             text: "Rezervacije",
-            link: "/#contact"
+            link: "/#"
         },
     ];
 

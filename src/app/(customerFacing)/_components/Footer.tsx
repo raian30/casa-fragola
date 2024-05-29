@@ -25,13 +25,13 @@ export default function Footer() {
                 <h1 className={'font-semibold text-lg'}>Linkovi</h1>
                 <div className={'flex flex-col gap-4 justify-center items-center'}>
                     <Link href={'/'} className={'hover:text-gray-500 transition-all'}>Pocetna</Link>
-                    <Link href={'#projects'}
+                    <Link href={'/#'}
                           className={'hover:text-gray-500 transition-all'}>Značajke</Link>
-                    <Link href={'#services'}
+                    <Link href={'/#'}
                           className={'hover:text-gray-500 transition-all'}>Galerija</Link>
-                    <Link href={'#skills'}
+                    <Link href={'/#'}
                           className={'hover:text-gray-500 transition-all'}>Atrakcije</Link>
-                    <Link href={'#contact'}
+                    <Link href={'/#'}
                           className={'hover:text-gray-500 transition-all'}>Recenzije</Link>
                 </div>
             </div>
