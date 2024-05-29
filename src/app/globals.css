@@ -8,3 +8,32 @@
         opacity: 1;
     }
 }
+
+::selection {
+    color: #000000;
+    background: #f1cbeb;
+}
+
+::-moz-selection {
+    color: #000000;
+    background: #f1cbeb;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    border: 2px solid white;
+    background: #a15b96;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: n-resize;
+    background: #c282b8;
+}
