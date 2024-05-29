@@ -36,16 +36,16 @@ export default function Second() {
                 </div>
             </div>
             <div
-                className={'gap-10 lg:gap-32 xl:gap-40 flex flex-col lg:flex-row items-center justify-between pt-0 md:pt-16 pb-0 md:pb-16 2xl:pb-28'}>
+                className={'md:gap-8 lg:gap-0 xl:gap-40 flex flex-col lg:flex-row items-center justify-between pt-0 md:pt-16 pb-0 md:pb-16 2xl:pb-28'}>
                 <div
-                    className={'w-full lg:w-1/2 px-0 lg:px-10 xl:px-20 2xl:px-32 flex flex-col items-start justify-center gap-10'}>
+                    className={'w-full lg:w-1/2 px-4 sm:px-8 md:px-12 xl:px-20 2xl:px-32 flex flex-col items-start justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>Sadržaj</h1>
                     <p className={'text-lg font-light'}>Do you want to enjoy your holiday in peace and sepration from
                         the rest of the world, and yet be close to events and entertainment and gastronomic and
                         oenological hedonism</p>
                     <FilledLink href={'/'} className={'text-sm'}>Pogledajte sve značajke</FilledLink>
                 </div>
-                <div className={'w-full h-full lg:w-1/2 flex flex-col sm:flex-row gap-5 sm:gap-20'}>
+                <div className={'w-full h-full lg:w-1/2 px-4 sm:px-8 md:px-12 lg:px-0 flex flex-col sm:flex-row gap-5 sm:gap-20'}>
                     <div className={'flex flex-col gap-5'}>
                         <div className={'flex gap-2'}><Bed/> <p>3 beds (1 double and 2 single)</p></div>
                         <div className={'flex gap-2'}><Image src={'/pool.svg'} width={23} height={23} alt={'pool'}/>
