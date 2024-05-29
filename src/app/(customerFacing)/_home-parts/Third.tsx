@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Third() {
     return (
-        <section className="bg-[#F5F5F5] w-screen px-8 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20 flex flex-col gap-20">
+        <section className="bg-[#F5F5F5] w-screen px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20 flex flex-col gap-20">
             <div className={'flex flex-col gap-10'}>
                 <h2 className={'text-xl md:text-[1.2rem] font-light'}>Do you want to enjoy your holiday in peace and
                     sepration from the rest of the world, and yet be close to events and entertainment and gastronomic

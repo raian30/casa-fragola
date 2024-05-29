@@ -15,7 +15,7 @@ export default function Hero() {
                     <CircleArrowDown strokeWidth={1} size={40}/>
                 </div>
             </section>
-            <section className={'bg-[#F5F5F5] w-screen px-12 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20'}>
+            <section className={'bg-[#F5F5F5] w-screen px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20'}>
                 <h2 className={'text-xl md:text-[1.4rem] font-light'}>Želite li miran i opušten odmor
                     daleko od gužve, ali i blizu događanja, zabave, ukusne hrane i vrhunskih vina koje Istra nudi?
                     Ovdje možete pronaći savršen spoj odmora i uživanja u svemu što Istra pruža!</h2>
