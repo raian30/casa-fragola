@@ -147,6 +147,6 @@ export function NavButton({children, href, target, className, style, onClick}: {
     onClick?: any
 }) {
     return (
-        <Link href={href} target={target} onClick={onClick} className={`${className}`} style={style}>{children}</Link>
+        <Link href={href} target={target} onClick={onClick} className={`${className} after:content-[''] after:h-0.5 hover:after:w-full after:w-0 after:transition-all after:duration-300 after:bg-black relative after:absolute after:left-0 after:right-0 after:m-auto after:-bottom-2`} style={style}>{children}</Link>
     )
 }
