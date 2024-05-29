@@ -21,7 +21,7 @@ export default function Second() {
                 </div>
             </div>
             <div
-                className={'bg-[#EDE8B8] gap-16 lg:gap-0 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between px-6 md:px-12 lg:px-0 pt-10 md:pt-16 2xl:pt-28 pb-10 md:pb-16 2xl:pb-28 lg:pr-12 xl:pr-20 2xl:pr-32'}>
+                className={'bg-[#EDE8B8] gap-16 lg:gap-0 flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between px-6 md:px-12 lg:px-0 pt-8 md:pt-16 2xl:pt-28 pb-8 md:pb-16 2xl:pb-28 lg:pr-12 xl:pr-20 2xl:pr-32'}>
                 <div
                     className={'w-full lg:w-1/2 text-center px-5 lg:px-10 xl:px-20 2xl:px-52 flex flex-col items-center justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>Olive and Fragola</h1>
