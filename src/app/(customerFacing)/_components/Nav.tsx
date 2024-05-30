@@ -180,15 +180,15 @@ export default function NavBar() {
                                     }} className="flex gap-2 items-center justify-center cursor-pointer">
                                         <Image src={currentLanguageObject.image} alt={currentLanguageObject.alt}
                                                width={39} height={22}/>
-                                        <p>{currentLanguageObject.shortName}</p>
+                                        <p className={'min-w-7 text-center'}>{currentLanguageObject.shortName}</p>
                                         <ChevronUp className={`transition-all ${isLanguageOpened && 'rotate-180'}`}/>
                                     </div>
                                 ) : (
                                 <div
                                     className="flex gap-2 items-center justify-center cursor-pointer animate-pulse">
-                                    <div className={'w-[40px] h-[30px] bg-gray-200 rounded-md'}/>
-                                    <div className={'w-[25px] h-[24px] bg-gray-200 rounded-md'}/>
-                                    <div className={'w-[20px] h-[24px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[39px] h-[22px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[28px] h-[22px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[24px] h-[22px] bg-gray-200 rounded-md'}/>
                                 </div>
                                 )}
                                 <div
