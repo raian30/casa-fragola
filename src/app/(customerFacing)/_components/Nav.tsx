@@ -10,6 +10,70 @@ export default function NavBar() {
     const [opacity, setOpacity] = useState(0)
 
     const [isLanguageOpened, setIsLanguageOpened] = useState(false)
+    const [currentLanguage , setCurrentLanguage] = useState<string | null>();
+
+    useEffect(() => {
+        if(localStorage.getItem('language')) {
+            let language = localStorage.getItem('language')
+            console.log(language)
+            setCurrentLanguage(language)
+        } else {
+            localStorage.setItem("language", 'hr')
+            setCurrentLanguage('hr')
+        }
+    }, []);
+
+    const HandleLanguageChange = (key: string) => {
+        localStorage.setItem('language', key)
+        setCurrentLanguage(key)
+    }
+
+    const languages = [
+        {
+            key: 'hr',
+            image: '/croatia-flag.svg',
+            alt: 'croatian flag',
+            name: 'Croatian',
+            shortName: 'HR',
+        },
+        {
+            key: 'en',
+            image: '/english-flag.svg',
+            alt: 'english flag',
+            name: 'English',
+            shortName: 'EN',
+        },
+        {
+            key: 'it',
+            image: '/italy-flag.svg',
+            alt: 'italy flag',
+            name: 'Italian',
+            shortName: 'IT',
+        },
+        {
+            key: 'fr',
+            image: '/france-flag.svg',
+            alt: 'france flag',
+            name: 'France',
+            shortName: 'FR',
+        }
+    ]
+
+    let currentLanguageObject = languages.find((l) => l.key === currentLanguage);
+
+    useEffect(() => {
+        currentLanguageObject = languages.find((l) => l.key === currentLanguage);
+
+        if (!currentLanguageObject) {
+            currentLanguageObject = {
+                key: 'hr',
+                image: '/croatia-flag.svg',
+                alt: 'croatian flag',
+                name: 'Croatian',
+                shortName: 'HR',
+            }
+        }
+    }, [currentLanguage]);
 
     const links = [
         {
@@ -109,25 +173,46 @@ export default function NavBar() {
                     ))}
                     <div className="w-[1px] h-8 bg-black"/>
                     <div className={'relative'}>
-                        <div onClick={() => {setIsLanguageOpened(!isLanguageOpened)}} className="flex gap-2 items-center justify-center cursor-pointer">
-                            <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                            <p>HR</p>
-                            <ChevronUp/>
-                        </div>
-                        <div className='absolute bg-[#F5F5F5] top-[150%] left-0 items-start justify-start w-max px-5 py-4 flex flex-col gap-4 rounded-md opacity-0'>
-                            <div className="flex gap-2 items-start justify-start cursor-pointer">
-                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                                <p>Engleski</p>
-                            </div>
-                            <div className="flex gap-2 items-start justify-start cursor-pointer">
-                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                                <p>Taljanski</p>
-                            </div>
-                            <div className="flex gap-2 items-start justify-start cursor-pointer">
-                                <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                                <p>Francuski</p>
-                            </div>
-                        </div>
+                            <>
+                                {currentLanguageObject ? (
+                                    <div onClick={() => {
+                                        setIsLanguageOpened(!isLanguageOpened);
+                                    }} className="flex gap-2 items-center justify-center cursor-pointer">
+                                        <Image src={currentLanguageObject.image} alt={currentLanguageObject.alt}
+                                               width={39} height={22}/>
+                                        <p>{currentLanguageObject.shortName}</p>
+                                        <ChevronUp className={`transition-all ${isLanguageOpened && 'rotate-180'}`}/>
+                                    </div>
+                                ) : (
+                                <div
+                                    className="flex gap-2 items-center justify-center cursor-pointer animate-pulse">
+                                    <div className={'w-[40px] h-[30px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[25px] h-[24px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[20px] h-[24px] bg-gray-200 rounded-md'}/>
+                                </div>
+                                )}
+                                <div
+                                    className={`absolute bg-[#F5F5F5] top-[150%] left-0 items-start justify-start w-max flex flex-col gap-5 rounded-md drop-shadow-2xl transition-all duration-200 px-5 py-4 ${isLanguageOpened ? 'opacity-100 h-auto' : 'opacity-0 overflow-hidden w-[160px] h-0'}`}>
+                                    {!isLanguageOpened && (
+                                        <div
+                                            className={`gap-2 items-start justify-start text-transparent bg-transparent opacity-0`}>
+                                        <div className={'w-[39px] h-[0px] rounded-md'}/>
+                                            <div className={'w-[75px] h-[0px] rounded-md'}/>
+                                        </div>
+                                    )}
+                                    {languages.filter((language) => language.key !== currentLanguage).map((language) => (
+                                        <div key={language.key} onClick={() => {
+                                            HandleLanguageChange(language.key)
+                                            setIsLanguageOpened(false)
+                                        }}
+                                            className={`gap-2 items-start justify-start cursor-pointer font-semibold ${isLanguageOpened ? 'flex' : ''}`}>
+                                            <Image src={language.image} alt={language.alt} width={39}
+                                                   height={22}/>
+                                            <p>{language.name}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </>
                     </div>
                 </div>
             </nav>
