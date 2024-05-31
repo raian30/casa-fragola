@@ -1,41 +1,49 @@
+import {withAuth} from 'next-auth/middleware';
 import createIntlMiddleware from 'next-intl/middleware';
-import { withAuth } from 'next-auth/middleware';
+import {NextRequest} from 'next/server';
 
-// Create next-intl middleware
+const locales = ['hr', 'en', 'it', 'fr'];
+const publicPages = ['/'];
+
 const intlMiddleware = createIntlMiddleware({
-    locales: ['hr', 'en', 'it', 'fr'],
+    locales,
+    localePrefix: 'as-needed',
     defaultLocale: 'hr'
 });
 
-// Create next-auth middleware
-const authMiddleware = withAuth({
-    pages: {
-        signIn: '/cms/login'
+const authMiddleware = withAuth(
+    function onSuccess(req) {
+        return intlMiddleware(req);
+    },
+    {
+        callbacks: {
+            authorized: ({token}) => token != null
+        },
+        pages: {
+            signIn: '/cms/login'
+        }
     }
-});
+);
 
-export default async function middleware(req: any, ev: any) {
-    const url = new URL(req.url);
+export default function middleware(req: NextRequest) {
+    const publicPathnameRegex = RegExp(
+        `^(/(${locales.join('|')}))?(${publicPages
+            .flatMap((p) => (p === '/' ? ['', '/'] : p))
+            .join('|')})/?$`,
+        'i'
+    );
+    const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
+    const isCmsPage = /^\/cms(\/.*)?$/.test(req.nextUrl.pathname);
 
-    // Apply intlMiddleware to all internationalized paths
-    if (url.pathname.startsWith('/hr') || url.pathname.startsWith('/en') || url.pathname === '/it' || url.pathname.startsWith('/fr') || url.pathname.startsWith('/')) {
+    if (isPublicPage) {
+        return intlMiddleware(req);
+    } else if (isCmsPage) {
+        return (authMiddleware as any)(req);
+    } else {
         return intlMiddleware(req);
     }
-
-    // Apply authMiddleware to CMS paths
-    if (url.pathname.startsWith('/cms')) {
-        return authMiddleware(req, ev);
-    }
-
-    // Default response if no path matches
-    return new Response('Not Found', { status: 404 });
 }
 
-
 export const config = {
-    matcher: [
-        '/',
-        '/(hr|en|it|fr)/:path*',
-        '/cms/:path*'
-    ]
+    matcher: ['/((?!api|_next|.*\\..*).*)']
 };
