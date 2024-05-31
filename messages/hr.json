@@ -1,0 +1,61 @@
+{
+  "NavBar": {
+    "pocetna": "Početna",
+    "znacajke": "Značajke",
+    "galerija": "Galerija",
+    "atrakcije": "Atrakcije",
+    "rezervacije": "Rezervacije"
+  },
+  "Hero": {
+    "text-prvi-dio": "Udobnost",
+    "text-drugi-dio": "Istarske Baštine",
+    "pogledajte-vise": "Pogledajte Više",
+    "long-text": "Želite li miran i opušten odmor daleko od gužve, ali i blizu događanja, zabave, ukusne hrane i vrhunskih vina koje Istra nudi? Ovdje možete pronaći savršen spoj odmora i uživanja u svemu što Istra pruža!"
+  },
+  "Second": {
+    "naslov-1": "Fragola i bijelo",
+    "opis-1": "Želite li uživati u odmoru u miru i odvojenosti od ostatka svijeta, a opet biti blizu događanja i zabave te gastronomskog i enološkog hedonizma",
+    "btn-text-1": "Rezervirajte sada",
+
+    "naslov-2": "Maslina i Fragola",
+    "opis-2": "Želite li uživati u odmoru u miru i odvojenosti od ostatka svijeta, a opet biti blizu događanja i zabave te gastronomskog i enološkog hedonizma",
+    "btn-text-2": "Rezervirajte sada",
+
+    "naslov-3": "Sadržaj",
+    "opis-3": "Želite li uživati u odmoru u miru i odvojenosti od ostatka svijeta, a opet biti blizu događanja i zabave te gastronomskog i enološkog hedonizma",
+    "btn-text-3": "Pogledajte sve značajke",
+
+    "znacajke-kreveti": "3 kreveta (1 bračni i 2 odvojena)",
+    "znacajke-bazen": "Vanjski bazen",
+    "znacajke-wifi": "Besplatan WI-FI",
+    "znacajke-parking": "Besplatno parkiranje",
+    "znacajke-klima": "Klima",
+    "znacajke-rostilj": "Oprema za roštilj"
+  },
+  "Third": {
+    "opis-1": "Želite li uživati u odmoru u miru i odvojenosti od ostatka svijeta, a opet biti blizu događanja i zabave te gastronomskog i enološkog hedonizma",
+    "btn-text-1": "Rezervirajte sada",
+
+    "naslov-2": "Uživaj u praznicima",
+    "opis-2": "Želite li uživati u odmoru u miru i odvojenosti od ostatka svijeta, a opet biti blizu događanja i zabave te gastronomskog i enološkog hedonizma",
+    "btn-text-2": "Rezervirajte sada",
+
+    "naslov-3": "Pogledajte dostupnost",
+    "opis-3": "Tu ce doj kalendar",
+    "btn-text-3": "Rezervirajte sada"
+  },
+  "Footer": {
+    "copy": "Casa Fragola. Sva prava pridržana",
+    "politika-privatnosti": "Politika privatnosti",
+    "politika-kolacica": "Politika kolačića",
+
+    "linkovi": "Linkovi",
+    "pocetna": "Početna",
+    "znacajke": "Značajke",
+    "galerija": "Galerija",
+    "atrakcije": "Atrakcije",
+    "rezervacije": "Rezervacije",
+
+    "kontakt": "Kontakt"
+  }
+}

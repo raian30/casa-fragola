@@ -1,31 +1,29 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useTransition} from 'react';
 import {ChevronUp} from "lucide-react";
+import {useLocale, useTranslations} from "next-intl";
+import {useRouter} from "next/navigation";
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMenuOpenWithNoDelay, setIsMenuOpenWithNoDelay] = useState(false);
     const [opacity, setOpacity] = useState(0)
 
-    const [isLanguageOpened, setIsLanguageOpened] = useState(false)
-    const [currentLanguage , setCurrentLanguage] = useState<string | null>();
+    const t = useTranslations('NavBar')
 
-    useEffect(() => {
-        if(localStorage.getItem('language')) {
-            let language = localStorage.getItem('language')
-            console.log(language)
-            setCurrentLanguage(language)
-        } else {
-            localStorage.setItem("language", 'hr')
-            setCurrentLanguage('hr')
-        }
-    }, []);
+    const [isLanguageOpened, setIsLanguageOpened] = useState(false)
+
+    const localActive = useLocale()
+
+    const [isPending, startTransition] = useTransition()
+    const router = useRouter()
 
     const HandleLanguageChange = (key: string) => {
-        localStorage.setItem('language', key)
-        setCurrentLanguage(key)
+        startTransition(() => {
+            router.replace(`/${key}`)
+        })
     }
 
     const languages = [
@@ -59,46 +57,32 @@ export default function NavBar() {
         }
     ]
 
-    let currentLanguageObject = languages.find((l) => l.key === currentLanguage);
-
-    useEffect(() => {
-        currentLanguageObject = languages.find((l) => l.key === currentLanguage);
-
-        if (!currentLanguageObject) {
-            currentLanguageObject = {
-                key: 'hr',
-                image: '/croatia-flag.svg',
-                alt: 'croatian flag',
-                name: 'Croatian',
-                shortName: 'HR',
-            }
-        }
-    }, [currentLanguage]);
+    let currentLanguageObject = languages.find((l) => l.key === localActive);
 
     const links = [
         {
             id: 1,
-            text: "Početna",
+            text: t('pocetna'),
             link: "/#"
         },
         {
             id: 2,
-            text: "Značajke",
+            text: t('znacajke'),
             link: "/#"
         },
         {
             id: 3,
-            text: "Galerija",
+            text: t('galerija'),
             link: "/#"
         },
         {
             id: 4,
-            text: "Atrakcije",
+            text: t('atrakcije'),
             link: "/#"
         },
         {
             id: 5,
-            text: "Rezervacije",
+            text: t('rezervacije'),
             link: "/#"
         },
     ];
@@ -183,7 +167,7 @@ export default function NavBar() {
                                         <p className={'min-w-7 text-center'}>{currentLanguageObject.shortName}</p>
                                         <ChevronUp className={`transition-all ${isLanguageOpened && 'rotate-180'}`}/>
                                     </div>
-                                ) : (
+                                ) : (isPending || !currentLanguageObject) && (
                                 <div
                                     className="flex gap-2 items-center justify-center cursor-pointer animate-pulse">
                                     <div className={'w-[39px] h-[22px] bg-gray-200 rounded-md'}/>
@@ -200,7 +184,7 @@ export default function NavBar() {
                                             <div className={'w-[75px] h-[0px] rounded-md'}/>
                                         </div>
                                     )}
-                                    {languages.filter((language) => language.key !== currentLanguage).map((language) => (
+                                    {languages.filter((language) => language.key !== localActive).map((language) => (
                                         <div key={language.key} onClick={() => {
                                             HandleLanguageChange(language.key)
                                             setIsLanguageOpened(false)
@@ -228,12 +212,49 @@ export default function NavBar() {
                                 animationDelay: `${(id - 1) * 100}ms`
                             }}>{text}</NavButton>
                         </div>
-
                     ))}
-                    <div className="flex gap-2 items-center justify-center opacity-0 translate-y-full" style={{animation: 'popupword 0.5s forwards', animationDelay: `${5 * 100}ms`}}>
-                        <Image src={'/croatia-flag.svg'} alt={'Croatia flag'} width={39} height={22}/>
-                        <p>HR</p>
-                        <ChevronUp/>
+                    <div className="relative flex gap-2 items-center justify-center opacity-0 translate-y-full"
+                         style={{animation: 'popupword 0.5s forwards', animationDelay: `${5 * 100}ms`}}>
+                        <>
+                            {currentLanguageObject ? (
+                                <div onClick={() => {
+                                    setIsLanguageOpened(!isLanguageOpened);
+                                }} className="flex gap-2 items-center justify-center cursor-pointer">
+                                    <Image src={currentLanguageObject.image} alt={currentLanguageObject.alt}
+                                           width={39} height={22}/>
+                                    <p className={'min-w-7 text-center'}>{currentLanguageObject.shortName}</p>
+                                    <ChevronUp className={`transition-all ${isLanguageOpened && 'rotate-180'}`}/>
+                                </div>
+                            ) : (isPending || !currentLanguageObject) && (
+                                <div
+                                    className="flex gap-2 items-center justify-center cursor-pointer animate-pulse">
+                                    <div className={'w-[39px] h-[22px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[28px] h-[22px] bg-gray-200 rounded-md'}/>
+                                    <div className={'w-[24px] h-[22px] bg-gray-200 rounded-md'}/>
+                                </div>
+                            )}
+                            <div
+                                className={`absolute bg-[#F5F5F5] top-[150%] items-start justify-start w-max flex flex-col gap-5 rounded-md drop-shadow-2xl transition-all duration-200 px-5 py-4 ${isLanguageOpened ? 'opacity-100 h-auto' : 'opacity-0 overflow-hidden w-[160px] h-0'}`}>
+                                {!isLanguageOpened && (
+                                    <div
+                                        className={`gap-2 items-start justify-start text-transparent bg-transparent opacity-0`}>
+                                        <div className={'w-[39px] h-[0px] rounded-md'}/>
+                                        <div className={'w-[75px] h-[0px] rounded-md'}/>
+                                    </div>
+                                )}
+                                {languages.filter((language) => language.key !== localActive).map((language) => (
+                                    <div key={language.key} onClick={() => {
+                                        HandleLanguageChange(language.key)
+                                        setIsLanguageOpened(false)
+                                    }}
+                                         className={`gap-2 items-start justify-start cursor-pointer font-semibold ${isLanguageOpened ? 'flex' : ''}`}>
+                                        <Image src={language.image} alt={language.alt} width={39}
+                                               height={22}/>
+                                        <p>{language.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
                     </div>
                 </div>
             )}
@@ -250,6 +271,8 @@ export function NavButton({children, href, target, className, style, onClick}: {
     onClick?: any
 }) {
     return (
-        <Link href={href} target={target} onClick={onClick} className={`${className} after:content-[''] after:h-0.5 hover:after:w-full after:w-0 after:transition-all after:duration-300 after:bg-black relative after:absolute after:left-0 after:right-0 after:m-auto after:-bottom-2`} style={style}>{children}</Link>
+        <Link href={href} target={target} onClick={onClick}
+              className={`${className} after:content-[''] after:h-0.5 hover:after:w-full after:w-0 after:transition-all after:duration-300 after:bg-black relative after:absolute after:left-0 after:right-0 after:m-auto after:-bottom-2`}
+              style={style}>{children}</Link>
     )
 }
