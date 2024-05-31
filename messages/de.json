@@ -1,0 +1,65 @@
+{
+  "NavBar": {
+    "pocetna": "Startseite",
+    "znacajke": "Eigenschaften",
+    "galerija": "Galerie",
+    "atrakcije": "Attraktionen",
+    "rezervacije": "Reservierungen"
+  },
+  "Hero": {
+    "text-prvi-dio": "Komfort",
+    "text-drugi-dio": "Istrisches Erbe",
+    "pogledajte-vise": "Mehr Sehen",
+    "long-text": "Möchten Sie einen ruhigen und erholsamen Urlaub fernab von Menschenmassen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung, köstlichem Essen und hochwertigen Weinen, die Istrien bietet? Hier finden Sie die perfekte Kombination aus Entspannung und Genuss in allem, was Istrien zu bieten hat!"
+  },
+  "Second": {
+    "naslov-1": "Erdbeere und Weiß",
+    "opis-1": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "btn-text-1": "Jetzt Buchen",
+
+    "naslov-2": "Oliven und Erdbeeren",
+    "opis-2": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "btn-text-2": "Jetzt Buchen",
+
+    "naslov-3": "Eigenschaften",
+    "opis-3": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "btn-text-3": "Alle Eigenschaften Ansehen",
+
+    "znacajke-kreveti": "3 Betten (1 Doppelbett und 2 Einzelbetten)",
+    "znacajke-bazen": "Außenpool",
+    "znacajke-wifi": "Kostenloses WLAN",
+    "znacajke-parking": "Kostenlose Parkplätze",
+    "znacajke-klima": "Klimaanlage",
+    "znacajke-rostilj": "Grillausstattung"
+  },
+  "Third": {
+    "opis-1": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "btn-text-1": "Jetzt Buchen",
+
+    "naslov-2": "Genießen Sie die Ferien",
+    "opis-2": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "btn-text-2": "Jetzt Buchen",
+
+    "naslov-3": "Verfügbarkeit Überprüfen",
+    "opis-3": "Hier kommt der Kalender",
+    "btn-text-3": "Jetzt Buchen"
+  },
+  "Footer": {
+    "copy": "Casa Fragola. Alle Rechte vorbehalten",
+    "politika-privatnosti": "Datenschutzrichtlinie",
+    "politika-kolacica": "Cookie-Richtlinie",
+
+    "linkovi": "Links",
+    "pocetna": "Startseite",
+    "znacajke": "Eigenschaften",
+    "galerija": "Galerie",
+    "atrakcije": "Attraktionen",
+    "rezervacije": "Reservierungen",
+
+    "kontakt": "Kontakt"
+  },
+  "NotFound": {
+    "text": "Leider existiert diese Seite nicht.",
+    "btn-text": "Zurück zur Startseite"
+  }
+}

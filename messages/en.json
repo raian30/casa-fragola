@@ -1,5 +1,65 @@
 {
-  "Index": {
-    "title": "Hello!"
+  "NavBar": {
+    "pocetna": "Home",
+    "znacajke": "Features",
+    "galerija": "Gallery",
+    "atrakcije": "Attractions",
+    "rezervacije": "Reservations"
+  },
+  "Hero": {
+    "text-prvi-dio": "The Comfort of",
+    "text-drugi-dio": "Istrian Heritage",
+    "pogledajte-vise": "See More",
+    "long-text": "Do you want a peaceful and relaxing holiday away from the crowds, but close to events, entertainment, delicious food, and top-quality wines that Istria offers? Here you can find the perfect combination of relaxation and enjoyment in everything Istria provides!"
+  },
+  "Second": {
+    "naslov-1": "Fragola and White",
+    "opis-1": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "btn-text-1": "Book Now",
+
+    "naslov-2": "Olive and Fragola",
+    "opis-2": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "btn-text-2": "Book Now",
+
+    "naslov-3": "Features",
+    "opis-3": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "btn-text-3": "See All Features",
+
+    "znacajke-kreveti": "3 beds (1 double and 2 single)",
+    "znacajke-bazen": "Outdoor Pool",
+    "znacajke-wifi": "Free Wi-Fi",
+    "znacajke-parking": "Free Parking",
+    "znacajke-klima": "Air Conditioning",
+    "znacajke-rostilj": "BBQ Equipment"
+  },
+  "Third": {
+    "opis-1": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "btn-text-1": "Book Now",
+
+    "naslov-2": "Enjoy the Holidays",
+    "opis-2": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "btn-text-2": "Book Now",
+
+    "naslov-3": "Check Availability",
+    "opis-3": "Here comes the calendar",
+    "btn-text-3": "Book Now"
+  },
+  "Footer": {
+    "copy": "Casa Fragola. All rights reserved",
+    "politika-privatnosti": "Privacy Policy",
+    "politika-kolacica": "Cookie Policy",
+
+    "linkovi": "Links",
+    "pocetna": "Home",
+    "znacajke": "Features",
+    "galerija": "Gallery",
+    "atrakcije": "Attractions",
+    "rezervacije": "Reservations",
+
+    "kontakt": "Contact"
+  },
+  "NotFound": {
+    "text": "Unfortunately, this page does not exist.",
+    "btn-text": "Return to home"
   }
 }

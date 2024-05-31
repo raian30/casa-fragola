@@ -57,5 +57,9 @@
     "rezervacije": "Rezervacije",
 
     "kontakt": "Kontakt"
+  },
+  "NotFound": {
+    "text": "Nažalost, ova stranica ne postoji.",
+    "btn-text": "Vratite se na početnu"
   }
 }

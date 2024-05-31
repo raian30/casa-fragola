@@ -1,5 +1,65 @@
 {
-  "Index": {
-    "title": "Bonzu!"
+  "NavBar": {
+    "pocetna": "Accueil",
+    "znacajke": "Caractéristiques",
+    "galerija": "Galerie",
+    "atrakcije": "Attractions",
+    "rezervacije": "Réservations"
+  },
+  "Hero": {
+    "text-prvi-dio": "Le confort Du",
+    "text-drugi-dio": "Patrimoine Istrien",
+    "pogledajte-vise": "Voir Plus",
+    "long-text": "Vous voulez des vacances tranquilles et reposantes loin de la foule, mais proches des événements, des divertissements, de la bonne nourriture et des vins de qualité offerts par l'Istrie ? Ici, vous pouvez trouver la combinaison parfaite de détente et de plaisir dans tout ce que l'Istrie a à offrir !"
+  },
+  "Second": {
+    "naslov-1": "Fraise et Blanc",
+    "opis-1": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "btn-text-1": "Réservez Maintenant",
+
+    "naslov-2": "Olive et Fraise",
+    "opis-2": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "btn-text-2": "Réservez Maintenant",
+
+    "naslov-3": "Caractéristiques",
+    "opis-3": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "btn-text-3": "Voir Toutes les Caractéristiques",
+
+    "znacajke-kreveti": "3 lits (1 double et 2 simples)",
+    "znacajke-bazen": "Piscine Extérieure",
+    "znacajke-wifi": "Wi-Fi Gratuit",
+    "znacajke-parking": "Parking Gratuit",
+    "znacajke-klima": "Climatisation",
+    "znacajke-rostilj": "Équipement pour BBQ"
+  },
+  "Third": {
+    "opis-1": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "btn-text-1": "Réservez Maintenant",
+
+    "naslov-2": "Profitez des Vacances",
+    "opis-2": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "btn-text-2": "Réservez Maintenant",
+
+    "naslov-3": "Vérifiez la Disponibilité",
+    "opis-3": "Ici vient le calendrier",
+    "btn-text-3": "Réservez Maintenant"
+  },
+  "Footer": {
+    "copy": "Casa Fragola. Tous droits réservés",
+    "politika-privatnosti": "Politique de Confidentialité",
+    "politika-kolacica": "Politique de Cookies",
+
+    "linkovi": "Liens",
+    "pocetna": "Accueil",
+    "znacajke": "Caractéristiques",
+    "galerija": "Galerie",
+    "atrakcije": "Attractions",
+    "rezervacije": "Réservations",
+
+    "kontakt": "Contact"
+  },
+  "NotFound": {
+    "text": "Malheureusement, cette page n'existe pas.",
+    "btn-text": "Retour à la page d'accueil"
   }
 }

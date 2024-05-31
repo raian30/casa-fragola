@@ -1,5 +1,65 @@
 {
-  "Index": {
-    "title": "Buongiorno!"
+  "NavBar": {
+    "pocetna": "Home",
+    "znacajke": "Caratteristiche",
+    "galerija": "Galleria",
+    "atrakcije": "Attrazioni",
+    "rezervacije": "Prenotazioni"
+  },
+  "Hero": {
+    "text-prvi-dio": "Il Conforto Del",
+    "text-drugi-dio": "Patrimonio Istriano",
+    "pogledajte-vise": "Vedi di Più",
+    "long-text": "Vuoi una vacanza tranquilla e rilassante lontano dalla folla, ma vicino a eventi, intrattenimento, cibo delizioso e vini di alta qualità che l'Istria offre? Qui puoi trovare la combinazione perfetta di relax e divertimento in tutto ciò che l'Istria offre!"
+  },
+  "Second": {
+    "naslov-1": "Fragola e Bianco",
+    "opis-1": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
+    "btn-text-1": "Prenota Ora",
+
+    "naslov-2": "Oliva e Fragola",
+    "opis-2": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
+    "btn-text-2": "Prenota Ora",
+
+    "naslov-3": "Caratteristiche",
+    "opis-3": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
+    "btn-text-3": "Vedi Tutte le Caratteristiche",
+
+    "znacajke-kreveti": "3 letti (1 matrimoniale e 2 singoli)",
+    "znacajke-bazen": "Piscina Esterna",
+    "znacajke-wifi": "Wi-Fi Gratuito",
+    "znacajke-parking": "Parcheggio Gratuito",
+    "znacajke-klima": "Aria Condizionata",
+    "znacajke-rostilj": "Attrezzatura per BBQ"
+  },
+  "Third": {
+    "opis-1": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
+    "btn-text-1": "Prenota Ora",
+
+    "naslov-2": "Goditi le Vacanze",
+    "opis-2": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
+    "btn-text-2": "Prenota Ora",
+
+    "naslov-3": "Controlla Disponibilità",
+    "opis-3": "Qui arriva il calendario",
+    "btn-text-3": "Prenota Ora"
+  },
+  "Footer": {
+    "copy": "Casa Fragola. Tutti i diritti riservati",
+    "politika-privatnosti": "Politica sulla Privacy",
+    "politika-kolacica": "Politica sui Cookie",
+
+    "linkovi": "Link",
+    "pocetna": "Home",
+    "znacajke": "Caratteristiche",
+    "galerija": "Galleria",
+    "atrakcije": "Attrazioni",
+    "rezervacije": "Prenotazioni",
+
+    "kontakt": "Contatto"
+  },
+  "NotFound": {
+    "text": "Purtroppo, questa pagina non esiste.",
+    "btn-text": "Torna alla home"
   }
 }

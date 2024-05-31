@@ -1,5 +1,6 @@
 import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
 import type { Metadata } from "next";
+import {useTranslations} from "next-intl";
 
 export const metadata: Metadata = {
     title: "404 | Ova stranica ne postoji",
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
 }
 
 export default function NotFound() {
+    const t = useTranslations('NotFound')
+
     return(
         <section
             className={'px-4 md:px-16 xl:px-32 2xl:px-52 pb-10 lg:py-28 flex justify-center items-center flex-col h-screen'}>
@@ -15,8 +18,8 @@ export default function NotFound() {
                 <span className={'text-[#9c418d]'}>0</span>
                 <h1 className={'pb-10'}>4</h1>
             </div>
-            <p className={'text-xl mdtext-2xl text-center'}>Nažalost, ova stranica ne postoji.</p>
-            <FilledLink className={'mt-10'} href="/">Vratite se na početnu</FilledLink>
+            <p className={'text-xl mdtext-2xl text-center'}>{t('text')}</p>
+            <FilledLink className={'mt-10'} href="/">{t('btn-text')}</FilledLink>
         </section>
     )
 }

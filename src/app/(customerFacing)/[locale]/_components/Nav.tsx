@@ -49,6 +49,13 @@ export default function NavBar() {
             shortName: 'IT',
         },
         {
+            key: 'de',
+            image: '/german-flag.svg',
+            alt: 'german flag',
+            name: 'Germany',
+            shortName: 'DE',
+        },
+        {
             key: 'fr',
             image: '/france-flag.svg',
             alt: 'france flag',
