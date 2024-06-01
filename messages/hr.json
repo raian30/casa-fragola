@@ -41,8 +41,27 @@
     "btn-text-2": "Rezervirajte sada",
 
     "naslov-3": "Rezervirajte sada",
-    "opis-3": "Tu ce doj kalendar",
-    "btn-text-3": "Rezervirajte sada"
+
+    "error-datum-nije-dostupan": "Odabrani datum nije dostupan, pokušajte neki drugi.",
+    "error-dogodila-se-greska": "Dogodila se greška, provjerite sve podatke ili nas kontaktirajte.",
+    "error-previse-ljudi": "Kuća može primiti najviše 4 osobe.",
+    "error-premalo-ljudi": "Odaberite broj osoba.",
+    "error-premalo-odabranih-dana": "Nije moguće rezervirati manje od 7 dana.",
+
+    "tumac-nedostupno": "Nedostupno",
+    "tumac-dostupno": "Dostupno",
+    "tumac-odabrano": "Odabrano",
+
+    "dolazak": "Dolazak",
+    "odlazak": "Odlazak",
+
+    "broj-odraslih": "Broj odraslih (>=13 god.)",
+    "broj-djece": "Broj djece (<13 god.)",
+    "broj-beba": "Broj beba (<2 god.)",
+
+    "rezerviraj": "Rezerviraj",
+
+    "powered-by": "Rezervaciju Pokreće"
   },
   "Footer": {
     "copy": "Casa Fragola. Sva prava pridržana",

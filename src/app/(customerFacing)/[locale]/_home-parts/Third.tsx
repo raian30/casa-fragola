@@ -45,7 +45,7 @@ export default function Third() {
                            className={'object-cover w-[50%]'}/>
                 </div>
 
-                <div className={'flex flex-col gap-32 justify-center items-center mt-10'}>
+                <div className={'flex flex-col gap-24 justify-center items-center mt-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
                     <div className={'flex flex-col gap-20 xl:gap-0 lg:flex-row justify-between items-start w-full'}>
                         <Reservation/>

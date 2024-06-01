@@ -40,9 +40,22 @@
     "opis-2": "Vuoi goderti una vacanza in pace e isolamento dal resto del mondo, ma essere comunque vicino a eventi, intrattenimento e edonismo gastronomico e enologico",
     "btn-text-2": "Prenota Ora",
 
-    "naslov-3": "Controlla Disponibilità",
-    "opis-3": "Qui arriva il calendario",
-    "btn-text-3": "Prenota Ora"
+    "naslov-3": "Prenota ora",
+    "error-datum-nije-dostupan": "La data selezionata non è disponibile, provane un'altra.",
+    "error-dogodila-se-greska": "Si è verificato un errore, controlla tutti i dati o contattaci.",
+    "error-previse-ljudi": "La casa può ospitare un massimo di 4 persone.",
+    "error-premalo-ljudi": "Seleziona il numero di persone.",
+    "error-premalo-odabranih-dana": "Non è possibile prenotare meno di 7 giorni.",
+    "tumac-nedostupno": "Non disponibile",
+    "tumac-dostupno": "Disponibile",
+    "tumac-odabrano": "Selezionato",
+    "dolazak": "Arrivo",
+    "odlazak": "Partenza",
+    "broj-odraslih": "Numero di adulti (>=13 anni)",
+    "broj-djece": "Numero di bambini (<13 anni)",
+    "broj-beba": "Numero di neonati (<2 anni)",
+    "rezerviraj": "Prenota",
+    "powered-by": "Prenotazione fornita da"
   },
   "Footer": {
     "copy": "Casa Fragola. Tutti i diritti riservati",

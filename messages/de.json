@@ -40,9 +40,22 @@
     "opis-2": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
     "btn-text-2": "Jetzt Buchen",
 
-    "naslov-3": "Verfügbarkeit Überprüfen",
-    "opis-3": "Hier kommt der Kalender",
-    "btn-text-3": "Jetzt Buchen"
+    "naslov-3": "Jetzt buchen",
+    "error-datum-nije-dostupan": "Das ausgewählte Datum ist nicht verfügbar, versuchen Sie ein anderes.",
+    "error-dogodila-se-greska": "Ein Fehler ist aufgetreten, überprüfen Sie alle Daten oder kontaktieren Sie uns.",
+    "error-previse-ljudi": "Das Haus kann maximal 4 Personen beherbergen.",
+    "error-premalo-ljudi": "Wählen Sie die Anzahl der Personen.",
+    "error-premalo-odabranih-dana": "Es ist nicht möglich, weniger als 7 Tage zu buchen.",
+    "tumac-nedostupno": "Nicht verfügbar",
+    "tumac-dostupno": "Verfügbar",
+    "tumac-odabrano": "Ausgewählt",
+    "dolazak": "Ankunft",
+    "odlazak": "Abreise",
+    "broj-odraslih": "Anzahl der Erwachsenen (>=13 Jahre)",
+    "broj-djece": "Anzahl der Kinder (<13 Jahre)",
+    "broj-beba": "Anzahl der Babys (<2 Jahre)",
+    "rezerviraj": "Buchen",
+    "powered-by": "Reservierung betrieben von"
   },
   "Footer": {
     "copy": "Casa Fragola. Alle Rechte vorbehalten",

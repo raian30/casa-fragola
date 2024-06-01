@@ -40,9 +40,22 @@
     "opis-2": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
     "btn-text-2": "Book Now",
 
-    "naslov-3": "Check Availability",
-    "opis-3": "Here comes the calendar",
-    "btn-text-3": "Book Now"
+    "naslov-3": "Book now",
+    "error-datum-nije-dostupan": "The selected date is not available, please try another.",
+    "error-dogodila-se-greska": "An error occurred, please check all data or contact us.",
+    "error-previse-ljudi": "The house can accommodate a maximum of 4 people.",
+    "error-premalo-ljudi": "Select the number of people.",
+    "error-premalo-odabranih-dana": "It is not possible to book less than 7 days.",
+    "tumac-nedostupno": "Unavailable",
+    "tumac-dostupno": "Available",
+    "tumac-odabrano": "Selected",
+    "dolazak": "Arrival",
+    "odlazak": "Departure",
+    "broj-odraslih": "Number of adults (>=13 years)",
+    "broj-djece": "Number of children (<13 years)",
+    "broj-beba": "Number of babies (<2 years)",
+    "rezerviraj": "Book",
+    "powered-by": "Reservation powered by"
   },
   "Footer": {
     "copy": "Casa Fragola. All rights reserved",
