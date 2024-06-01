@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from 'next/image'
 import {Mail, MapPin, Phone} from "lucide-react";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 export default function Footer() {
     const date = new Date()
@@ -9,30 +9,32 @@ export default function Footer() {
 
     const t = useTranslations('Footer')
 
+    const localActive = useLocale()
+
     return (
         <div
             className={'bg-[#F5F5F5] flex flex-wrap justify-between items-start gap-8 lg:gap-0 py-8 px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60'}>
             <div className={'flex flex-col justify-start items-start gap-5 w-[100%] lg:w-[24%]'}>
-                <Link href={'/'}>
+                <Link href={`/${localActive}`}>
                     <Image src={'logo.svg'}
                            alt={'Logo Casa Fragola'} width={120} height={120}/>
                 </Link>
                 <p>Copyright {year} {t('copy')}</p>
-                <Link href={'/#nema'} className={'hover:text-gray-500 transition-all'}>{t('politika-privatnosti')}</Link>
-                <Link href={'/#nema'} className={'hover:text-gray-500 transition-all'}>{t('politika-kolacica')}</Link>
+                <Link href={`/${localActive}#nema`} className={'hover:text-gray-500 transition-all'}>{t('politika-privatnosti')}</Link>
+                <Link href={`/${localActive}#nema`} className={'hover:text-gray-500 transition-all'}>{t('politika-kolacica')}</Link>
             </div>
             <div
                 className={'flex flex-col gap-6 justify-start lg:justify-center items-start lg:items-center w-[100%] lg:w-[24%]'}>
                 <h1 className={'font-semibold text-lg'}>{t('linkovi')}</h1>
                 <div className={'flex flex-col gap-4 justify-center items-center'}>
-                    <Link href={'/'} className={'hover:text-gray-500 transition-all'}>{t('pocetna')}</Link>
-                    <Link href={'/#'}
+                    <Link href={`/${localActive}`} className={'hover:text-gray-500 transition-all'}>{t('pocetna')}</Link>
+                    <Link href={`/${localActive}#`}
                           className={'hover:text-gray-500 transition-all'}>{t('znacajke')}</Link>
-                    <Link href={'/#'}
+                    <Link href={`/${localActive}#`}
                           className={'hover:text-gray-500 transition-all'}>{t('galerija')}</Link>
-                    <Link href={'/#'}
+                    <Link href={`/${localActive}#`}
                           className={'hover:text-gray-500 transition-all'}>{t('atrakcije')}</Link>
-                    <Link href={'/#'}
+                    <Link href={`/${localActive}#`}
                           className={'hover:text-gray-500 transition-all'}>{t('rezervacije')}</Link>
                 </div>
             </div>

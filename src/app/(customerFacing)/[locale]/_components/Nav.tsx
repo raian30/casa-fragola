@@ -52,7 +52,7 @@ export default function NavBar() {
             key: 'de',
             image: '/german-flag.svg',
             alt: 'german flag',
-            name: 'Germany',
+            name: 'German',
             shortName: 'DE',
         },
         {
@@ -70,27 +70,27 @@ export default function NavBar() {
         {
             id: 1,
             text: t('pocetna'),
-            link: "/#"
+            link: `/${localActive}#`
         },
         {
             id: 2,
             text: t('znacajke'),
-            link: "/#"
+            link: `/${localActive}#`
         },
         {
             id: 3,
             text: t('galerija'),
-            link: "/#"
+            link: `/${localActive}#`
         },
         {
             id: 4,
             text: t('atrakcije'),
-            link: "/#"
+            link: `/${localActive}#`
         },
         {
             id: 5,
             text: t('rezervacije'),
-            link: "/#"
+            link: `/${localActive}#`
         },
     ];
 
@@ -135,7 +135,7 @@ export default function NavBar() {
     return (
         <>
             <nav className="fixed z-50 flex bg-[#F5F5F5] items-center justify-between w-screen py-6 px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60">
-                <Link href={'/'} onClick={() => {
+                <Link href={`/${localActive}`} onClick={() => {
                     setIsMenuOpen(false)
                     setIsMenuOpenWithNoDelay(false)
                 }} className={'flex justify-center items-center gap-5'}>

@@ -1,10 +1,12 @@
 import Image from "next/image";
 import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
 import {Bed, Flame, ParkingSquare, Wifi, Wind} from "lucide-react";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 export default function Second() {
     const t = useTranslations('Second')
+
+    const localActive = useLocale()
 
     return(
         <section className={'px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28 w-screen my-20 flex flex-col gap-20'}>
@@ -18,7 +20,7 @@ export default function Second() {
                     className={'w-full lg:w-1/2 text-center px-5 lg:px-10 xl:px-20 2xl:px-52 flex flex-col items-center justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-1')}</h1>
                     <p className={'text-lg font-light'}>{t('opis-1')}</p>
-                    <FilledLink href={'/'}>{t('btn-text-1')}</FilledLink>
+                    <FilledLink href={`/${localActive}`}>{t('btn-text-1')}</FilledLink>
                 </div>
             </div>
             <div
@@ -27,7 +29,7 @@ export default function Second() {
                     className={'w-full lg:w-1/2 text-center px-5 lg:px-10 xl:px-20 2xl:px-52 flex flex-col items-center justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-2')}</h1>
                     <p className={'text-lg font-light'}>{t('opis-2')}</p>
-                    <FilledLink href={'/'}>{t('btn-text-2')}</FilledLink>
+                    <FilledLink href={`/${localActive}`}>{t('btn-text-2')}</FilledLink>
                 </div>
                 <div className={'w-full h-full lg:w-1/2'}>
                     <Image src={'/image2.png'} alt={'House picture 2'} width={760} height={505}
@@ -40,7 +42,7 @@ export default function Second() {
                     className={'w-full lg:w-1/2 px-6 md:px-12 xl:px-20 2xl:px-32 flex flex-col items-start justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
                     <p className={'text-lg font-light'}>{t('opis-3')}</p>
-                    <FilledLink href={'/'} className={'text-sm'}>{t('btn-text-3')}</FilledLink>
+                    <FilledLink href={`/${localActive}`} className={'text-sm'}>{t('btn-text-3')}</FilledLink>
                 </div>
                 <div className={'w-full h-full lg:w-1/2 px-6 md:px-12 lg:px-0 flex flex-col sm:flex-row gap-5 sm:gap-20'}>
                     <div className={'flex flex-col gap-5'}>

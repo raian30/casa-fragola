@@ -35,3 +35,19 @@
 ::-webkit-scrollbar-thumb:hover {
     cursor: n-resize;
 }
+
+.rdrCalendarWrapper  {
+    font-size: 0.9rem !important;
+}
+
+.rdrDateDisplayWrapper {
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.rdrMonth {
+    width: 100% !important;
+}
+
+.rdrDay {
+    height: 5em !important;
+}

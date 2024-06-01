@@ -1,6 +1,6 @@
 import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
 import type { Metadata } from "next";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 export const metadata: Metadata = {
     title: "404 | Ova stranica ne postoji",
@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     const t = useTranslations('NotFound')
+
+    const localActive = useLocale()
 
     return(
         <section
@@ -19,7 +21,7 @@ export default function NotFound() {
                 <h1 className={'pb-10'}>4</h1>
             </div>
             <p className={'text-xl mdtext-2xl text-center'}>{t('text')}</p>
-            <FilledLink className={'mt-10'} href="/">{t('btn-text')}</FilledLink>
+            <FilledLink className={'mt-10'} href={`/${localActive}`}>{t('btn-text')}</FilledLink>
         </section>
     )
 }
