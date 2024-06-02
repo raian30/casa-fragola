@@ -67,6 +67,7 @@ export default function Reservation() {
 
     //gleda da li je selected range dostupan i da li je selektano manje od 7 dana
     const ValidateRange = () => {
+        console.log('validating...')
         WantedRangeArray = []
         let start = dateRange[0].startDate.toLocaleDateString('hr-HR').toString().replaceAll(" ", "")
         let end = dateRange[0].endDate.toLocaleDateString('hr-HR').toString().replaceAll(" ", "")
@@ -88,16 +89,18 @@ export default function Reservation() {
         WantedRangeArray.forEach((date) => {
             if(!availableDates.includes(date)) {
                 setError(t('error-datum-nije-dostupan'))
+                console.log('error')
                 errorOccurred = true;
             }
         })
 
+        useEffect(() => {
+            console.log('dada')
+            ValidateRange()
+        }, [dateRange]);
+
         if (!errorOccurred) setError('')
     }
-
-    useEffect(() => {
-        ValidateRange()
-    }, [dateRange]);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(() => {
@@ -139,7 +142,7 @@ export default function Reservation() {
                 <DateRange
                     className={'shadow-[0px_0px_20px_1px_gray] w-full rounded-md'}
                     rangeColors={['#b96da8', '#b96da8', '#b96da8']}
-                    //@ts-ignore
+                    // @ts-ignore
                     disabledDay={(date) => !availableDates.includes(date.toLocaleDateString('hr-HR'))}
                     dateDisplayFormat='dd.MM.yyyy'
                     locale={
@@ -151,7 +154,7 @@ export default function Reservation() {
                                             enUS
                     }
                     onChange={item => {
-                        console.log(item)
+                        console.log('changing')
                         //@ts-ignore
                         return setDateRange([item.selection])
                     }}
@@ -192,7 +195,7 @@ export default function Reservation() {
                     </div>
                 </div>
                 <div className={'flex flex-wrap gap-4 items-start justify-between'}>
-                    <div className={'flex flex-col justify-start items-start w-max'}>
+                    <div className={'flex flex-col justify-center items-center w-fit'}>
                         <label htmlFor="numberOfAdults" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-odraslih')}</label>
                         <div className={'px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {
@@ -214,7 +217,7 @@ export default function Reservation() {
                             </div>
                         </div>
                     </div>
-                    <div className={'flex flex-col justify-start items-start w-fit'}>
+                    <div className={'flex flex-col justify-center items-center w-fit'}>
                         <label htmlFor="numberOfChildren" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-djece')}</label>
                         <div className={'px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {
@@ -236,7 +239,7 @@ export default function Reservation() {
                             </div>
                         </div>
                     </div>
-                    <div className={'flex flex-col justify-start items-start w-fit'}>
+                    <div className={'flex flex-col justify-center items-center w-fit'}>
                         <label htmlFor="numberOfInfants" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-beba')}</label>
                         <div className={'px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {

@@ -4,7 +4,13 @@
     "znacajke": "Features",
     "galerija": "Gallery",
     "atrakcije": "Attractions",
-    "rezervacije": "Reservations"
+    "rezervacije": "Reservations",
+
+    "hrvatski": "Croatian",
+    "engleski": "English",
+    "talijanski": "Italian",
+    "njemacki": "German",
+    "francuski": "French"
   },
   "Hero": {
     "text-prvi-dio": "The Comfort of",

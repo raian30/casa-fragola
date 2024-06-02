@@ -4,7 +4,13 @@
     "znacajke": "Caractéristiques",
     "galerija": "Galerie",
     "atrakcije": "Attractions",
-    "rezervacije": "Réservations"
+    "rezervacije": "Réservations",
+
+    "hrvatski": "Croate",
+    "engleski": "Anglais",
+    "talijanski": "Italien",
+    "njemacki": "Allemand",
+    "francuski": "Français"
   },
   "Hero": {
     "text-prvi-dio": "Le confort Du",

@@ -4,7 +4,13 @@
     "znacajke": "Značajke",
     "galerija": "Galerija",
     "atrakcije": "Atrakcije",
-    "rezervacije": "Rezervacije"
+    "rezervacije": "Rezervacije",
+
+    "hrvatski": "Hrvatski",
+    "engleski": "Engleski",
+    "talijanski": "Talijanski",
+    "njemacki": "Njemački",
+    "francuski": "Francuski"
   },
   "Hero": {
     "text-prvi-dio": "Udobnost",

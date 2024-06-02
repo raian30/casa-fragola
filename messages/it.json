@@ -4,7 +4,13 @@
     "znacajke": "Caratteristiche",
     "galerija": "Galleria",
     "atrakcije": "Attrazioni",
-    "rezervacije": "Prenotazioni"
+    "rezervacije": "Prenotazioni",
+
+    "hrvatski": "Croato",
+    "engleski": "Inglese",
+    "talijanski": "Italiano",
+    "njemacki": "Tedesco",
+    "francuski": "Francese"
   },
   "Hero": {
     "text-prvi-dio": "Il Conforto Del",
