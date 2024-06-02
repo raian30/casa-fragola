@@ -102,6 +102,18 @@ export default function Reservation() {
         ValidateRange()
     }, [dateRange]);
 
+    const ValidatePersonNumber = (numberOfAdults: number, numberOfChildren: number, numberOfInfants: number) => {
+        console.log(numberOfChildren + numberOfAdults + numberOfInfants)
+        if ((numberOfChildren + numberOfAdults + numberOfInfants) > 4) {
+            return setWarning(t('error-previse-ljudi'))
+        }
+
+        if ((numberOfChildren + numberOfAdults + numberOfInfants) <= 0) {
+            return setWarning(t('error-premalo-ljudi'))
+        }
+        return setWarning('')
+    }
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(() => {
             e.preventDefault()
@@ -112,13 +124,7 @@ export default function Reservation() {
 
             ValidateRange()
 
-            if ((numberOfChildren + numberOfAdults + numberOfInfants) > 4) {
-                return setWarning(t('error-previse-ljudi'))
-            }
-
-            if ((numberOfChildren + numberOfAdults + numberOfInfants) <= 0) {
-                return setWarning(t('error-premalo-ljudi'))
-            }
+            ValidatePersonNumber(numberOfAdults, numberOfChildren, numberOfInfants)
 
             if(WantedRangeArray.length < 7) {
                 return setError(t('error-premalo-odabranih-dana'))
@@ -140,7 +146,7 @@ export default function Reservation() {
         <>
             <div className={'flex flex-col w-full lg:w-2/5 gap-10'}>
                 <DateRange
-                    className={'shadow-[0px_0px_20px_1px_gray] w-full rounded-md'}
+                    className={'shadow-[0px_0px_20px_1px_#c9c9c9] w-full rounded-md'}
                     rangeColors={['#b96da8', '#b96da8', '#b96da8']}
                     // @ts-ignore
                     disabledDay={(date) => !availableDates.includes(date.toLocaleDateString('hr-HR'))}
@@ -160,7 +166,7 @@ export default function Reservation() {
                     }}
                     ranges={dateRange}
                 />
-                <div className={'flex flex-wrap gap-5 justify-between items-center'}>
+                <div className={'flex flex-col sm:flex-row sm:flex-wrap gap-5 justify-start sm:justify-between items-start sm:items-center'}>
                     <div className={'flex justify-center items-center gap-2'}>
                         <div className={'size-10 rounded-xl bg-[#e8e6e6] shadow-[0px_0px_20px_-1px_#fff]'}/>
                         <p>{t('tumac-nedostupno')}</p>
@@ -175,9 +181,9 @@ export default function Reservation() {
                     </div>
                 </div>
             </div>
-            <form onSubmit={handleSubmit} className={'flex flex-col gap-14 lg:max-w-[50%]'}>
-                <div className={'flex gap-10 items-start justify-start'}>
-                    <div className={'space-y-2 w-1/2'}>
+            <form onSubmit={handleSubmit} className={'flex flex-col gap-14 w-full lg:max-w-[50%]'}>
+                <div className={'flex flex-col sm:flex-row gap-10 items-start justify-start'}>
+                    <div className={'space-y-2 w-full sm:w-1/2'}>
                         <label htmlFor="checkIn" className={'text-gray-700 text-sm mb-4'}>{t('dolazak')}</label>
                         <input required={true} disabled
                                value={dateRange[0].startDate.toLocaleDateString('hr-HR').toString()}
@@ -185,7 +191,7 @@ export default function Reservation() {
                                name={'checkIn'} type="text"
                                className={'border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
                     </div>
-                    <div className={'space-y-2 w-1/2'}>
+                    <div className={'space-y-2 w-full sm:w-1/2'}>
                         <label htmlFor="checkOut" className={'text-gray-700 text-sm pb-4'}>{t('odlazak')}</label>
                         <input required={true} disabled
                                value={dateRange[0].endDate.toLocaleDateString('hr-HR').toString()}
@@ -194,67 +200,85 @@ export default function Reservation() {
                                className={'border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
                     </div>
                 </div>
-                <div className={'flex flex-wrap gap-4 items-start justify-between'}>
-                    <div className={'flex flex-col justify-center items-center w-fit'}>
+                <div className={'flex flex-col sm:flex-row sm:flex-wrap gap-4 items-start justify-between'}>
+                    <div className={'flex flex-col justify-center items-center w-full sm:w-fit'}>
                         <label htmlFor="numberOfAdults" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-odraslih')}</label>
-                        <div className={'px-3 flex justify-center items-center gap-3'}>
+                        <div className={'w-full sm:w-fit px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfAdults >= 1) {
-                                    setNumberOfAdults(numberOfAdults - 1)
+                                    setNumberOfAdults(prevNumberOfAdults => {
+                                        ValidatePersonNumber(prevNumberOfAdults-1, numberOfChildren, numberOfInfants);
+                                        return prevNumberOfAdults - 1;
+                                    });
                                 }
                             }}>
                                 <MinusCircle strokeWidth={1} className={'hover:text-[#854276] transition-all mt-2'}/>
                             </div>
                             <input disabled required={true} id={'numberOfAdults'} name={'numberOfAdults'} min={0}
                                    value={numberOfAdults}
-                                   className={'max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfAdults <= 3) {
-                                    setNumberOfAdults(numberOfAdults + 1)
+                                    setNumberOfAdults(prevNumberOfAdults => {
+                                        ValidatePersonNumber(prevNumberOfAdults+1, numberOfChildren, numberOfInfants);
+                                        return prevNumberOfAdults + 1;
+                                    });
                                 }
                             }}>
                                 <PlusCircle strokeWidth={1}  className={'hover:text-[#854276] hover:select-none transition-all mt-2'}/>
                             </div>
                         </div>
                     </div>
-                    <div className={'flex flex-col justify-center items-center w-fit'}>
+                    <div className={'flex flex-col justify-center items-center w-full sm:w-fit'}>
                         <label htmlFor="numberOfChildren" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-djece')}</label>
-                        <div className={'px-3 flex justify-center items-center gap-3'}>
+                        <div className={'w-full sm:w-fit px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfChildren >= 1) {
-                                    setNumberOfChildren(numberOfChildren - 1)
+                                    setNumberOfChildren(prevNumberOfChildren => {
+                                        ValidatePersonNumber(numberOfAdults, prevNumberOfChildren - 1, numberOfInfants);
+                                        return prevNumberOfChildren - 1;
+                                    });
                                 }
                             }}>
                                 <MinusCircle strokeWidth={1}  className={'hover:text-[#854276] transition-all mt-2'}/>
                             </div>
                             <input disabled required={true} id={'numberOfChildren'} min={0} name={'numberOfChildren'}
                                    value={numberOfChildren}
-                                   className={'max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfChildren <= 3) {
-                                    setNumberOfChildren(numberOfChildren + 1)
+                                    setNumberOfChildren(prevNumberOfChildren => {
+                                        ValidatePersonNumber(numberOfAdults, prevNumberOfChildren + 1, numberOfInfants);
+                                        return prevNumberOfChildren + 1;
+                                    });
                                 }
                             }}>
                                 <PlusCircle strokeWidth={1}  className={'hover:text-[#854276] hover:select-none transition-all mt-2'}/>
                             </div>
                         </div>
                     </div>
-                    <div className={'flex flex-col justify-center items-center w-fit'}>
+                    <div className={'flex flex-col justify-center items-center w-full sm:w-fit'}>
                         <label htmlFor="numberOfInfants" className={'text-gray-700 text-sm w-full mb-2'}>{t('broj-beba')}</label>
-                        <div className={'px-3 flex justify-center items-center gap-3'}>
+                        <div className={'w-full sm:w-fit px-3 flex justify-center items-center gap-3'}>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfInfants >= 1) {
-                                    setNumberOfInfants(numberOfInfants - 1)
+                                    setNumberOfInfants(prevNumberOfInfants => {
+                                        ValidatePersonNumber(numberOfAdults, numberOfChildren, prevNumberOfInfants - 1);
+                                        return prevNumberOfInfants - 1;
+                                    });
                                 }
                             }}>
                                 <MinusCircle strokeWidth={1}  className={'hover:text-[#854276] transition-all mt-2'}/>
                             </div>
                             <input disabled required={true} id={'numberOfInfants'} name={'numberOfInfants'} min={0}
                                    value={numberOfInfants}
-                                   className={'max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfInfants <= 3) {
-                                    setNumberOfInfants(numberOfInfants + 1)
+                                    setNumberOfInfants(prevNumberOfInfants => {
+                                        ValidatePersonNumber(numberOfAdults, numberOfChildren, prevNumberOfInfants + 1);
+                                        return prevNumberOfInfants + 1;
+                                    });
                                 }
                             }}>
                                 <PlusCircle strokeWidth={1}  className={'hover:text-[#854276] hover:select-none transition-all mt-2'}/>
