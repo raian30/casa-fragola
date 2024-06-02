@@ -107,7 +107,7 @@ export default function Reservation() {
             e.preventDefault()
 
             if (error) {
-                return setWarning(t('error-dogodila-se-greska'))
+                return
             }
 
             ValidateRange()
