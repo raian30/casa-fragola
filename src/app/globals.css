@@ -36,6 +36,11 @@
     cursor: n-resize;
 }
 
+input{
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
 .rdrCalendarWrapper  {
     font-size: 0.95rem !important;
 }
