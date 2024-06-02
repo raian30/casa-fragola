@@ -94,13 +94,13 @@ export default function Reservation() {
             }
         })
 
-        useEffect(() => {
-            console.log('dada')
-            ValidateRange()
-        }, [dateRange]);
-
         if (!errorOccurred) setError('')
     }
+
+
+    useEffect(() => {
+        ValidateRange()
+    }, [dateRange]);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(() => {
