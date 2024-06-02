@@ -189,7 +189,7 @@ export default function Reservation() {
                                value={dateRange[0].startDate.toLocaleDateString('hr-HR').toString()}
                                id={'checkIn'}
                                name={'checkIn'} type="text"
-                               className={'border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
+                               className={'border-r-0 outline-0 border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
                     </div>
                     <div className={'space-y-2 w-full sm:w-1/2'}>
                         <label htmlFor="checkOut" className={'text-gray-700 text-sm pb-4'}>{t('odlazak')}</label>
@@ -197,7 +197,7 @@ export default function Reservation() {
                                value={dateRange[0].endDate.toLocaleDateString('hr-HR').toString()}
                                id={'checkOut'}
                                name={'checkOut'} type="text"
-                               className={'border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
+                               className={'border-r-0 outline-0 border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
                     </div>
                 </div>
                 <div className={'flex flex-col sm:flex-row sm:flex-wrap gap-4 items-start justify-between'}>
@@ -216,7 +216,7 @@ export default function Reservation() {
                             </div>
                             <input disabled required={true} id={'numberOfAdults'} name={'numberOfAdults'} min={0}
                                    value={numberOfAdults}
-                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'border-r-0 outline-0 sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfAdults <= 3) {
                                     setNumberOfAdults(prevNumberOfAdults => {
@@ -244,7 +244,7 @@ export default function Reservation() {
                             </div>
                             <input disabled required={true} id={'numberOfChildren'} min={0} name={'numberOfChildren'}
                                    value={numberOfChildren}
-                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'border-r-0 outline-0 sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfChildren <= 3) {
                                     setNumberOfChildren(prevNumberOfChildren => {
@@ -272,7 +272,7 @@ export default function Reservation() {
                             </div>
                             <input disabled required={true} id={'numberOfInfants'} name={'numberOfInfants'} min={0}
                                    value={numberOfInfants}
-                                   className={'sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
+                                   className={'border-r-0 outline-0 sm:max-w-10 text-center focus:outline-none focus:border-[#b96da8] border-b border-black px-2.5 py-2.5 bg-transparent w-full'}/>
                             <div className={'cursor-pointer'} onClick={() => {
                                 if (numberOfInfants <= 3) {
                                     setNumberOfInfants(prevNumberOfInfants => {
