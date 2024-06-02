@@ -26,7 +26,7 @@ export default function Footer() {
             <div
                 className={'flex flex-col gap-6 justify-start lg:justify-center items-start lg:items-center w-[100%] lg:w-[24%]'}>
                 <h1 className={'font-semibold text-lg'}>{t('linkovi')}</h1>
-                <div className={'flex flex-col gap-4 justify-center items-center'}>
+                <div className={'flex flex-col gap-4 lg:justify-center lg:items-center'}>
                     <Link href={`/${localActive}`} className={'hover:text-gray-500 transition-all'}>{t('pocetna')}</Link>
                     <Link href={`/${localActive}#`}
                           className={'hover:text-gray-500 transition-all'}>{t('znacajke')}</Link>

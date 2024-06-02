@@ -196,7 +196,7 @@ export default function NavBar() {
                                             HandleLanguageChange(language.key)
                                             setIsLanguageOpened(false)
                                         }}
-                                            className={`gap-2 items-start justify-start cursor-pointer font-semibold ${isLanguageOpened ? 'flex' : ''}`}>
+                                            className={`gap-2 items-center justify-center cursor-pointer font-semibold ${isLanguageOpened ? 'flex' : ''}`}>
                                             <Image src={language.image} alt={language.alt} width={39}
                                                    height={22}/>
                                             <p>{language.name}</p>
@@ -209,7 +209,7 @@ export default function NavBar() {
             </nav>
             {isMenuOpen && (
                 <div
-                    className={`bg-[#F5F5F5] fixed top-0 flex flex-col gap-10 z-20 items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`}
+                    className={`overflow-y-auto bg-[#F5F5F5] fixed top-0 flex flex-col gap-10 z-20 items-center justify-center text-xl py-20 mb-40 transition-opacity duration-500 w-screen h-[100dvh]`}
                     style={{opacity}}>
                     {links.map(({id, link, text}) => (
                         <div key={id}>
@@ -254,7 +254,7 @@ export default function NavBar() {
                                         HandleLanguageChange(language.key)
                                         setIsLanguageOpened(false)
                                     }}
-                                         className={`gap-2 items-start justify-start cursor-pointer font-semibold ${isLanguageOpened ? 'flex' : ''}`}>
+                                         className={`gap-2 items-center justify-center cursor-pointer text-lg ${isLanguageOpened ? 'flex' : ''}`}>
                                         <Image src={language.image} alt={language.alt} width={39}
                                                height={22}/>
                                         <p>{language.name}</p>
