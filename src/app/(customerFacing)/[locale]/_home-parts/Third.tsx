@@ -5,14 +5,7 @@ import Reservation from "@/app/(customerFacing)/[locale]/_components/Reservation
 
 export default function Third() {
     const t = useTranslations('Third')
-
     const localActive = useLocale()
-
-    //https://www.airbnb.com/book/stays/1030204797174613452?numberOfAdults=1&numberOfChildren=2&checkin=2024-06-15&checkout=2024-07-13&productId=1030204797174613452
-    //numberOfAdults
-    //numberOfChildren
-    //checkin
-    //checkout
 
     return (
         <section className="w-screen px-0 md:px-0 lg:px-12 xl:px-[5.5rem] 2xl:px-[7.5rem] pb-20">
@@ -22,7 +15,7 @@ export default function Third() {
                     <FilledLink href={`/${localActive}`} className={'w-fit'}>{t('btn-text-1')}</FilledLink>
                 </div>
                 <div className={'flex gap-2 lg:gap-8 justify-between overflow-hidden h-64 lg:h-auto'}>
-                    <Image src={'/image2.png'} alt={'House image'} width={760} height={505}
+                    <Image src={'/image2.png'} alt={'House image'} width={1100} height={505}
                            className={'object-cover w-[40%] mb-5 lg:mb-20'}/>
                     <Image src={'/image3.png'} alt={'House image'} width={794} height={505}
                            className={'object-cover w-[60%] mt-5 lg:mt-20'}/>
@@ -35,22 +28,16 @@ export default function Third() {
                 </div>
                 <div className={'flex gap-2 lg:gap-8 justify-between overflow-hidden'}>
                     <div className={'flex flex-col justify-between items-end gap-2 md:gap-10'}>
-                        <Image src={'/image3.png'} alt={'House image'} width={794} height={505}
-                               className={'object-cove mt-5 lg:mt-20'}/>
+                        <Image src={'/image3.png'} alt={'House image'} width={700} height={505}
+                               className={'object-cover mt-5 lg:mt-20'}/>
                         <Image src={'/image2.png'} alt={'House image'} width={760} height={505}
                                className={'object-cover w-[90%] md:w-[70%]'}/>
                     </div>
 
-                    <Image src={'/image2.png'} alt={'House image'} width={794} height={505}
+                    <Image src={'/image2.png'} alt={'House image'} width={794} height={505} quality={100}
                            className={'object-cover w-[50%]'}/>
                 </div>
-
-                <div className={'flex flex-col gap-24 justify-center items-center mt-10'}>
-                    <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
-                    <div className={'flex flex-col gap-20 xl:gap-0 lg:flex-row justify-between items-start w-full'}>
-                        <Reservation/>
-                    </div>
-                </div>
+                <Reservation/>
             </div>
         </section>
     )

@@ -74,17 +74,17 @@ export default function NavBar() {
         },
         {
             id: 2,
-            text: t('znacajke'),
+            text: t('atrakcije'),
             link: `/${localActive}#`
         },
         {
             id: 3,
-            text: t('galerija'),
+            text: t('znacajke'),
             link: `/${localActive}#`
         },
         {
             id: 4,
-            text: t('atrakcije'),
+            text: t('galerija'),
             link: `/${localActive}#`
         },
         {

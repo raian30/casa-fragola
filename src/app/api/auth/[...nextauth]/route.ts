@@ -33,7 +33,6 @@ const handler = NextAuth({
                     const comparePassword = await compare(password, AdminUser.password)
 
                     if(AdminUser.email == email && comparePassword) {
-                        console.log({ message: 'success' });
                         return {
                             id: "1",
                             email: AdminUser.email

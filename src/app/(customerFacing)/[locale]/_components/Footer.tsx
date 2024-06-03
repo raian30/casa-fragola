@@ -17,7 +17,7 @@ export default function Footer() {
             <div className={'flex flex-col justify-start items-start gap-5 w-[100%] lg:w-[24%]'}>
                 <Link href={`/${localActive}`}>
                     <Image src={'logo.svg'}
-                           alt={'Logo Casa Fragola'} width={120} height={120}/>
+                           alt={'Logo Casa Fragola'} width={122} height={54}/>
                 </Link>
                 <p>Copyright {year} {t('copy')}</p>
                 <Link href={`/${localActive}#nema`} className={'hover:text-gray-500 transition-all'}>{t('politika-privatnosti')}</Link>
@@ -43,11 +43,9 @@ export default function Footer() {
                 <div className={'flex flex-col gap-6 justify-start items-start'}>
                     <p>Mladen Radolović</p>
                     <Link target={'_blank'} href={'https://www.google.com/maps/place/Casa+Fragola/@45.2330496,13.7098128,19z/data=!4m9!3m8!1s0x477ca30028ef1679:0xc1fe4524a1c57395!5m2!4m1!1i2!8m2!3d45.2330933!4d13.7099127!16s%2Fg%2F11vprjfr95?entry=ttu'}
-                          className={'hover:text-gray-500 transition-all flex gap-4'}><MapPin/>Pršurići 18, 52463 Višnjan</Link>
-                    <Link target={'_blank'} href={'info@casa-fragola.com'}
-                          className={'hover:text-gray-500 transition-all flex gap-4'}><Mail/>info@casa-fragola.com</Link>
-                    <Link target={'_blank'} href={'tel:+385910000000'}
-                          className={'hover:text-gray-500 transition-all flex gap-4'}><Phone/>+385 91 000 0000</Link>
+                          className={'hover:text-gray-500 transition-all flex gap-4'}><MapPin/>Pršurići 16, 52463 Višnjan</Link>
+                    <Link target={'_blank'} href={'mladen.radolovic@gmail.com'}
+                          className={'hover:text-gray-500 transition-all flex gap-4'}><Mail/>mladen.radolovic@gmail.com</Link>
                 </div>
             </div>
         </div>
