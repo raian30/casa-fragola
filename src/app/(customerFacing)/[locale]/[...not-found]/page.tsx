@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import {useLocale, useTranslations} from "next-intl";
 
 export const metadata: Metadata = {
-    title: "404 | Ova stranica ne postoji",
-    description: "Nažalost, ova stranica ne postoji, vratite se na početnu.",
+    title: "404 | This page does not exist",
+    description: "Unfortunately, this page does not exist, return to the home page.",
 }
 
 export default function NotFound() {

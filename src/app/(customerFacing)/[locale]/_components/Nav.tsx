@@ -70,27 +70,27 @@ export default function NavBar() {
         {
             id: 1,
             text: t('pocetna'),
-            link: `/${localActive}#`
+            link: `/${localActive}#home`
         },
         {
             id: 2,
             text: t('atrakcije'),
-            link: `/${localActive}#`
+            link: `/${localActive}#attractions`
         },
         {
             id: 3,
             text: t('znacajke'),
-            link: `/${localActive}#`
+            link: `/${localActive}#features`
         },
         {
             id: 4,
             text: t('galerija'),
-            link: `/${localActive}#`
+            link: `/${localActive}#gallery`
         },
         {
             id: 5,
             text: t('rezervacije'),
-            link: `/${localActive}#`
+            link: `/${localActive}#reservation`
         },
     ];
 

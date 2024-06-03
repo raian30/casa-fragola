@@ -36,6 +36,11 @@
     cursor: n-resize;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px
+}
+
 input{
     -webkit-appearance: none;
     -webkit-border-radius: 0;

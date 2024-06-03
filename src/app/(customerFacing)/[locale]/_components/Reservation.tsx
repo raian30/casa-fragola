@@ -140,7 +140,7 @@ export default function Reservation() {
     }
 
     return (
-        <div className={'flex flex-col gap-24 justify-center items-center mt-10'}>
+        <div id={'reservation'} className={'flex flex-col gap-24 justify-center items-center mt-10'}>
             <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
             <div className={'flex flex-col gap-20 xl:gap-0 lg:flex-row justify-between items-start w-full'}>
                 <div className={'flex flex-col w-full lg:w-2/5 gap-10'}>
