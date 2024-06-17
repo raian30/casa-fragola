@@ -1,6 +1,6 @@
-import {withAuth} from 'next-auth/middleware';
+import { withAuth } from 'next-auth/middleware';
 import createIntlMiddleware from 'next-intl/middleware';
-import {NextRequest} from 'next/server';
+import { NextRequest } from 'next/server';
 
 const locales = ['hr', 'en', 'it', 'de', 'fr'];
 const publicPages = ['/'];
@@ -17,7 +17,7 @@ const authMiddleware = withAuth(
     },
     {
         callbacks: {
-            authorized: ({token}) => token != null
+            authorized: ({ token }) => token != null
         },
         pages: {
             signIn: '/cms/login'
@@ -32,8 +32,9 @@ export default function middleware(req: NextRequest) {
             .join('|')})/?$`,
         'i'
     );
+
     const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
-    const isCmsPage = /^\/cms(\/.*)?$/.test(req.nextUrl.pathname);
+    const isCmsPage = /^(\/[a-z]{2})?\/cms(\/.*)?$/.test(req.nextUrl.pathname);
 
     if (isPublicPage) {
         return intlMiddleware(req);

@@ -1,9 +1,9 @@
 'use client'
 import {Eye, EyeOff} from "lucide-react";
-import {FormEvent, useState, useTransition} from "react";
+import {FormEvent, useEffect, useState, useTransition} from "react";
 import {signIn} from "next-auth/react";
 import {useRouter} from "next/navigation";
-import {toast, ToastContainer, useToast} from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Form() {
@@ -20,7 +20,6 @@ export default function Form() {
                 email: formData.get('email'),
                 password: formData.get('password'),
                 redirect: false,
-
             })
 
             if(response?.error == 'CredentialsSignin'){

@@ -33,8 +33,8 @@ export default function Reservation() {
         }
     ])
 
-    const availableRanges = ['now:20.6.2024', '22.6.2024:1.7.2024'];
-    const availableDates: Date[] = [];
+    const disabeldRanges = ['1.1.1924:now', '22.6.2024:29.6.2024'];
+    const disabledDates: Date[] = [];
 
     function addDays(date: Date, days: number) {
         const result = new Date(date);
@@ -42,25 +42,29 @@ export default function Reservation() {
         return result;
     }
 
-    //U availableRanges array stavlja svaki dostupan datum koji je definiran u availableRanges arrayu i gleda da li je u proslosti
+    //U disabledDates array stavlja svaki dostupan datum koji je definiran u disabledRanges arrayu i gleda da li je u proslosti
     function processRange(range: string) {
         let [start, end] = range.split(':');
 
         let startDate = start === 'now' ? new Date() : new Date(start.split('.').reverse().join('-'));
 
-        let [endDay, endMonth, endYear] = end.split('.').map(Number);
-        let endDate = new Date(endYear, endMonth - 1, endDay);
+        let endDate;
+        if (end === 'now') {
+            endDate = new Date();
+            endDate.setDate(endDate.getDate() - 1);
+        } else {
+            let [endDay, endMonth, endYear] = end.split('.').map(Number);
+            endDate = new Date(endYear, endMonth - 1, endDay);
+        }
 
         for (let d = startDate; d <= endDate; d = addDays(d, 1)) {
             let today = new Date();
             today.setHours(0, 0, 0, 0);
-            if (d >= today) {
-                //@ts-ignore
-                availableDates.push(d.toLocaleDateString('hr-HR'));
-            }
+            //@ts-ignore
+            disabledDates.push(d.toLocaleDateString('hr-HR'));
         }
     }
-    availableRanges.forEach(range => processRange(range));
+    disabeldRanges.forEach(range => processRange(range));
 
 
     let WantedRangeArray: Date[] = []
@@ -79,14 +83,14 @@ export default function Reservation() {
         for (let d = startDate; d <= endDate; d = addDays(d, 1)) {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            if (d >= today) {
+            if (d <= today) {
                 //@ts-ignore
                 WantedRangeArray.push(d.toLocaleDateString('hr-HR'));
             }
         }
 
         WantedRangeArray.forEach((date) => {
-            if(!availableDates.includes(date)) {
+            if(disabledDates.includes(date)) {
                 setError(t('error-datum-nije-dostupan'))
                 errorOccurred = true;
             }
@@ -148,7 +152,7 @@ export default function Reservation() {
                         className={'shadow-[0px_0px_20px_1px_#c9c9c9] w-full rounded-md'}
                         rangeColors={['#b96da8', '#b96da8', '#b96da8']}
                         // @ts-ignore
-                        disabledDay={(date) => !availableDates.includes(date.toLocaleDateString('hr-HR'))}
+                        disabledDay={(date) => disabledDates.includes(date.toLocaleDateString('hr-HR'))}
                         dateDisplayFormat='dd.MM.yyyy'
                         locale={
                             localActive == 'en' ? enUS :
