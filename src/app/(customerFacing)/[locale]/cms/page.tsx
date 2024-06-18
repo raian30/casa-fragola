@@ -45,6 +45,7 @@ export default function Home() {
                         </div>
                         <div className={'flex flex-col gap-5'}>
                             <Suspense fallback={<div>Loading...</div>}>
+                                {/*@ts-ignore*/}
                                 {occupiedDates && occupiedDates.map((date, index) => (
                                     <div key={index}
                                          className={'flex justify-between bg-gray-50 hover:bg-gray-100 transition-all rounded-xl py-5 px-5 shadow-[0px_0px_10px_-5px_#404040]'}>
