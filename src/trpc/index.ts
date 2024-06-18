@@ -14,7 +14,7 @@ export const appRouter = router({
     GetOccupiedDates: publicProcedure.query(async({ctx}) => {
         const date = await db.reservedDays.findMany({
             orderBy: {
-                createdAt: 'asc',
+                createdAt: 'desc',
             }
         });
         return date
