@@ -12,10 +12,13 @@ export default function Home() {
     const router = useRouter();
     const occupiedDatesQuery = trpc.GetOccupiedDates.useQuery();
     let occupiedDates
-    if(occupiedDatesQuery.data) {
-        occupiedDates = occupiedDatesQuery.data;
-    }
-    console.log(occupiedDates)
+
+    useEffect(() => {
+        if(occupiedDatesQuery.data) {
+            occupiedDates = occupiedDatesQuery.data;
+        }
+        console.log(occupiedDates)
+    })
 
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);
