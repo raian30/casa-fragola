@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Home() {
     const router = useRouter();
 
+
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);
         const login = searchParams.get('login');

@@ -8,8 +8,12 @@ import {DateRange} from "react-date-range";
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import {trpc} from "@/app/_trpc/client";
+import {useRouter} from "next/navigation";
 
 export default function OccupyDate() {
+    const OccupyDateMutation  = trpc.OccupyDate.useMutation()
+    const router = useRouter()
+
     const [dateRange, setDateRange] = useState([
         {
             startDate: new Date(Date.now()),
@@ -65,13 +69,13 @@ export default function OccupyDate() {
             const DateRangeFormatted = `${Number(StartDay)}.${Number(StartMonth)}.${Number(StartYear)}:${Number(EndDay)}.${Number(EndMonth)}.${Number(EndYear)}`
 
             try {
-                const mutation  = trpc.OccupyDate.useMutation()
-
-                const DateReturned = await mutation.mutateAsync({
+                const DateReturned = await OccupyDateMutation.mutateAsync({
                     range: DateRangeFormatted
                 });
 
-                console.log(DateReturned)
+                if(DateReturned.id) {
+                    router.push('/cms?occupied=success')
+                }
 
             } catch (error: any) {
                 if (error.data?.code === "UNAUTHORIZED") {

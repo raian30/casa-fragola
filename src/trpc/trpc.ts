@@ -6,11 +6,14 @@ const t = initTRPC.create();
 const middleware = t.middleware
 
 const isAuth  = middleware(async(opts) => {
-    const { data: session, status } = useSession()
 
-    if (status === "unauthenticated") {
-        throw new TRPCError({code : "UNAUTHORIZED"})
-    }
+    // FIX!! useSession ne dela u server componentama
+
+    // const { data: session, status } = useSession()
+
+    // if (status === "unauthenticated") {
+    //     throw new TRPCError({code : "UNAUTHORIZED"})
+    // }
 
     return opts.next({
         ctx: {
