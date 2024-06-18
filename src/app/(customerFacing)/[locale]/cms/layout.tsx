@@ -21,7 +21,7 @@ export default function RootLayout({
     const [trpcClient] = useState(() => trpc.createClient({
         links: [
             httpBatchLink({
-                url:  `${process.env.NEXTAUTH_URL}/api/trpc`,
+                url:  `/api/trpc`,
             })
         ]
     }))

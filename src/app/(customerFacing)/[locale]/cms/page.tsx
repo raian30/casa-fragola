@@ -12,12 +12,10 @@ export default function Home() {
     const router = useRouter();
     const occupiedDatesQuery = trpc.GetOccupiedDates.useQuery();
     let occupiedDates
-
-    useEffect(() => {
-        if(occupiedDatesQuery.data) {
-            occupiedDates = occupiedDatesQuery.data;
-        }
-    })
+    if(occupiedDatesQuery.data) {
+        occupiedDates = occupiedDatesQuery.data;
+    }
+    console.log(occupiedDates)
 
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);
@@ -45,7 +43,6 @@ export default function Home() {
                         </div>
                         <div className={'flex flex-col gap-5'}>
                             <Suspense fallback={<div>Loading...</div>}>
-                                {/*@ts-ignore*/}
                                 {occupiedDates && occupiedDates.map((date, index) => (
                                     <div key={index}
                                          className={'flex justify-between bg-gray-50 hover:bg-gray-100 transition-all rounded-xl py-5 px-5 shadow-[0px_0px_10px_-5px_#404040]'}>
