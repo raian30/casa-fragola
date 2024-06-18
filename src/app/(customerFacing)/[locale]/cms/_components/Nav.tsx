@@ -52,7 +52,7 @@ export default function AdminNavBar() {
 
     return (
         <>
-            <nav className="fixed shadow-[0px_0px_20px_1px_#923E82] z-50 flex bg-[#F5F5F5] items-center justify-between w-screen py-6 px-12 md:px-20 lg:px-24 xl:px-44 2xl:px-60">
+            <nav className="fixed shadow-[0px_0px_20px_1px_#923E82] z-50 flex bg-[#F5F5F5] items-center justify-between w-screen py-6 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28">
                 <Link href={'/'} onClick={() => {
                     setIsMenuOpen(false)
                     setIsMenuOpenWithNoDelay(false)

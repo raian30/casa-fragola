@@ -16,7 +16,7 @@ export default function Footer() {
             className={'bg-[#F5F5F5] flex flex-wrap justify-between items-start gap-8 lg:gap-0 py-8 px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60'}>
             <div className={'flex flex-col justify-start items-start gap-5 w-[100%] lg:w-[24%]'}>
                 <Link href={`/${localActive}#home`}>
-                    <Image src={'logo.svg'}
+                    <Image src={'/logo.svg'}
                            alt={'Logo Casa Fragola'} width={122} height={54}/>
                 </Link>
                 <p>Copyright {year} {t('copy')}</p>

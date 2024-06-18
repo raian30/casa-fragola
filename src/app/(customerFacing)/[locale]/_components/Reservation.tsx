@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
-import {z} from "zod";
 import Link from "next/link";
 import {MinusCircle, Plus, PlusCircle, PlusCircleIcon} from "lucide-react";
 
