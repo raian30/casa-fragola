@@ -17,7 +17,6 @@ export default function Home() {
         if(occupiedDatesQuery.data) {
             occupiedDates = occupiedDatesQuery.data;
         }
-        console.log(occupiedDates)
     })
 
     useEffect(() => {
