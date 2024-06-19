@@ -88,7 +88,6 @@ export default function OccupyDate() {
 
     return (
         <>
-            <Suspense fallback={<div>Loading...</div>}>
                 <main
                     className="flex gap-10 bg-[#F5F5F5] min-h-[100dvh] flex-col py-[150px] px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28 overflow-x-hidden w-full">
                     <Link href={'/cms'} className={'flex gap-2 group w-fit hover:gap-3 transition-all items-center justify-start'}>
@@ -155,7 +154,6 @@ export default function OccupyDate() {
                         </div>
                     </section>
                 </main>
-            </Suspense>
             <ToastContainer position="bottom-right" theme="colored"/>
         </>
     )
