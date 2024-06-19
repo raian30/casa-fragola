@@ -2,7 +2,6 @@
 import { trpc } from "@/app/_trpc/client";
 import { Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import {Refresh} from "@/app/(customerFacing)/[locale]/cms/_actions/refresh";
 
 export function DeleteOccupiedDate({ id }: { id: string }) {
     const router = useRouter();
