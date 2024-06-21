@@ -8,6 +8,8 @@ export default async function Login() {
         redirect('/cms');
     }
     return (
-        <Form/>
+        <>
+            <Form/>
+        </>
     );
 }

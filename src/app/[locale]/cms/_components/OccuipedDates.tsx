@@ -1,8 +1,9 @@
 'use client'
 
 import {PencilLine} from "lucide-react";
-import {DeleteOccupiedDate} from "@/app/(customerFacing)/[locale]/cms/_actions/DeleteOccupiedDate";
-import {getOccupiedDates} from "@/app/(customerFacing)/[locale]/cms/_actions/getOccupiedDates";
+import {DeleteOccupiedDate} from "@/app/[locale]/cms/_actions/DeleteOccupiedDate";
+import {getOccupiedDates} from "@/app/[locale]/cms/_actions/getOccupiedDates";
+import Link from "next/link";
 
 export default function OccupiedDates() {
     const {occupiedDates, error, isLoading} = getOccupiedDates()
@@ -13,17 +14,20 @@ export default function OccupiedDates() {
 
     return (
         <div className={'flex flex-col gap-5'}>
-            {occupiedDates && occupiedDates.map((date) => (
+            {(occupiedDates && occupiedDates.length > 0) ? occupiedDates.map((date) => (
                 <div key={date.id}
                      className={'flex justify-between bg-gray-50 hover:bg-gray-100 transition-all rounded-xl py-5 px-5 shadow-[0px_0px_10px_-5px_#404040]'}>
                     <h1>{date.range.split(':')[0]} - {date.range.split(':')[1]}</h1>
                     <div className={'flex gap-7 justify-center items-center'}>
                         <DeleteOccupiedDate id={date.id} />
-                        <PencilLine
-                            className={'text-gray-600 transition-all hover:cursor-pointer hover:text-blue-500'}/>
+                        <Link href={`/cms/occupy-date/edit/${date.id}`}>
+                            <PencilLine className={'text-gray-600 transition-all hover:cursor-pointer hover:text-blue-500'}/>
+                        </Link>
                     </div>
                 </div>
-            ))}
+            )): <div>
+                <h1 className={'w-full h-[40vh] flex justify-center items-center text-2xl'}>Nema zauzetih datuma</h1>
+            </div>}
         </div>
     );
 }

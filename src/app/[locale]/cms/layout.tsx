@@ -1,6 +1,7 @@
 'use client'
 
-import AdminNavBar from "@/app/(customerFacing)/[locale]/cms/_components/Nav";
+import '../../globals.css'
+import AdminNavBar from "@/app/[locale]/cms/_components/Nav";
 import {useState} from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {trpc} from "@/app/_trpc/client";

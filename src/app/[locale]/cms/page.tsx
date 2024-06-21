@@ -1,6 +1,6 @@
 import Link from "next/link";
-import {SearchForParams} from "@/app/(customerFacing)/[locale]/cms/_actions/SearchForParams";
-import OccupiedDates from "@/app/(customerFacing)/[locale]/cms/_components/OccuipedDates";
+import {SearchForParams} from "@/app/[locale]/cms/_actions/SearchForParams";
+import OccupiedDates from "@/app/[locale]/cms/_components/OccuipedDates";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
+import {FilledLink} from "@/app/[locale]/_components/Buttons";
 import {Bed, Flame, ParkingSquare, Wifi, Wind} from "lucide-react";
 import {useLocale, useTranslations} from "next-intl";
 

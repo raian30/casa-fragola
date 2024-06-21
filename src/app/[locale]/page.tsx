@@ -1,6 +1,6 @@
-import Hero from "@/app/(customerFacing)/[locale]/_home-parts/Hero";
-import Second from "@/app/(customerFacing)/[locale]/_home-parts/Second";
-import Third from "@/app/(customerFacing)/[locale]/_home-parts/Third";
+import Hero from "@/app/[locale]/_home-parts/Hero";
+import Second from "@/app/[locale]/_home-parts/Second";
+import Third from "@/app/[locale]/_home-parts/Third";
 
 export default function Home() {
 

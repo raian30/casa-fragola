@@ -1,7 +1,7 @@
 'use client'
 import {signOut} from "next-auth/react";
 import {ArrowLeft} from "lucide-react";
-import {NavButton} from "@/app/cms/_components/Nav";
+import {NavButton} from "@/app/[locale]/cms/_components/Nav";
 
 export default function Logout() {
     return (

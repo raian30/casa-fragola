@@ -9,6 +9,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import Link from "next/link";
 import {MinusCircle, Plus, PlusCircle, PlusCircleIcon} from "lucide-react";
+import {getOccupiedDates} from "@/app/[locale]/cms/_actions/getOccupiedDates";
 
 export default function Reservation() {
     const [isPending, startTransition] = useTransition()
@@ -32,7 +33,11 @@ export default function Reservation() {
         }
     ])
 
-    const disabeldRanges = ['1.1.1924:now', '22.6.2024:29.6.2024'];
+    const {occupiedDates, isLoading} = getOccupiedDates()
+
+    const todayMonth = new Date().getMonth() + 1;
+    const disabledRanges = [`1.${todayMonth}.2024:now`];
+
     const disabledDates: Date[] = [];
 
     function addDays(date: Date, days: number) {
@@ -60,12 +65,21 @@ export default function Reservation() {
             let today = new Date();
             today.setHours(0, 0, 0, 0);
             //@ts-ignore
-            disabledDates.push(d.toLocaleDateString('hr-HR'));
+            disabledDates.push(d);
         }
     }
-    disabeldRanges.forEach(range => processRange(range));
 
-
+    const getDisabledDates = () => {
+        if (!isLoading && occupiedDates) {
+            occupiedDates?.forEach(date => {
+                disabledRanges.push(date.range);
+            });
+            disabledRanges.forEach(range => processRange(range));
+            return disabledDates;
+        } else {
+            return [new Date()];
+        }
+    }
     let WantedRangeArray: Date[] = []
 
     //gleda da li je selected range dostupan i da li je selektano manje od 7 dana
@@ -147,26 +161,30 @@ export default function Reservation() {
             <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
             <div className={'flex flex-col gap-20 xl:gap-0 lg:flex-row justify-between items-start w-full'}>
                 <div className={'flex flex-col w-full lg:w-2/5 gap-10'}>
-                    <DateRange
-                        className={'shadow-[0px_0px_20px_1px_#c9c9c9] w-full rounded-md'}
-                        rangeColors={['#b96da8', '#b96da8', '#b96da8']}
-                        // @ts-ignore
-                        disabledDay={(date) => disabledDates.includes(date.toLocaleDateString('hr-HR'))}
-                        dateDisplayFormat='dd.MM.yyyy'
-                        locale={
-                            localActive == 'en' ? enUS :
-                                localActive == 'hr' ? hr :
-                                    localActive == 'it' ? it :
-                                        localActive == 'de' ? de :
-                                            localActive == 'fr' ? fr :
-                                                enUS
-                        }
-                        onChange={item => {
-                            //@ts-ignore
-                            return setDateRange([item.selection])
-                        }}
-                        ranges={dateRange}
-                    />
+                    {isLoading ? (
+                        <div className={'w-full h-[550px] bg-gray-200 rounded-xl animate-pulse'}></div>
+                    ) : (
+                        <DateRange
+                            className={'shadow-[0px_0px_20px_1px_#c9c9c9] w-full rounded-md'}
+                            rangeColors={['#b96da8', '#b96da8', '#b96da8']}
+                            // @ts-ignore
+                            disabledDates={getDisabledDates()}
+                            dateDisplayFormat='dd.MM.yyyy'
+                            locale={
+                                localActive == 'en' ? enUS :
+                                    localActive == 'hr' ? hr :
+                                        localActive == 'it' ? it :
+                                            localActive == 'de' ? de :
+                                                localActive == 'fr' ? fr :
+                                                    enUS
+                            }
+                            onChange={item => {
+                                //@ts-ignore
+                                return setDateRange([item.selection])
+                            }}
+                            ranges={dateRange}
+                        />
+                    )}
                     <div
                         className={'flex flex-col sm:flex-row sm:flex-wrap gap-5 justify-start sm:justify-between items-start sm:items-center'}>
                         <div className={'flex justify-center items-center gap-2'}>

@@ -1,4 +1,4 @@
-import Form from "@/app/cms/login/_components/Form";
+import Form from "@/app/[locale]/cms/login/_components/Form";
 import {redirect} from "next/navigation";
 import {getServerSession} from "next-auth";
 
@@ -8,6 +8,8 @@ export default async function Login() {
         redirect('/cms');
     }
     return (
-        <Form/>
+        <>
+            <Form/>
+        </>
     );
 }

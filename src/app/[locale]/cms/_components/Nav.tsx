@@ -4,7 +4,7 @@ import Link from "next/link";
 import {useEffect, useState} from 'react';
 import {signOut} from "next-auth/react";
 import {useRouter} from "next/navigation";
-import Logout from "@/app/cms/_components/Logout";
+import Logout from "@/app/[locale]/cms/_components/Logout";
 
 export default function AdminNavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

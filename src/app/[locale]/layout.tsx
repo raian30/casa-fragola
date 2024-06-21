@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import '../../globals.css'
-import NavBar from "@/app/(customerFacing)/[locale]/_components/Nav";
-import Footer from "@/app/(customerFacing)/[locale]/_components/Footer";
+import '../globals.css'
+import NavBar from "@/app/[locale]/_components/Nav";
+import Footer from "@/app/[locale]/_components/Footer";
 import {NextIntlClientProvider} from "next-intl";
 import {getMessages} from "next-intl/server";
 

@@ -22,11 +22,12 @@ export function SearchForParams({children}: {children: ReactNode}) {
             router.replace('/cms');
         }
 
-        const deleted = searchParams.get('deleted');
-        if (deleted === "success") {
-            toast.success("Uspješno ste se izbrisali zauzeti datum!");
+        const edited = searchParams.get('edited');
+        if (edited === "success") {
+            toast.success("Uspješno ste se uredili zauzeti datum!");
             router.replace('/cms');
         }
+
     }, [router]);
 
     return (

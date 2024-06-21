@@ -9,21 +9,29 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import {trpc} from "@/app/_trpc/client";
 import {useRouter} from "next/navigation";
+import {getOccupiedDates} from "@/app/[locale]/cms/_actions/getOccupiedDates";
+import {hr} from "date-fns/locale";
 
 export default function OccupyDate() {
     const OccupyDateMutation  = trpc.OccupyDate.useMutation()
     const router = useRouter()
 
+    const [errorMessage, setError] = useState<string | undefined>();
+
     const [dateRange, setDateRange] = useState([
         {
             startDate: new Date(Date.now()),
-            endDate: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000),
+            endDate: new Date(Date.now()),
             disabled: false,
             key: 'selection'
         }
     ])
 
-    const disabeldRanges = ['1.6.2024:now', '22.6.2024:29.6.2024'];
+    const {occupiedDates, error, isLoading} = getOccupiedDates()
+
+    const todayMonth = new Date().getMonth() + 1;
+    const disabledRanges = [`1.${todayMonth}.2024:now`];
+
     const disabledDates: Date[] = [];
 
     function addDays(date: Date, days: number) {
@@ -51,10 +59,21 @@ export default function OccupyDate() {
             let today = new Date();
             today.setHours(0, 0, 0, 0);
             //@ts-ignore
-            disabledDates.push(d.toLocaleDateString('hr-HR'));
+            disabledDates.push(d);
         }
     }
-    disabeldRanges.forEach(range => processRange(range));
+
+    const getDisabledDates = () => {
+        if (!isLoading && occupiedDates) {
+            occupiedDates?.forEach(date => {
+                disabledRanges.push(date.range);
+            });
+            disabledRanges.forEach(range => processRange(range));
+            return disabledDates;
+        } else {
+            return [new Date()];
+        }
+    }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(async() => {
@@ -66,7 +85,12 @@ export default function OccupyDate() {
             let checkout = dateRange[0].endDate.toLocaleDateString('hr-HR').toString().replaceAll(" ", "")
             let [EndDay, EndMonth, EndYear] = checkout.split('.')
 
+
             const DateRangeFormatted = `${Number(StartDay)}.${Number(StartMonth)}.${Number(StartYear)}:${Number(EndDay)}.${Number(EndMonth)}.${Number(EndYear)}`
+
+            if ((Number(EndDay) - Number(StartDay) + 1) <= 1) {
+                return setError('Najmanje možete zauzeti 2 dana')
+            }
 
             try {
                 const DateReturned = await OccupyDateMutation.mutateAsync({
@@ -98,17 +122,22 @@ export default function OccupyDate() {
                         <h1 className={'text-3xl'}>Zauzmite novi datum</h1>
                         <div className={'flex flex-col gap-20 xl:gap-0 lg:flex-row justify-between items-start w-full'}>
                             <div className={'flex flex-col w-full lg:w-2/5 gap-10'}>
-                                <DateRange
-                                    rangeColors={['#b96da8', '#b96da8', '#b96da8']}
-                                    // @ts-ignore
-                                    disabledDay={(date) => disabledDates.includes(date.toLocaleDateString('hr-HR'))}
-                                    dateDisplayFormat='dd.MM.yyyy'
-                                    onChange={item => {
-                                        //@ts-ignore
-                                        return setDateRange([item.selection])
-                                    }}
-                                    ranges={dateRange}
-                                />
+                                {isLoading ? (
+                                    <div className={'w-full h-[650px] bg-gray-200 rounded-xl animate-pulse'}></div>
+                                ) : (
+                                    <DateRange
+                                        rangeColors={['#b96da8', '#b96da8', '#b96da8']}
+                                        disabledDates={getDisabledDates()}
+                                        dateDisplayFormat='dd.MM.yyyy'
+                                        onChange={item => {
+                                            setError('')
+                                            //@ts-ignore
+                                            setDateRange([item.selection])
+                                        }}
+                                        locale={hr}
+                                        ranges={dateRange}
+                                    />
+                                )}
                                 <div
                                     className={'flex flex-col sm:flex-row sm:flex-wrap gap-5 justify-start sm:justify-between items-start sm:items-center'}>
                                     <div className={'flex justify-center items-center gap-2'}>
@@ -147,9 +176,11 @@ export default function OccupyDate() {
                                                className={'border-r-0 outline-0 border-b bg-gray-200 border-black px-2.5 py-2.5 w-full'}/>
                                     </div>
                                 </div>
-                                <button type={'submit'}
-                                        className={'disabled:bg-gray-200 disabled:cursor-auto cursor-pointer bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-full text-center'}>Zauzmi datum
+                                <button disabled={!!errorMessage || isLoading} type={'submit'}
+                                        className={'disabled:bg-gray-200 disabled:cursor-auto cursor-pointer bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-full text-center'}>Zauzmi
+                                    datum
                                 </button>
+                                <p className={`text-red-500 ${!errorMessage && 'my-3'}`}>{errorMessage}</p>
                             </form>
                         </div>
                     </section>

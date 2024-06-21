@@ -1,15 +1,30 @@
-import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
+'use client'
+import {FilledLink} from "@/app/[locale]/_components/Buttons";
 import Image from 'next/image'
 import {useLocale, useTranslations} from "next-intl";
-import Reservation from "@/app/(customerFacing)/[locale]/_components/Reservation";
+import Reservation from "@/app/[locale]/_components/Reservation";
+import {useState} from "react";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import {trpc} from "@/app/_trpc/client";
+import {httpBatchLink} from "@trpc/client";
 
 export default function Third() {
     const t = useTranslations('Third')
     const localActive = useLocale()
 
+    const [queryClient] = useState(() => new QueryClient())
+    const [trpcClient] = useState(() => trpc.createClient({
+        links: [
+            httpBatchLink({
+                url:  `/api/trpc`,
+            })
+        ]
+    }))
+
     return (
         <section id={'gallery'} className="w-screen px-0 md:px-0 lg:px-12 xl:px-[5.5rem] 2xl:px-[7.5rem] pb-20">
-            <div className="bg-[#F5F5F5] px-10 md:px-20 lg:px-12 xl:px-[5.5rem] 2xl:px-[7.5rem] py-20 flex flex-col gap-20">
+            <div
+                className="bg-[#F5F5F5] px-10 md:px-20 lg:px-12 xl:px-[5.5rem] 2xl:px-[7.5rem] py-20 flex flex-col gap-20">
                 <div className={'flex flex-col gap-10'}>
                     <h2 className={'text-xl md:text-[1.2rem] font-light'}>{t('opis-1')}</h2>
                     <FilledLink href={`/${localActive}#reservation`} className={'w-fit'}>{t('btn-text-1')}</FilledLink>
@@ -37,8 +52,12 @@ export default function Third() {
                     <Image src={'/image2.png'} alt={'House image'} width={794} height={505} quality={100}
                            className={'object-cover w-[50%]'}/>
                 </div>
-                <Reservation/>
+                <trpc.Provider queryClient={queryClient} client={trpcClient}>
+                    <QueryClientProvider client={queryClient}>
+                        <Reservation/>
+                    </QueryClientProvider>
+                </trpc.Provider>
             </div>
         </section>
-    )
+)
 }

@@ -1,4 +1,4 @@
-import {FilledLink} from "@/app/(customerFacing)/[locale]/_components/Buttons";
+import {FilledLink} from "@/app/[locale]/_components/Buttons";
 import type { Metadata } from "next";
 import {useLocale, useTranslations} from "next-intl";
 
