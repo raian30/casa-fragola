@@ -1,7 +1,6 @@
 import {privateProcedure, publicProcedure, router} from './trpc';
 import {z} from "zod";
 import {db} from "@/db";
-import {revalidatePath} from "next/cache";
 
 export const appRouter = router({
     OccupyDate: privateProcedure.input(z.object({range: z.string()})).mutation(async({ctx, input}) => {
@@ -12,7 +11,7 @@ export const appRouter = router({
         })
         return date
     }),
-    GetOccupiedDates: privateProcedure.query(async({ctx}) => {
+    GetOccupiedDates: publicProcedure.query(async({ctx}) => {
         const date = await db.reservedDays.findMany({
             orderBy: {
                 createdAt: 'desc',
