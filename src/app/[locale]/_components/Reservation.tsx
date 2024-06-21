@@ -27,7 +27,7 @@ export default function Reservation() {
     const [dateRange, setDateRange] = useState([
         {
             startDate: new Date(Date.now()),
-            endDate: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000),
+            endDate: new Date(Date.now()),
             disabled: false,
             key: 'selection'
         }
