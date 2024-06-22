@@ -71,7 +71,7 @@ export default function Reservation() {
 
     const getDisabledDates = () => {
         if (!isLoading && occupiedDates) {
-            occupiedDates?.forEach(date => {
+            occupiedDates?.items.forEach(date => {
                 disabledRanges.push(date.range);
             });
             disabledRanges.forEach(range => processRange(range));
@@ -320,10 +320,6 @@ export default function Reservation() {
                             className={'disabled:bg-gray-200 disabled:cursor-auto cursor-pointer bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-full text-center'}> {t('rezerviraj')}
                     </button>
                     <p className={`text-red-500 ${!error && !warning && 'my-3'}`}>{error || warning}</p>
-                    <Link target={'_blank'} href={'https://www.airbnb.com/rooms/1030204797174613452'}
-                          className={'flex justify-end items-center gap-5 text-[#828282] w-full font-semibold'}>{t('powered-by')}
-                        <Image src={'/airbnb-logo.png'} className={'contrast-0'} alt={'Airbnb'} width={100}
-                               height={31}/></Link>
                 </form>
             </div>
         </div>

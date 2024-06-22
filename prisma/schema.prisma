@@ -16,8 +16,10 @@ datasource db {
 // MODELI
 
 model ReservedDays {
-  id    String @id @default(uuid())
-  range String
+  id        String   @id @default(uuid())
+  startDate DateTime
+  endDate   DateTime
+  range     String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

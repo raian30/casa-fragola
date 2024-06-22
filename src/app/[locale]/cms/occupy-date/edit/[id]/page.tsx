@@ -1,7 +1,7 @@
 'use client'
-import {FormEvent, startTransition, Suspense, useEffect, useState} from "react";
+import {FormEvent, Suspense, useEffect, useState, useTransition} from "react";
 import {ToastContainer} from "react-toastify";
-import {ChevronLeft} from "lucide-react";
+import {ChevronLeft, LoaderCircle} from "lucide-react";
 import Link from "next/link";
 import {DateRange} from "react-date-range";
 
@@ -94,7 +94,7 @@ export default function EditOccupiedDate({params: {id}}: {params: {id: string}})
 
     const getDisabledDates = () => {
         if (!isLoading && occupiedDates && oldOccupiedDate) {
-            occupiedDates?.forEach(date => {
+            occupiedDates?.items.forEach(date => {
                 disabledRanges.push(date.range);
             });
             disabledRanges.forEach(range => processRange(range));
@@ -124,6 +124,8 @@ export default function EditOccupiedDate({params: {id}}: {params: {id: string}})
         }
     }
 
+    const [isPending, startTransition] = useTransition()
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(async() => {
             e.preventDefault()
@@ -134,10 +136,16 @@ export default function EditOccupiedDate({params: {id}}: {params: {id: string}})
             let checkout = dateRange[0].endDate.toLocaleDateString('hr-HR').toString().replaceAll(" ", "")
             let [EndDay, EndMonth, EndYear] = checkout.split('.')
 
-
             const DateRangeFormatted = `${Number(StartDay)}.${Number(StartMonth)}.${Number(StartYear)}:${Number(EndDay)}.${Number(EndMonth)}.${Number(EndYear)}`
 
-            if ((Number(EndDay) - Number(StartDay) + 1) <= 1) {
+            let startDate = new Date(Number(StartYear), Number(StartMonth) - 1, Number(StartDay));
+            let endDate = new Date(Number(EndYear), Number(EndMonth) - 1, Number(EndDay));
+
+            //@ts-ignore
+            let diffTime = endDate - startDate;
+            let diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 1) {
                 return setError('Najmanje možete zauzeti 2 dana')
             }
 
@@ -148,6 +156,10 @@ export default function EditOccupiedDate({params: {id}}: {params: {id: string}})
             try {
                 const DateReturned = await OccupyDateEditMutation.mutateAsync({
                     id: oldOccupiedDate.id,
+                    //@ts-ignore
+                    startDate: startDate,
+                    //@ts-ignore
+                    endDate: endDate,
                     range: DateRangeFormatted
                 });
 
@@ -246,9 +258,13 @@ export default function EditOccupiedDate({params: {id}}: {params: {id: string}})
                                         )}
                                 </div>
                             </div>
-                            <button disabled={!!errorMessage || isLoading || oldIsLoading} type={'submit'}
-                                    className={'disabled:bg-gray-200 disabled:cursor-auto cursor-pointer bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-full text-center'}>Uredi zauzeti
-                                datum
+                            <button disabled={!!errorMessage || isLoading || oldIsLoading || isPending} type={'submit'}
+                                    className={'disabled:bg-gray-200 disabled:cursor-auto cursor-pointer bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-full text-center flex justify-center items-center'}>
+                                {isPending ? (
+                                    <LoaderCircle className={'text-gray-600 transition-all animate-spin'}/>
+                                ) : (
+                                    'Uredi zauzeti datum'
+                                )}
                             </button>
                             <p className={`text-red-500 ${!errorMessage && 'my-3'}`}>{errorMessage}</p>
                         </form>
