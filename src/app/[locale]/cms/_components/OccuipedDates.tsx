@@ -30,7 +30,7 @@ export default function OccupiedDates() {
         <div className={'flex flex-col gap-5'}>
             <div className={'px-5 pb-2 w-full border-b border-b-gray-600'}>
                 <button onClick={() => ChangeSortBy()}>
-                    <ArrowDownUp className={'hover:rotate-180 text-gray-600 hover:text-[#B96DA8] transition-all'}/>
+                    <ArrowDownUp className={`hover:rotate-${sortBy == 'asc' ? '' : '180'} text-gray-600 hover:text-[#B96DA8] transition-all ${sortBy == 'asc' ? 'rotate-180' : ''}`}/>
                 </button>
             </div>
             {occupiedDates.data && occupiedDates.data.pages[0].items.length > 0 ? occupiedDates.data?.pages.map(page => (

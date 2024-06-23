@@ -18,7 +18,7 @@ export const appRouter = router({
             z.object({
                 limit: z.number().min(1).max(100).nullish(),
                 cursor: z.string().nullish(),
-                sortBy: z.string().optional()
+                sortBy: z.enum(['desc', 'asc']).nullish()
             }).optional())
         .query(async (opts) => {
             const { input } = opts;

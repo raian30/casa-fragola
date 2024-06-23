@@ -7,7 +7,7 @@ import {toast} from "react-toastify";
 export function DeleteOccupiedDate({ id }: { id: string }) {
     const [isPending, startTransition] = useTransition()
     const OccupyDateMutation = trpc.DeleteOccupiedDate.useMutation();
-    let occupiedDates = trpc.GetOccupiedDates.useInfiniteQuery({limit: 5}, {getNextPageParam: (lastPage) => lastPage.nextCursor});
+    let occupiedDates = trpc.GetOccupiedDates.useInfiniteQuery({limit: 5, sortBy: 'desc'}, {getNextPageParam: (lastPage) => lastPage.nextCursor});
 
     return (
         <button disabled={isPending} onClick={() => {
