@@ -29,8 +29,7 @@ export default function OccupyDate() {
 
     const {occupiedDates, error, isLoading} = getOccupiedDates()
 
-    const todayMonth = new Date().getMonth() + 1;
-    const disabledRanges = [`1.${todayMonth}.2024:now`];
+    const disabledRanges: string[] = [];
 
     const disabledDates: Date[] = [];
 
@@ -44,16 +43,10 @@ export default function OccupyDate() {
     function processRange(range: string) {
         let [start, end] = range.split(':');
 
-        let startDate = start === 'now' ? new Date() : new Date(start.split('.').reverse().join('-'));
+        let startDate = new Date(start.split('.').reverse().join('-'));
 
-        let endDate;
-        if (end === 'now') {
-            endDate = new Date();
-            endDate.setDate(endDate.getDate() - 1);
-        } else {
-            let [endDay, endMonth, endYear] = end.split('.').map(Number);
-            endDate = new Date(endYear, endMonth - 1, endDay);
-        }
+        let [endDay, endMonth, endYear] = end.split('.').map(Number);
+        let endDate = new Date(endYear, endMonth - 1, endDay);
 
         for (let d = startDate; d <= endDate; d = addDays(d, 1)) {
             let today = new Date();
@@ -139,6 +132,7 @@ export default function OccupyDate() {
                                 ) : (
                                     <DateRange
                                         rangeColors={['#b96da8', '#b96da8', '#b96da8']}
+                                        minDate={new Date(Date.now())}
                                         disabledDates={getDisabledDates()}
                                         dateDisplayFormat='dd.MM.yyyy'
                                         onChange={item => {

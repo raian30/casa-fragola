@@ -44,7 +44,7 @@ export default function Footer() {
                     <p>Mladen Radolović</p>
                     <Link target={'_blank'} href={'https://www.google.com/maps/place/Casa+Fragola/@45.2330496,13.7098128,19z/data=!4m9!3m8!1s0x477ca30028ef1679:0xc1fe4524a1c57395!5m2!4m1!1i2!8m2!3d45.2330933!4d13.7099127!16s%2Fg%2F11vprjfr95?entry=ttu'}
                           className={'hover:text-gray-500 transition-all flex gap-4'}><MapPin/>Pršurići 16, 52463 Višnjan</Link>
-                    <Link target={'_blank'} href={'mladen.radolovic@gmail.com'}
+                    <Link target={'_blank'} href={'mailto:mladen.radolovic@gmail.com'}
                           className={'hover:text-gray-500 transition-all flex gap-4'}><Mail/>mladen.radolovic@gmail.com</Link>
                 </div>
             </div>

@@ -61,7 +61,12 @@
     "broj-djece": "Numero di bambini (<13 anni)",
     "broj-beba": "Numero di neonati (<2 anni)",
     "rezerviraj": "Prenota",
-    "powered-by": "Prenotazione fornita da"
+
+    "ime": "Nome",
+    "prezime": "Cognome",
+    "telefon": "Telefono",
+    "slazem-se": "Sono d'accordo con",
+    "odredbama-i-uvjetima": "termini e condizioni"
   },
   "Footer": {
     "copy": "Casa Fragola. Tutti i diritti riservati",

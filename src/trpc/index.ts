@@ -3,6 +3,44 @@ import {z} from "zod";
 import {db} from "@/db";
 
 export const appRouter = router({
+    //Reservation
+    CreateReservation: publicProcedure.input(z.object({
+        firstName: z.string(),
+        lastName: z.string(),
+        email: z.string(),
+        phone: z.string(),
+        checkIn: z.string().datetime(),
+        checkOut: z.string().datetime(),
+        adults: z.number(),
+        children: z.number(),
+        babies: z.number(),
+        range: z.string()
+    })).mutation(async ({ctx, input}) => {
+        const reservation = await db.reservation.create({
+            data: {
+                firstName: input.firstName,
+                lastName: input.lastName,
+                email: input.email,
+                phone: input.phone,
+                checkIn: input.checkIn,
+                checkOut: input.checkOut,
+                adults: input.adults,
+                children: input.children,
+                babies: input.babies,
+                reservedDays: {
+                    create: [{
+                        startDate: input.checkIn,
+                        endDate: input.checkOut,
+                        range: input.range
+                    }]
+                }
+            }
+        }, )
+
+        return reservation
+    }),
+
+    //Reserved Days
     OccupyDate: privateProcedure.input(z.object({range: z.string(), startDate: z.string().datetime(), endDate: z.string().datetime()})).mutation(async({ctx, input}) => {
         let date = await db.reservedDays.create({
             data: {

@@ -61,7 +61,12 @@
     "broj-djece": "Anzahl der Kinder (<13 Jahre)",
     "broj-beba": "Anzahl der Babys (<2 Jahre)",
     "rezerviraj": "Buchen",
-    "powered-by": "Reservierung betrieben von"
+    
+    "ime": "Name",
+    "prezime": "Nachname",
+    "telefon": "Telefon",
+    "slazem-se": "Ich stimme zu",
+    "odredbama-i-uvjetima": "Bedingungen und Konditionen"
   },
   "Footer": {
     "copy": "Casa Fragola. Alle Rechte vorbehalten",

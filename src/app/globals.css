@@ -41,7 +41,7 @@ html {
     scroll-padding-top: 150px
 }
 
-input{
+input[type='text'] {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
@@ -67,7 +67,3 @@ input{
         height: 4em !important;
     }
 }
-
-/*@media (width > 500px) {*/
-/*    height: 4em !important;*/
-/*}*/

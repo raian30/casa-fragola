@@ -15,16 +15,6 @@ datasource db {
 
 // MODELI
 
-model ReservedDays {
-  id        String   @id @default(uuid())
-  startDate DateTime
-  endDate   DateTime
-  range     String
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
 model Reservation {
   id        String @id @default(uuid())
   firstName String
@@ -32,11 +22,32 @@ model Reservation {
   email     String
   phone     String
 
-  checkIn  String
-  checkOut String
+  checkIn  DateTime
+  checkOut DateTime
   adults   Int
   children Int
   babies   Int
+
+  status Status @default(ACCEPTED)
+
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  reservedDays ReservedDays[]
+}
+
+enum Status {
+  ACCEPTED
+  REJECTED
+}
+
+model ReservedDays {
+  id        String   @id @default(uuid())
+  startDate DateTime
+  endDate   DateTime
+  range     String
+
+  reservation   Reservation? @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  reservationId String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

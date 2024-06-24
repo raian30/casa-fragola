@@ -67,7 +67,11 @@
 
     "rezerviraj": "Rezerviraj",
 
-    "powered-by": "Rezervaciju Pokreće"
+    "ime": "Ime",
+    "prezime": "Prezime",
+    "telefon": "Telefon",
+    "slazem-se": "Slažem se s",
+    "odredbama-i-uvjetima": "uvjetima i odredbama"
   },
   "Footer": {
     "copy": "Casa Fragola. Sva prava pridržana",
