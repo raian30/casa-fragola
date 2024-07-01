@@ -22,9 +22,9 @@ export function SearchForParams({children}: {children: ReactNode}) {
             router.replace('/cms');
         }
 
-        const edited = searchParams.get('edited');
+        const edited = searchParams.get('deleted');
         if (edited === "success") {
-            toast.success("Uspješno ste se uredili zauzeti datum!");
+            toast.success("Uspješno ste se izbrisali rezervaciju datum!");
             router.replace('/cms');
         }
 

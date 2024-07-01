@@ -13,7 +13,10 @@ import {z} from "zod";
 
 export default function Reservation() {
     const [isPending, startTransition] = useTransition()
+    let occupiedDates = trpc.GetOccupiedDates.useQuery();
     const CreateReservationMutation  = trpc.CreateReservation.useMutation()
+    const SendEmail = trpc.NewReservationEmail.useMutation()
+
     const localActive = useLocale()
     const t = useTranslations('Third')
 
@@ -40,8 +43,6 @@ export default function Reservation() {
             key: 'selection'
         }
     ])
-
-    let occupiedDates = trpc.GetOccupiedDates.useQuery();
 
     const disabledRanges: string[] = [];
 
@@ -97,11 +98,9 @@ export default function Reservation() {
         const endDate = new Date(endYear, endMonth - 1, endDay);
 
         for (let d = startDate; d <= endDate; d = addDays(d, 1)) {
-            console.log(d)
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             if (d >= today) {
-                console.log(d, "da")
                 //@ts-ignore
                 WantedRangeArray.push(d.toLocaleDateString('hr-HR'));
             }
@@ -135,26 +134,36 @@ export default function Reservation() {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         startTransition(async () => {
-            e.preventDefault()
+            setWarning('')
 
-            if (error) {
-                return
-            }
+            e.preventDefault()
 
             ValidateRange()
 
             ValidatePersonNumber(numberOfAdults, numberOfChildren, numberOfInfants)
 
+            if (error) {
+                return
+            }
+
+            let warningOccured = false
             if(WantedRangeArray.length < 7) {
+                warningOccured = true
                 return setWarning(t('error-premalo-odabranih-dana'))
             }
 
             if(!name || !surname || !email || !phone) {
+                warningOccured = true
                 return setWarning('Popunite sva polja.')
             }
 
             if(!termsAgreed) {
+                warningOccured = true
                 return setWarning('Prihvatite naše uvjete.')
+            }
+
+            if (warningOccured) {
+                return
             }
 
             let checkin = dateRange[0].startDate.toLocaleDateString('hr-HR').toString().replaceAll(" ", "")
@@ -181,10 +190,32 @@ export default function Reservation() {
             }, {onSettled: () => {occupiedDates.refetch()}});
 
             if(DateReturned.id) {
+                await SendEmail.mutateAsync({
+                    id: DateReturned.id,
+                    firstName: name,
+                    lastName: surname,
+                    email: email,
+                });
+
+                setName('')
+                setSurname('')
+                setEmail('')
+                setPhone('')
+                setDateRange([
+                    {
+                        startDate: new Date(Date.now()),
+                        endDate: new Date(Date.now()),
+                        disabled: false,
+                        key: 'selection'
+                    }
+                ])
+                setNumberOfAdults(0)
+                setNumberOfChildren(0)
+                setNumberOfInfants(0)
                 setSuccess('Uspješno ste rezervirali Casa Fragolu, kontaktirat cemo Vas za dalje.')
             }
-
         })
+
     }
 
     return (
@@ -409,7 +440,7 @@ export default function Reservation() {
 
                     )}
                     {(success) && (
-                        <p className={`text-gray-700 bg-[#d7ffd7] p-5`}>{success}</p>
+                        <p className={`text-[#007e00] bg-[#d7ffd7] p-5`}>{success}</p>
                     )}
                 </form>
             </div>
