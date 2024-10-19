@@ -8,6 +8,7 @@ import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {trpc} from "@/app/_trpc/client";
 import {httpBatchLink} from "@trpc/client";
 import FeaturesModal from "@/app/[locale]/_components/FeaturesModal";
+import RulesModal from "@/app/[locale]/_components/RulesModal";
 
 export default function Third() {
     const t = useTranslations('Third')
@@ -29,7 +30,7 @@ export default function Third() {
                 <div className={'flex flex-col gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-4')}</h1>
                     <h2 className={'text-xl md:text-[1.2rem] font-light'}>{t('opis-1')}</h2>
-                    <FilledLink href={`/${localActive}#reservation`} className={'w-fit'}>{t('btn-text-1')}</FilledLink>
+                    <RulesModal/>
                 </div>
                 <div className={'flex gap-2 lg:gap-8 justify-between overflow-hidden h-64 lg:h-auto'}>
                     <Image src={'/image4.png'} alt={'House image 4'} width={1100} height={505}
