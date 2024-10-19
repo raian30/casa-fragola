@@ -16,10 +16,7 @@ export default function Hero() {
                 <Link href={`/${localActive}#attractions`}
                     className={'group z-10 absolute bottom-4 md:bottom-[4rem] right-10 md:right-20 lg:right-24 xl:right-44 2xl:right-60 text-[#FFF1DD] inline-flex gap-5 justify-center items-center'}>
                     <p className={'sm:block hidden'}>{t('pogledajte-vise')}</p>
-                    {/*<div className={'relative overflow-hidden'}>*/}
-                    {/*    <ArrowDown className={'absolute -translate-y-full group-hover:translate-y-0 transition-all'} strokeWidth={1} size={40}/>*/}
                         <CircleArrowDown strokeWidth={1} size={40}/>
-                    {/*</div>*/}
                 </Link>
             </section>
             <section className={'bg-[#F5F5F5] w-screen px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20'}>

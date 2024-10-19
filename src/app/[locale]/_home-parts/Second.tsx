@@ -32,7 +32,7 @@ export default function Second() {
                     <FilledLink href={`/${localActive}#reservation`}>{t('btn-text-2')}</FilledLink>
                 </div>
                 <div className={'w-full h-full lg:w-1/2'}>
-                    <Image src={'/image2.png'} alt={'House picture 2'} width={760} height={505}
+                    <Image src={'/image3.png'} alt={'House picture 3'} width={760} height={505}
                            className={'w-full h-full object-cover'}/>
                 </div>
             </div>
