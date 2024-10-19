@@ -1,7 +1,7 @@
 {
   "NavBar": {
     "pocetna": "Startseite",
-    "znacajke": "Eigenschaften",
+    "znacajke": "Merkmale",
     "galerija": "Galerie",
     "atrakcije": "Attraktionen",
     "rezervacije": "Reservierungen",
@@ -14,68 +14,74 @@
   },
   "Hero": {
     "text-prvi-dio": "Komfort",
-    "text-drugi-dio": "Istrisches Erbe",
+    "text-drugi-dio": "Istrianisches Erbe",
     "pogledajte-vise": "Mehr Sehen",
-    "long-text": "Möchten Sie einen ruhigen und erholsamen Urlaub fernab von Menschenmassen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung, köstlichem Essen und hochwertigen Weinen, die Istrien bietet? Hier finden Sie die perfekte Kombination aus Entspannung und Genuss in allem, was Istrien zu bieten hat!"
+    "long-text": "Möchten Sie einen ruhigen und entspannenden Urlaub fernab der Menschenmengen, aber nahe an Veranstaltungen, Unterhaltung, köstlichem Essen und hervorragenden Weinen, die Istrien bietet? Hier finden Sie die perfekte Mischung aus Entspannung und Genuss in allem, was Istrien zu bieten hat!"
   },
   "Second": {
-    "naslov-1": "Erdbeere und Weiß",
-    "opis-1": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "naslov-1": "Entdecken Sie das Beste aus Istrien",
+    "opis-1": "Charmante Städte, Weinrouten, Radwege und schöne Strände – alles liegt in greifbarer Nähe.",
     "btn-text-1": "Jetzt Buchen",
 
-    "naslov-2": "Oliven und Erdbeeren",
-    "opis-2": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
+    "naslov-2": "Istrien ist der Ideale Ort",
+    "opis-2": "Genießen Sie die Ruhe der Natur und eine entspannende Umgebung. Istrien ist der perfekte Ort, um dem Alltagsstress zu entfliehen.",
     "btn-text-2": "Jetzt Buchen",
 
-    "naslov-3": "Eigenschaften",
-    "opis-3": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
-    "btn-text-3": "Alle Eigenschaften Ansehen",
+    "naslov-3": "Alles für Ihren Perfekten Urlaub",
+    "opis-3": "Genießen Sie Komfort und Entspannung, mit erstklassigen Merkmalen, die all Ihre Bedürfnisse erfüllen.",
+    "btn-text-3": "Alle Merkmale Anzeigen",
 
-    "znacajke-kreveti": "3 Betten (1 Doppelbett und 2 Einzelbetten)",
+    "znacajke-kreveti": "3 Betten (1 Doppel- und 2 Einzelbetten)",
     "znacajke-bazen": "Außenpool",
     "znacajke-wifi": "Kostenloses WLAN",
-    "znacajke-parking": "Kostenlose Parkplätze",
+    "znacajke-parking": "Kostenloses Parken",
     "znacajke-klima": "Klimaanlage",
     "znacajke-rostilj": "Grillausstattung"
   },
   "Third": {
-    "opis-1": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
-    "btn-text-1": "Jetzt Buchen",
+    "naslov-4": "Hausregeln",
+    "opis-1": "Bitte machen Sie sich mit den Regeln vertraut, um einen angenehmen Aufenthalt für alle Gäste zu gewährleisten. Vielen Dank für Ihr Verständnis!",
+    "btn-text-1": "Regeln Ansehen",
 
-    "naslov-2": "Genießen Sie die Ferien",
-    "opis-2": "Möchten Sie einen Urlaub in Ruhe und Abgeschiedenheit vom Rest der Welt genießen, aber dennoch in der Nähe von Veranstaltungen, Unterhaltung sowie gastronomischem und önologischem Genuss",
-    "btn-text-2": "Jetzt Buchen",
+    "naslov-2": "Unsere Galerie Ansehen",
+    "opis-2": "Entdecken Sie Fotos, die die Schönheit unseres Raumes und die wunderbaren Momente zeigen, die Sie während Ihres Aufenthalts erleben können.",
+    "btn-text-2": "Galerie Ansehen",
 
-    "naslov-3": "Jetzt buchen",
-    "error-datum-nije-dostupan": "Das ausgewählte Datum ist nicht verfügbar, versuchen Sie ein anderes.",
-    "error-dogodila-se-greska": "Ein Fehler ist aufgetreten, überprüfen Sie alle Daten oder kontaktieren Sie uns.",
-    "error-previse-ljudi": "Das Haus kann maximal 4 Personen beherbergen.",
-    "error-premalo-ljudi": "Wählen Sie die Anzahl der Personen.",
+    "naslov-3": "Jetzt Buchen",
+
+    "error-datum-nije-dostupan": "Das ausgewählte Datum ist nicht verfügbar, bitte versuchen Sie ein anderes.",
+    "error-dogodila-se-greska": "Es ist ein Fehler aufgetreten, bitte überprüfen Sie alle Daten oder kontaktieren Sie uns.",
+    "error-previse-ljudi": "Das Haus kann maximal 4 Personen aufnehmen.",
+    "error-premalo-ljudi": "Bitte wählen Sie die Anzahl der Personen.",
     "error-premalo-odabranih-dana": "Es ist nicht möglich, weniger als 7 Tage zu buchen.",
-    "tumac-nedostupno": "Nicht verfügbar",
+
+    "tumac-nedostupno": "Nicht Verfügbar",
     "tumac-dostupno": "Verfügbar",
     "tumac-odabrano": "Ausgewählt",
+
     "dolazak": "Ankunft",
-    "odlazak": "Abreise",
+    "odlazak": "Abfahrt",
+
     "broj-odraslih": "Anzahl der Erwachsenen (>=13 Jahre)",
     "broj-djece": "Anzahl der Kinder (<13 Jahre)",
     "broj-beba": "Anzahl der Babys (<2 Jahre)",
-    "rezerviraj": "Buchen",
-    
-    "ime": "Name",
+
+    "rezerviraj": "Reservieren",
+
+    "ime": "Vorname",
     "prezime": "Nachname",
     "telefon": "Telefon",
     "slazem-se": "Ich stimme zu",
-    "odredbama-i-uvjetima": "Bedingungen und Konditionen"
+    "odredbama-i-uvjetima": "den Allgemeinen Geschäftsbedingungen"
   },
   "Footer": {
-    "copy": "Casa Fragola. Alle Rechte vorbehalten",
+    "copy": "Casa Fragola. Alle Rechte vorbehalten.",
     "politika-privatnosti": "Datenschutzrichtlinie",
     "politika-kolacica": "Cookie-Richtlinie",
 
     "linkovi": "Links",
     "pocetna": "Startseite",
-    "znacajke": "Eigenschaften",
+    "znacajke": "Merkmale",
     "galerija": "Galerie",
     "atrakcije": "Attraktionen",
     "rezervacije": "Reservierungen",

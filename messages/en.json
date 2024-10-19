@@ -13,63 +13,69 @@
     "francuski": "French"
   },
   "Hero": {
-    "text-prvi-dio": "The Comfort of",
+    "text-prvi-dio": "Comfort",
     "text-drugi-dio": "Istrian Heritage",
     "pogledajte-vise": "See More",
-    "long-text": "Do you want a peaceful and relaxing holiday away from the crowds, but close to events, entertainment, delicious food, and top-quality wines that Istria offers? Here you can find the perfect combination of relaxation and enjoyment in everything Istria provides!"
+    "long-text": "Do you want a peaceful and relaxing vacation away from the crowds, yet close to events, entertainment, delicious food, and fine wines that Istria offers? Here you can find the perfect blend of relaxation and enjoyment in everything Istria provides!"
   },
   "Second": {
-    "naslov-1": "Fragola and White",
-    "opis-1": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "naslov-1": "Discover the Best of Istria",
+    "opis-1": "Charming towns, wine routes, cycling trails, and beautiful beaches – everything is at your fingertips.",
     "btn-text-1": "Book Now",
 
-    "naslov-2": "Olive and Fragola",
-    "opis-2": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "naslov-2": "Istria is an Ideal Place",
+    "opis-2": "Enjoy the tranquility of nature and a relaxing environment. Istria is the perfect place to escape everyday stress.",
     "btn-text-2": "Book Now",
 
-    "naslov-3": "Features",
-    "opis-3": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
+    "naslov-3": "Everything for Your Perfect Vacation",
+    "opis-3": "Enjoy comfort and relaxation, with top features that meet all your needs.",
     "btn-text-3": "See All Features",
 
     "znacajke-kreveti": "3 beds (1 double and 2 single)",
-    "znacajke-bazen": "Outdoor Pool",
+    "znacajke-bazen": "Outdoor pool",
     "znacajke-wifi": "Free Wi-Fi",
-    "znacajke-parking": "Free Parking",
-    "znacajke-klima": "Air Conditioning",
-    "znacajke-rostilj": "BBQ Equipment"
+    "znacajke-parking": "Free parking",
+    "znacajke-klima": "Air conditioning",
+    "znacajke-rostilj": "Barbecue equipment"
   },
   "Third": {
-    "opis-1": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
-    "btn-text-1": "Book Now",
+    "naslov-4": "House Rules",
+    "opis-1": "Please familiarize yourself with the rules to ensure a pleasant stay for all guests. Thank you for your understanding!",
+    "btn-text-1": "View Rules",
 
-    "naslov-2": "Enjoy the Holidays",
-    "opis-2": "Do you want to enjoy a vacation in peace and seclusion from the rest of the world, yet be close to events, entertainment, and gastronomic and oenological hedonism",
-    "btn-text-2": "Book Now",
+    "naslov-2": "View Our Gallery",
+    "opis-2": "Explore photos showcasing the beauty of our space and the wonderful moments you can experience during your stay.",
+    "btn-text-2": "View Gallery",
 
-    "naslov-3": "Book now",
-    "error-datum-nije-dostupan": "The selected date is not available, please try another.",
-    "error-dogodila-se-greska": "An error occurred, please check all data or contact us.",
+    "naslov-3": "Book Now",
+
+    "error-datum-nije-dostupan": "Selected date is not available, please try another.",
+    "error-dogodila-se-greska": "An error occurred, please check all details or contact us.",
     "error-previse-ljudi": "The house can accommodate a maximum of 4 people.",
-    "error-premalo-ljudi": "Select the number of people.",
+    "error-premalo-ljudi": "Please select the number of people.",
     "error-premalo-odabranih-dana": "It is not possible to book less than 7 days.",
+
     "tumac-nedostupno": "Unavailable",
     "tumac-dostupno": "Available",
     "tumac-odabrano": "Selected",
+
     "dolazak": "Arrival",
     "odlazak": "Departure",
+
     "broj-odraslih": "Number of adults (>=13 years)",
     "broj-djece": "Number of children (<13 years)",
-    "broj-beba": "Number of babies (<2 years)",
-    "rezerviraj": "Book",
-    
-    "ime": "Name",
-    "prezime": "Surname",
+    "broj-beba": "Number of infants (<2 years)",
+
+    "rezerviraj": "Reserve",
+
+    "ime": "First Name",
+    "prezime": "Last Name",
     "telefon": "Phone",
     "slazem-se": "I agree with",
     "odredbama-i-uvjetima": "terms and conditions"
   },
   "Footer": {
-    "copy": "Casa Fragola. All rights reserved",
+    "copy": "Casa Fragola. All rights reserved.",
     "politika-privatnosti": "Privacy Policy",
     "politika-kolacica": "Cookie Policy",
 
@@ -84,6 +90,6 @@
   },
   "NotFound": {
     "text": "Unfortunately, this page does not exist.",
-    "btn-text": "Return to home"
+    "btn-text": "Return to Home"
   }
 }

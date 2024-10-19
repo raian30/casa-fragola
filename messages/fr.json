@@ -13,65 +13,71 @@
     "francuski": "Français"
   },
   "Hero": {
-    "text-prvi-dio": "Le confort Du",
+    "text-prvi-dio": "Confort",
     "text-drugi-dio": "Patrimoine Istrien",
     "pogledajte-vise": "Voir Plus",
-    "long-text": "Vous voulez des vacances tranquilles et reposantes loin de la foule, mais proches des événements, des divertissements, de la bonne nourriture et des vins de qualité offerts par l'Istrie ? Ici, vous pouvez trouver la combinaison parfaite de détente et de plaisir dans tout ce que l'Istrie a à offrir !"
+    "long-text": "Vous voulez des vacances paisibles et relaxantes loin de la foule, mais proches des événements, des divertissements, de la nourriture délicieuse et des vins raffinés que l'Istrie a à offrir ? Ici, vous pouvez trouver le mélange parfait de détente et de plaisir dans tout ce que l'Istrie propose !"
   },
   "Second": {
-    "naslov-1": "Fraise et Blanc",
-    "opis-1": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "naslov-1": "Découvrez le Meilleur de l'Istrie",
+    "opis-1": "Des villes charmantes, des routes viticoles, des pistes cyclables et de belles plages – tout est à portée de main.",
     "btn-text-1": "Réservez Maintenant",
 
-    "naslov-2": "Olive et Fraise",
-    "opis-2": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "naslov-2": "L'Istrie est un Endroit Idéal",
+    "opis-2": "Profitez du calme de la nature et d'un environnement relaxant. L'Istrie est l'endroit parfait pour échapper au stress quotidien.",
     "btn-text-2": "Réservez Maintenant",
 
-    "naslov-3": "Caractéristiques",
-    "opis-3": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
+    "naslov-3": "Tout pour Vos Vacances Parfaites",
+    "opis-3": "Profitez du confort et de la détente, avec des caractéristiques de premier ordre qui répondent à tous vos besoins.",
     "btn-text-3": "Voir Toutes les Caractéristiques",
 
     "znacajke-kreveti": "3 lits (1 double et 2 simples)",
-    "znacajke-bazen": "Piscine Extérieure",
-    "znacajke-wifi": "Wi-Fi Gratuit",
-    "znacajke-parking": "Parking Gratuit",
+    "znacajke-bazen": "Piscine extérieure",
+    "znacajke-wifi": "Wi-Fi gratuit",
+    "znacajke-parking": "Parking gratuit",
     "znacajke-klima": "Climatisation",
-    "znacajke-rostilj": "Équipement pour BBQ"
+    "znacajke-rostilj": "Équipement de barbecue"
   },
   "Third": {
-    "opis-1": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
-    "btn-text-1": "Réservez Maintenant",
+    "naslov-4": "Règles de la Maison",
+    "opis-1": "Veuillez vous familiariser avec les règles afin d'assurer un séjour agréable pour tous les invités. Merci de votre compréhension !",
+    "btn-text-1": "Voir les règles",
 
-    "naslov-2": "Profitez des Vacances",
-    "opis-2": "Voulez-vous profiter de vacances en paix et en isolement du reste du monde, tout en étant proche des événements, des divertissements et de l'hédonisme gastronomique et œnologique",
-    "btn-text-2": "Réservez Maintenant",
+    "naslov-2": "Voir Notre Galerie",
+    "opis-2": "Découvrez des photos montrant la beauté de notre espace et les merveilleux moments que vous pouvez vivre pendant votre séjour.",
+    "btn-text-2": "Voir la Galerie",
 
-    "naslov-3": "Réservez maintenant",
-    "error-datum-nije-dostupan": "La date sélectionnée n'est pas disponible, essayez-en une autre.",
-    "error-dogodila-se-greska": "Une erreur s'est produite, vérifiez toutes les données ou contactez-nous.",
-    "error-previse-ljudi": "La maison peut accueillir jusqu'à 4 personnes.",
-    "error-premalo-ljudi": "Sélectionnez le nombre de personnes.",
+    "naslov-3": "Réservez Maintenant",
+
+    "error-datum-nije-dostupan": "La date sélectionnée n'est pas disponible, veuillez essayer une autre.",
+    "error-dogodila-se-greska": "Une erreur est survenue, veuillez vérifier tous les détails ou nous contacter.",
+    "error-previse-ljudi": "La maison peut accueillir un maximum de 4 personnes.",
+    "error-premalo-ljudi": "Veuillez sélectionner le nombre de personnes.",
     "error-premalo-odabranih-dana": "Il n'est pas possible de réserver moins de 7 jours.",
+
     "tumac-nedostupno": "Indisponible",
     "tumac-dostupno": "Disponible",
     "tumac-odabrano": "Sélectionné",
+
     "dolazak": "Arrivée",
     "odlazak": "Départ",
+
     "broj-odraslih": "Nombre d'adultes (>=13 ans)",
     "broj-djece": "Nombre d'enfants (<13 ans)",
     "broj-beba": "Nombre de bébés (<2 ans)",
-    "rezerviraj": "Réservez",
+
+    "rezerviraj": "Réserver",
 
     "ime": "Prénom",
-    "prezime": "Nom",
+    "prezime": "Nom de famille",
     "telefon": "Téléphone",
-    "slazem-se": "Je suis d'accord avec",
-    "odredbama-i-uvjetima": "termes et conditions"
+    "slazem-se": "J'accepte",
+    "odredbama-i-uvjetima": "les termes et conditions"
   },
   "Footer": {
-    "copy": "Casa Fragola. Tous droits réservés",
-    "politika-privatnosti": "Politique de Confidentialité",
-    "politika-kolacica": "Politique de Cookies",
+    "copy": "Casa Fragola. Tous droits réservés.",
+    "politika-privatnosti": "Politique de confidentialité",
+    "politika-kolacica": "Politique des cookies",
 
     "linkovi": "Liens",
     "pocetna": "Accueil",
@@ -84,6 +90,6 @@
   },
   "NotFound": {
     "text": "Malheureusement, cette page n'existe pas.",
-    "btn-text": "Retour à la page d'accueil"
+    "btn-text": "Retour à l'accueil"
   }
 }

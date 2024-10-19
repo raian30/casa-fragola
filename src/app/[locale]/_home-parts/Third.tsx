@@ -26,6 +26,7 @@ export default function Third() {
             <div
                 className="bg-[#F5F5F5] px-10 md:px-20 lg:px-12 xl:px-[5.5rem] 2xl:px-[7.5rem] py-20 flex flex-col gap-20">
                 <div className={'flex flex-col gap-10'}>
+                    <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-4')}</h1>
                     <h2 className={'text-xl md:text-[1.2rem] font-light'}>{t('opis-1')}</h2>
                     <FilledLink href={`/${localActive}#reservation`} className={'w-fit'}>{t('btn-text-1')}</FilledLink>
                 </div>
