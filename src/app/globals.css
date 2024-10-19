@@ -9,6 +9,10 @@
     }
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 ::selection {
     color: #000000;
     background: #f1cbeb;

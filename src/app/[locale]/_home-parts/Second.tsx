@@ -2,6 +2,8 @@ import Image from "next/image";
 import {FilledLink} from "@/app/[locale]/_components/Buttons";
 import {Bed, Flame, ParkingSquare, Wifi, Wind} from "lucide-react";
 import {useLocale, useTranslations} from "next-intl";
+import FeaturesModal from "@/app/[locale]/_components/FeaturesModal";
+import React from "react";
 
 export default function Second() {
     const t = useTranslations('Second')
@@ -42,7 +44,7 @@ export default function Second() {
                     className={'w-full lg:w-1/2 px-6 md:px-12 xl:px-20 2xl:px-32 flex flex-col items-start justify-center gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-3')}</h1>
                     <p className={'text-lg font-light'}>{t('opis-3')}</p>
-                    <FilledLink href={`/${localActive}#attractions`} className={'text-sm'}>{t('btn-text-3')}</FilledLink>
+                    <FeaturesModal/>
                 </div>
                 <div className={'w-full h-full lg:w-1/2 px-6 md:px-12 lg:px-0 flex flex-col sm:flex-row gap-5 sm:gap-20'}>
                     <div className={'flex flex-col gap-5'}>
