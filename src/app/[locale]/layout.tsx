@@ -9,7 +9,7 @@ import {getMessages} from "next-intl/server";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Casa Fragola",
+  title: "Casa Fragola | Udobnost Istarske Baštine",
   description: "Želite li miran i opušten odmor daleko od gužve, ali i blizu događanja, zabave, ukusne hrane i vrhunskih vina koje Istra nudi? Ovdje možete pronaći savršen spoj odmora i uživanja u svemu što Istra pruža!",
 };
 
