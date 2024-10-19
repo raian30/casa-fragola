@@ -20,7 +20,7 @@ export default function Hero() {
                 </Link>
             </section>
             <section className={'bg-[#F5F5F5] w-screen px-10 md:px-20 lg:px-24 xl:px-44 2xl:px-60 py-20'}>
-                <h2 className={'text-xl md:text-[1.4rem] font-light'}>{t('long-text')}</h2>
+                <h1 className={'text-xl md:text-[1.4rem] font-light'}>{t('long-text')}</h1>
             </section>
         </>
     )
