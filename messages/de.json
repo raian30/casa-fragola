@@ -74,6 +74,102 @@
     "slazem-se": "Ich stimme zu",
     "odredbama-i-uvjetima": "den Allgemeinen Geschäftsbedingungen"
   },
+  "FeaturesModal": {
+    "sve-za-vas": "Alles für Sie",
+    "savsen-odmor": "Perfekter Urlaub",
+
+    "parking": "Parkplatz",
+    "parking-1": "Kostenlose Privatparkplätze stehen vor Ort ohne Reservierung zur Verfügung.",
+
+    "internet": "Internet",
+    "internet-1": "WLAN ist in allen Bereichen verfügbar und kostenfrei.",
+
+    "kuhinja": "Küche",
+    "kuhinja-1": "Kinderhochstuhl",
+    "kuhinja-2": "Herdplatte",
+    "kuhinja-3": "Backofen",
+    "kuhinja-4": "Waschmaschine",
+    "kuhinja-5": "Geschirrspüler",
+    "kuhinja-6": "Mikrowelle",
+    "kuhinja-7": "Kühlschrank",
+
+    "spavaca-soba": "Schlafzimmer",
+    "spavaca-soba-1": "Bettwäsche",
+
+    "kupaonica": "Badezimmer",
+    "kupaonica-1": "Toilettenpapier",
+    "kupaonica-2": "Handtücher",
+    "kupaonica-3": "Haartrockner",
+
+    "mediji": "Medien und Technologie",
+    "mediji-1": "Flachbild-TV",
+
+    "dvoriste": "Hof",
+    "dvoriste-1": "Privater Pool",
+    "dvoriste-2": "Balkon",
+    "dvoriste-3": "Garten",
+
+    "bazen": "Schwimmbad",
+
+    "hrana": "Essen und Trinken",
+    "hrana-1": "Kaffee-/Teezubereiter",
+
+    "usluga": "Service verfügbar in",
+    "usluga-1": "Deutsch",
+    "usluga-2": "Englisch",
+    "usluga-3": "Kroatisch",
+    "usluga-4": "Italienisch",
+
+    "ostalo": "Sonstiges",
+    "ostalo-1": "Klimaanlage",
+    "ostalo-2": "Bügeleisen",
+    "ostalo-3": "Nichtraucherunterkunft"
+  },
+
+  "RulesModal": {
+    "pravila-kuce": "Hausregeln",
+
+    "prijava": "Check-in",
+    "prijava-1": "Von 16:00 bis 20:00",
+    "prijava-2": "Bitte informieren Sie die Unterkunft im Voraus über Ihre Ankunftszeit.",
+
+    "odjava": "Check-out",
+    "odjava-1": "Von 07:00 bis 10:00",
+
+    "otkazivanje": "Stornierung / Vorauszahlung",
+    "otkazivanje-1": "Die Stornierungs- und Vorauszahlungsbedingungen variieren je nach Unterkunftstyp.",
+    "otkazivanje-2": "Geben Sie Ihre Aufenthaltsdaten ein und prüfen Sie die Bedingungen für die gewählte Option.",
+
+    "polog": "Rückzahlbare Kaution",
+    "polog-1": "Eine Kaution in Höhe von 200 € ist bei der Ankunft erforderlich. Diese wird in bar erhoben. Ihre Kaution wird in bar vollständig zurückerstattet, nachdem die Unterkunft geprüft wurde.",
+
+    "djeca": "Kinder und Betten",
+    "djeca-1": "Kinderregelungen",
+    "djeca-2": "Kinder jeden Alters sind willkommen.",
+    "djeca-3": "Um die richtigen Preise und Belegungsinformationen zu sehen, geben Sie die Anzahl der mitreisenden Kinder und deren Alter bei Ihrer Suche ein.",
+    "djeca-4": "Kinderbetten und Zustellbetten",
+    "djeca-5": "Die Anzahl der erlaubten Kinderbetten hängt von der gewählten Option ab. Überprüfen Sie die von Ihnen gewählte Option für weitere Informationen.",
+    "djeca-6": "In dieser Unterkunft sind keine Zustellbetten verfügbar.",
+    "djeca-7": "Alle Kinderbetten unterliegen der Verfügbarkeit.",
+
+    "granica": "Keine Altersbeschränkung",
+    "granica-1": "Es gibt keine Altersvorgabe für den Check-in.",
+
+    "kartice": "Karten, die in dieser Unterkunft akzeptiert werden",
+    "kartice-1": "Diese Unterkunft akzeptiert keine Barzahlung",
+
+    "pusenje": "Rauchen",
+    "pusenje-1": "Rauchen ist nicht erlaubt.",
+
+    "zabave": "Partys",
+    "zabave-1": "Partys/Veranstaltungen sind nicht erlaubt.",
+
+    "red": "Ruhezeiten",
+    "red-1": "Die Gäste müssen zwischen 22:00 und 08:00 Uhr leise sein.",
+
+    "ljubimci": "Haustiere",
+    "ljubimci-1": "Haustiere sind nicht erlaubt."
+  },
   "Footer": {
     "copy": "Casa Fragola. Alle Rechte vorbehalten.",
     "politika-privatnosti": "Datenschutzrichtlinie",

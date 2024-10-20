@@ -74,6 +74,102 @@
     "slazem-se": "I agree with",
     "odredbama-i-uvjetima": "terms and conditions"
   },
+  "FeaturesModal": {
+    "sve-za-vas": "All for your",
+    "savsen-odmor": "Perfect vacation",
+
+    "parking": "Parking",
+    "parking-1": "Free private parking is available on-site without reservation.",
+
+    "internet": "Internet",
+    "internet-1": "WiFi is available throughout the property and is free of charge.",
+
+    "kuhinja": "Kitchen",
+    "kuhinja-1": "Child's high chair",
+    "kuhinja-2": "Stovetop",
+    "kuhinja-3": "Oven",
+    "kuhinja-4": "Washing machine",
+    "kuhinja-5": "Dishwasher",
+    "kuhinja-6": "Microwave",
+    "kuhinja-7": "Refrigerator",
+
+    "spavaca-soba": "Bedroom",
+    "spavaca-soba-1": "Bed linen",
+
+    "kupaonica": "Bathroom",
+    "kupaonica-1": "Toilet paper",
+    "kupaonica-2": "Towels",
+    "kupaonica-3": "Hairdryer",
+
+    "mediji": "Media and technology",
+    "mediji-1": "Flat-screen TV",
+
+    "dvoriste": "Courtyard",
+    "dvoriste-1": "Private pool",
+    "dvoriste-2": "Balcony",
+    "dvoriste-3": "Garden",
+
+    "bazen": "Pool",
+
+    "hrana": "Food and drink",
+    "hrana-1": "Coffee/tea maker",
+
+    "usluga": "Service available in",
+    "usluga-1": "German",
+    "usluga-2": "English",
+    "usluga-3": "Croatian",
+    "usluga-4": "Italian",
+
+    "ostalo": "Other",
+    "ostalo-1": "Air conditioning",
+    "ostalo-2": "Iron",
+    "ostalo-3": "Non-smoking throughout"
+  },
+
+  "RulesModal": {
+    "pravila-kuce": "House rules",
+
+    "prijava": "Check-in",
+    "prijava-1": "From 16:00 to 20:00",
+    "prijava-2": "Please inform the property in advance of your arrival time.",
+
+    "odjava": "Check-out",
+    "odjava-1": "From 07:00 to 10:00",
+
+    "otkazivanje": "Cancellation / Prepayment",
+    "otkazivanje-1": "Cancellation and prepayment policies vary depending on the accommodation type.",
+    "otkazivanje-2": "Enter your stay dates and check the conditions for the selected option.",
+
+    "polog": "Refundable damage deposit",
+    "polog-1": "A damage deposit of €200 is required upon arrival. This will be collected as a cash payment. Your deposit will be refunded in full in cash after inspection of the accommodation.",
+
+    "djeca": "Children and beds",
+    "djeca-1": "Children's stay policy",
+    "djeca-2": "Children of all ages are welcome.",
+    "djeca-3": "To see correct prices and occupancy info, add the number of children and their ages in your search.",
+    "djeca-4": "Children's cots and extra beds policy",
+    "djeca-5": "The number of cots allowed depends on the option you choose. Check your selected option for more info.",
+    "djeca-6": "No extra beds are available at this property.",
+    "djeca-7": "All cots are subject to availability.",
+
+    "granica": "No age limit",
+    "granica-1": "There's no age requirement for check-in",
+
+    "kartice": "Cards accepted at this property",
+    "kartice-1": "This property does not accept cash",
+
+    "pusenje": "Smoking",
+    "pusenje-1": "Smoking is not allowed.",
+
+    "zabave": "Parties",
+    "zabave-1": "Parties/events are not allowed.",
+
+    "red": "Quiet hours",
+    "red-1": "Guests must be quiet between 22:00 and 08:00",
+
+    "ljubimci": "Pets",
+    "ljubimci-1": "Pets are not allowed."
+  },
   "Footer": {
     "copy": "Casa Fragola. All rights reserved.",
     "politika-privatnosti": "Privacy Policy",

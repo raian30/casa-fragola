@@ -74,6 +74,102 @@
     "slazem-se": "Accetto",
     "odredbama-i-uvjetima": "i termini e le condizioni"
   },
+  "FeaturesModal": {
+    "sve-za-vas": "Tutto per tua",
+    "savsen-odmor": "Vacanza perfetta",
+
+    "parking": "Parcheggio",
+    "parking-1": "Parcheggio privato gratuito disponibile in loco senza prenotazione.",
+
+    "internet": "Internet",
+    "internet-1": "WiFi disponibile in tutta la struttura gratuitamente.",
+
+    "kuhinja": "Cucina",
+    "kuhinja-1": "Seggiolone",
+    "kuhinja-2": "Piano cottura",
+    "kuhinja-3": "Forno",
+    "kuhinja-4": "Lavatrice",
+    "kuhinja-5": "Lavastoviglie",
+    "kuhinja-6": "Microonde",
+    "kuhinja-7": "Frigorifero",
+
+    "spavaca-soba": "Camera da letto",
+    "spavaca-soba-1": "Biancheria da letto",
+
+    "kupaonica": "Bagno",
+    "kupaonica-1": "Carta igienica",
+    "kupaonica-2": "Asciugamani",
+    "kupaonica-3": "Asciugacapelli",
+
+    "mediji": "Media e tecnologia",
+    "mediji-1": "TV a schermo piatto",
+
+    "dvoriste": "Cortile",
+    "dvoriste-1": "Piscina privata",
+    "dvoriste-2": "Balcone",
+    "dvoriste-3": "Giardino",
+
+    "bazen": "Piscina",
+
+    "hrana": "Cibo e bevande",
+    "hrana-1": "Macchina da caffè/tè",
+
+    "usluga": "Servizio disponibile in",
+    "usluga-1": "Tedesco",
+    "usluga-2": "Inglese",
+    "usluga-3": "Croato",
+    "usluga-4": "Italiano",
+
+    "ostalo": "Altro",
+    "ostalo-1": "Aria condizionata",
+    "ostalo-2": "Ferro da stiro",
+    "ostalo-3": "Struttura non fumatori"
+  },
+
+  "RulesModal": {
+    "pravila-kuce": "Regole della casa",
+
+    "prijava": "Check-in",
+    "prijava-1": "Dalle 16:00 alle 20:00",
+    "prijava-2": "Si prega di informare la struttura in anticipo sull'orario di arrivo.",
+
+    "odjava": "Check-out",
+    "odjava-1": "Dalle 07:00 alle 10:00",
+
+    "otkazivanje": "Cancellazione / Pagamento anticipato",
+    "otkazivanje-1": "Le condizioni di cancellazione e pagamento anticipato variano in base al tipo di alloggio.",
+    "otkazivanje-2": "Inserisci le date del soggiorno e controlla le condizioni dell'opzione selezionata.",
+
+    "polog": "Cauzione rimborsabile per danni",
+    "polog-1": "È richiesto un deposito cauzionale di €200 all'arrivo. Questo importo sarà addebitato in contanti. La cauzione sarà interamente restituita in contanti dopo il controllo della struttura.",
+
+    "djeca": "Bambini e letti",
+    "djeca-1": "Politica per i bambini",
+    "djeca-2": "I bambini di tutte le età sono i benvenuti.",
+    "djeca-3": "Per visualizzare prezzi e informazioni corrette sulla capienza, aggiungi il numero e l'età dei bambini durante la ricerca.",
+    "djeca-4": "Politica per culle e letti supplementari",
+    "djeca-5": "Il numero di culle consentite dipende dall'opzione scelta. Controlla l'opzione selezionata per ulteriori informazioni.",
+    "djeca-6": "In questa struttura non sono disponibili letti supplementari.",
+    "djeca-7": "Tutte le culle sono soggette a disponibilità.",
+
+    "granica": "Nessun limite di età",
+    "granica-1": "Non c'è alcun requisito di età per il check-in",
+
+    "kartice": "Carte accettate in questa struttura",
+    "kartice-1": "Questa struttura non accetta contanti",
+
+    "pusenje": "Fumatori",
+    "pusenje-1": "Fumare non è consentito.",
+
+    "zabave": "Feste",
+    "zabave-1": "Feste/eventi non sono consentiti.",
+
+    "red": "Ore di silenzio",
+    "red-1": "Gli ospiti devono fare silenzio tra le 22:00 e le 08:00",
+
+    "ljubimci": "Animali domestici",
+    "ljubimci-1": "Animali non ammessi."
+  },
   "Footer": {
     "copy": "Casa Fragola. Tutti i diritti riservati.",
     "politika-privatnosti": "Politica sulla privacy",

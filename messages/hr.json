@@ -74,6 +74,103 @@
     "slazem-se": "Slažem se s",
     "odredbama-i-uvjetima": "uvjetima i odredbama"
   },
+  "FeaturesModal": {
+    "sve-za-vas": "Sve za vaš",
+    "savsen-odmor": "savršen odmor",
+
+    "parking": "Parkiralište",
+    "parking-1": "Besplatno privatno parkiralište dostupno je u okviru objekta i nije potrebna rezervacija.",
+
+    "internet": "Internet",
+    "internet-1": "Bežični pristup internetu dostupan je u cijelom objektu i ne naplaćuje se.",
+
+    "kuhinja": "Kuhinja",
+    "kuhinja-1": "Dječja stolica",
+    "kuhinja-2": "Ploče za kuhanje",
+    "kuhinja-3": "Pećnica",
+    "kuhinja-4": "Perilica rublja",
+    "kuhinja-5": "Perilica posuđa",
+    "kuhinja-6": "Mikrovalna pećnica",
+    "kuhinja-7": "Hladnjak",
+
+    "spavaca-soba": "Spavaća soba",
+    "spavaca-soba-1": "Posteljina",
+
+    "kupaonica": "Kupaonica",
+    "kupaonica-1": "Toaletni papir",
+    "kupaonica-2": "Ručnici",
+    "kupaonica-3": "Sušilo za kosu",
+
+    "mediji": "Mediji i tehnologija",
+    "mediji-1": "TV ravnog ekrana",
+
+    "dvoriste": "Dvorište",
+    "dvoriste-1": "Privatni bazen",
+    "dvoriste-2": "Balkon",
+    "dvoriste-3": "Vrt",
+
+    "bazen": "Bazen",
+
+    "hrana": "Hrana i piće",
+    "hrana-1": "Aparat za pripremu kave/čaja",
+
+    "usluga": "Usluga dostupna na",
+    "usluga-1": "Njemački",
+    "usluga-2": "Engleski",
+    "usluga-3": "Hrvatski",
+    "usluga-4": "Talijanski",
+
+    "ostalo": "Ostalo",
+    "ostalo-1": "Klima-uređaj",
+    "ostalo-2": "Glačalo",
+    "ostalo-3": "Zabranjeno pušenje čitavom objektu"
+  },
+
+  "RulesModal": {
+    "pravila-kuce": "Pravila Kuće",
+
+    "prijava": "Prijava",
+    "prijava-1": "Od 16:00 do 20:00",
+    "prijava-2": "Molimo vas da unaprijed obavijestite objekt o vremenu dolaska.",
+
+    "odjava": "Odjava",
+    "odjava-1": "Od 07:00 do 10:00",
+
+    "otkazivanje": "Otkazivanje / plaćanje unaprijed",
+    "otkazivanje-1": "Pravila otkazivanja i plaćanja unaprijed razlikuju se ovisno o vrsti smještaja.",
+    "otkazivanje-2": "Unesite datume boravka i provjerite uvjete vezane uz opciju koju ste odabrali.",
+
+    "polog": "Povratni polog za slučaj štete",
+    "polog-1": "Polog za slučaj štete u iznosu od 200 € potrebno je uplatiti prilikom dolaska. Ova će se naknada naplatiti u gotovini. Polog će vam biti vraćen prilikom odjave. Puni iznos vašeg pologa bit će u gotovini vraćen nakon pregleda smještajnog objekta.",
+
+    "djeca": "Djeca i kreveti",
+    "djeca-1": "Pravila za boravak djece",
+    "djeca-2": "U objektu mogu boraviti djeca svih dobi.",
+    "djeca-3": "Za prikaz točnih cijena i informacija o kapacitetu dodajte broj djece koja putuju s vama i njihovu dob u svoju pretragu.",
+    "djeca-4": "Pravila o dječjim krevetima i pomoćnim ležajevima",
+    "djeca-5": "Broj dopuštenih dječjih kreveta ovisi o opciji koju odaberete. Za više informacija provjerite opciju koju ste odabrali.",
+    "djeca-6": "U ovom objektu nema dostupnih pomoćnih ležajeva.",
+    "djeca-7": "Svi dječji kreveti ovise o raspoloživosti.",
+
+    "granica": "Bez dobne granice",
+    "granica-1": "Za prijavu nema dobne granice",
+
+    "kartice": "Kartice koje prihvaća ovaj objekt",
+    "kartice-1": "Objekt ne prihvaća gotovinu",
+
+    "pusenje": "Za pušače",
+    "pusenje-1": "Pušenje nije dozvoljeno.",
+
+    "zabave": "Zabave",
+    "zabave-1": "Zabave nisu dozvoljene.",
+
+    "red": "Kućni red i mir",
+    "red-1": "Gosti ne smiju stvarati buku između 22:00 i 08:00",
+
+    "ljubimci": "Kućni ljubimci",
+    "ljubimci-1": "Boravak kućnih ljubimaca nije dozvoljen."
+  },
+
   "Footer": {
     "copy": "Casa Fragola. Sva prava pridržana",
     "politika-privatnosti": "Politika privatnosti",
