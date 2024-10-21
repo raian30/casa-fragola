@@ -79,13 +79,13 @@ const Gallery = () => {
             if (event.key === 'Escape') {
                 closeModal();
             }
-        };
+        }
 
         window.addEventListener('keydown', handleKeyDown);
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [])
 
     useEffect(() => {
         if (isOpen) {
@@ -96,8 +96,6 @@ const Gallery = () => {
     }, [isOpen]);
 
     useEffect(() => {
-        console.log(carouselRef.current)
-
         if(!carouselRef.current) return
         let elem = carouselRef.current as unknown as HTMLDivElement
         let { width, height } = elem.getBoundingClientRect()
@@ -107,7 +105,28 @@ const Gallery = () => {
                 height,
             })
         }
-    }, [isOpen])
+
+        if(isOpen) {
+            const handleKeyDownArrows = (event: any) => {
+                if (event.key === 'ArrowLeft') {
+                    if(currentImg > 0) {
+                        setCurrentImg((prev) => prev - 1)
+                    }
+                }
+                else if (event.key === 'ArrowRight' || event.key === ' ') {
+                    if(currentImg < data.length - 1) {
+                        setCurrentImg((prev) => prev + 1)
+                    }
+                }
+            }
+
+            window.addEventListener('keydown', handleKeyDownArrows);
+            return () => {
+                window.removeEventListener('keydown', handleKeyDownArrows);
+            };
+        }
+
+    }, [isOpen, currentImg])
 
     return (
         <>
