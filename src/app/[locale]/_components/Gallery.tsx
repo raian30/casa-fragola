@@ -17,45 +17,70 @@ const Gallery = () => {
     const carouselRef = useRef(null)
 
     const data = [
-        {image: "/full/IMG-20241018-WA0002.jpg"},
-        {image: "/full/IMG-20241018-WA0003.jpg"},
-        {image: "/full/IMG-20241018-WA0004.jpg"},
-        {image: "/full/IMG-20241018-WA0005.jpg"},
-        {image: "/full/IMG-20241018-WA0006.jpg"},
+        //BAZEN
+        {image: "/full/IMG-20241018-WA0038.jpg"},
+        {image: "/full/IMG-20241018-WA0039.jpg"},
+        {image: "/full/IMG-20241018-WA0040.jpg"},
+        {image: "/full/IMG-20241018-WA0041.jpg"},
+        {image: "/full/IMG-20241018-WA0042.jpg"},
+        {image: "/full/IMG-20241018-WA0043.jpg"},
+        {image: "/full/IMG-20241018-WA0044.jpg"},
+        {image: "/full/IMG-20241018-WA0045.jpg"},
+        {image: "/full/IMG-20241018-WA0046.jpg"},
+        {image: "/full/IMG-20241018-WA0050.jpg"},
         {image: "/full/IMG-20241018-WA0007.jpg"},
-        {image: "/full/IMG-20241018-WA0008.jpg"},
-        {image: "/full/IMG-20241018-WA0009.jpg"},
         {image: "/full/IMG-20241018-WA0010.jpg"},
         {image: "/full/IMG-20241018-WA0011.jpg"},
         {image: "/full/IMG-20241018-WA0012.jpg"},
         {image: "/full/IMG-20241018-WA0013.jpg"},
+
+        //OKUCNICA
+        {image: "/full/IMG-20241018-WA0005.jpg"},
+        {image: "/full/IMG-20241018-WA0006.jpg"},
+        {image: "/full/IMG-20241018-WA0008.jpg"},
+        {image: "/full/IMG-20241018-WA0009.jpg"},
         {image: "/full/IMG-20241018-WA0014.jpg"},
-        {image: "/full/IMG-20241018-WA0015.jpg"},
+        {image: "/full/IMG-20241018-WA0028.jpg"},
+        {image: "/full/IMG-20241018-WA0029.jpg"},
+        {image: "/full/IMG-20241018-WA0036.jpg"},
+        {image: "/full/IMG-20241018-WA0037.jpg"},
         {image: "/full/IMG-20241018-WA0016.jpg"},
-        {image: "/full/IMG-20241018-WA0017.jpg"},
-        {image: "/full/IMG-20241018-WA0018.jpg"},
-        {image: "/full/IMG-20241018-WA0019.jpg"},
-        {image: "/full/IMG-20241018-WA0020.jpg"},
-        {image: "/full/IMG-20241018-WA0021.jpg"},
         {image: "/full/IMG-20241018-WA0022.jpg"},
         {image: "/full/IMG-20241018-WA0023.jpg"},
         {image: "/full/IMG-20241018-WA0024.jpg"},
         {image: "/full/IMG-20241018-WA0025.jpg"},
+
+        //KUHINJA / DNEVNI
+        {image: "/full/IMG-20241018-WA0002.jpg"},
+        {image: "/full/IMG-20241018-WA0003.jpg"},
+        {image: "/full/IMG-20241018-WA0004.jpg"},
         {image: "/full/IMG-20241018-WA0026.jpg"},
         {image: "/full/IMG-20241018-WA0027.jpg"},
-        {image: "/full/IMG-20241018-WA0028.jpg"},
-        {image: "/full/IMG-20241018-WA0029.jpg"},
         {image: "/full/IMG-20241018-WA0030.jpg"},
         {image: "/full/IMG-20241018-WA0031.jpg"},
         {image: "/full/IMG-20241018-WA0032.jpg"},
         {image: "/full/IMG-20241018-WA0033.jpg"},
         {image: "/full/IMG-20241018-WA0034.jpg"},
         {image: "/full/IMG-20241018-WA0035.jpg"},
-        {image: "/full/IMG-20241018-WA0036.jpg"},
-        {image: "/full/IMG-20241018-WA0037.jpg"},
-        {image: "/full/IMG-20241018-WA0038.jpg"},
-        {image: "/full/IMG-20241018-WA0039.jpg"},
-        {image: "/full/IMG-20241018-WA0040.jpg"},
+        {image: "/full/IMG-20241018-WA0047.jpg"},
+        {image: "/full/IMG-20241018-WA0048.jpg"},
+        {image: "/full/IMG-20241018-WA0049.jpg"},
+
+        //SOBE
+        {image: "/full/IMG-20241018-WA0015.jpg"},
+        {image: "/full/IMG-20241018-WA0017.jpg"},
+        {image: "/full/IMG-20241018-WA0018.jpg"},
+        {image: "/full/IMG-20241018-WA0020.jpg"},
+        {image: "/full/IMG-20241018-WA0021.jpg"},
+        {image: "/full/IMG-20241018-WA0051.jpg"},
+
+        //WC
+        {image: "/full/IMG-20241018-WA0019.jpg"},
+
+
+
+
+
     ]
 
     const openModal = () => {
