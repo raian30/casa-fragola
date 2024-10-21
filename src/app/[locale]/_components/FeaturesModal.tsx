@@ -34,7 +34,7 @@ const Modal = () => {
         }, 300);
     };
 
-    const t = useTranslations('Third');
+    const t = useTranslations('Second');
     const t2 = useTranslations('FeaturesModal');
 
     useEffect(() => {
@@ -62,7 +62,7 @@ const Modal = () => {
         <>
         <button onClick={openModal}
                 className={'bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-fit'}>
-            {t('btn-text-1')}
+            {t('btn-text-2')}
         </button>
     {isOpen && (
         <div
