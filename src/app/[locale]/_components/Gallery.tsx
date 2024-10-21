@@ -139,7 +139,7 @@ const Gallery = () => {
                     className={`fixed z-50 inset-0 bg-black backdrop-blur-3xl bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`}
                     onClick={closeModal}>
                     <div
-                        className={`w-screen h-screen md:h-[calc(100vh-7rem)] md:rounded-2xl mx-0 md:mx-14 lg:mx-12 xl:mx-[5.5rem] 2xl:mx-[7.5rem] bg-white shadow-lg relative transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`}
+                        className={`w-screen h-[100dvh] md:h-[calc(100vh-7rem)] md:rounded-2xl mx-0 md:mx-14 lg:mx-12 xl:mx-[5.5rem] 2xl:mx-[7.5rem] bg-white shadow-lg relative transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`}
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
