@@ -144,15 +144,15 @@ const Gallery = () => {
                     >
                         <button
                             onClick={closeModal}
-                            className="absolute z-10 top-5 left-5 hover:text-gray-600 bg-white p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all">
+                            className="absolute z-10 top-5 left-5 hover:text-gray-600 bg-gray-300 md:bg-white p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all">
                             <X size={20} strokeWidth={1.5}/>
                         </button>
 
                         <button
                             disabled={currentImg === 0}
                             onClick={() => setCurrentImg((prev) => prev - 1)}
-                            className={`absolute z-10 top-0 bottom-0 my-auto h-fit left-5 hover:text-gray-600 bg-white p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all ${currentImg === 0 && 'opacity-0'}`}>
-                            <ChevronLeft size={30} strokeWidth={1.5}/>
+                            className={`absolute z-10 top-0 bottom-0 my-auto h-fit left-5 hover:text-gray-600 bg-white p-2 md:p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all ${currentImg === 0 && 'opacity-0'}`}>
+                            <ChevronLeft size={25} strokeWidth={1.5}/>
                         </button>
 
                         <div className="md:rounded-2xl relative h-full overflow-hidden">
@@ -166,7 +166,7 @@ const Gallery = () => {
                                 {data.map((v, i) => (
                                     <div key={i} className="relative h-full w-full shrink-0">
                                         <Image
-                                            className="pointer-events-none object-cover"
+                                            className="pointer-events-none object-contain md:object-cover"
                                             alt={`Carousel Image ${i}`}
                                             fill
                                             quality={100}
@@ -180,8 +180,8 @@ const Gallery = () => {
                         <button
                             disabled={currentImg === data.length - 1}
                             onClick={() => setCurrentImg((prev) => prev + 1)}
-                            className={`absolute z-10 top-0 bottom-0 my-auto h-fit right-5 hover:text-gray-600 bg-white p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all ${currentImg === data.length - 1 && 'opacity-0'}`}>
-                            <ChevronRight size={30} strokeWidth={1.5}/>
+                            className={`absolute z-10 top-0 bottom-0 my-auto h-fit right-5 hover:text-gray-600 bg-white p-2 md:p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all ${currentImg === data.length - 1 && 'opacity-0'}`}>
+                            <ChevronRight size={25} strokeWidth={1.5}/>
                         </button>
                     </div>
                 </div>
