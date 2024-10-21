@@ -130,8 +130,7 @@ const Modal = () => {
                     <div className={'flex flex-col gap-2'}>
                     <h1 className={'font-medium flex gap-2'}><Utensils strokeWidth={1.5}/> {t2('hrana')}
                     </h1>
-                    <p className={'text-sm flex gap-2'}><Check strokeWidth={1.5}/> {t2('hrana-1')}
-                    kave/čaja</p>
+                    <p className={'text-sm flex gap-2'}><Check strokeWidth={1.5}/> {t2('hrana-1')}</p>
                     </div>
                     <div className={'flex flex-col gap-2'}>
                     <h1 className={'font-medium flex gap-2'}><MessageSquare strokeWidth={1.5}/> {t2('usluga')}</h1>
