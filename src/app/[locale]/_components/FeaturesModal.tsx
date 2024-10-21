@@ -62,7 +62,7 @@ const Modal = () => {
         <>
         <button onClick={openModal}
                 className={'bg-white hover:bg-gray-100 transition-all px-8 py-3 border border-black font-light uppercase w-fit'}>
-            {t('btn-text-2')}
+            {t('btn-text-3')}
         </button>
     {isOpen && (
         <div
