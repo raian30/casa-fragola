@@ -9,6 +9,7 @@ import {trpc} from "@/app/_trpc/client";
 import {httpBatchLink} from "@trpc/client";
 import FeaturesModal from "@/app/[locale]/_components/FeaturesModal";
 import RulesModal from "@/app/[locale]/_components/RulesModal";
+import Gallery from "@/app/[locale]/_components/Gallery";
 
 export default function Third() {
     const t = useTranslations('Third')
@@ -42,7 +43,7 @@ export default function Third() {
                 <div className={'flex flex-col gap-10'}>
                     <h1 className={'text-4xl xl:text-5xl'}>{t('naslov-2')}</h1>
                     <h2 className={'text-xl md:text-[1.2rem] font-light sm:w-2/3 lg:w-1/2'}>{t('opis-2')}</h2>
-                    <FilledLink href={`/${localActive}#reservation`} className={'w-fit'}>{t('btn-text-2')}</FilledLink>
+                    <Gallery/>
                 </div>
                 <div className={'flex gap-2 lg:gap-8 justify-between overflow-hidden'}>
                     <div className={'flex flex-col justify-between items-end gap-2 md:gap-10'}>
