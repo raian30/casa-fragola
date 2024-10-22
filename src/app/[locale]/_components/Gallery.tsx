@@ -27,10 +27,7 @@ const Gallery = () => {
         {image: "/full/IMG-20241018-WA0044.jpg"},
         {image: "/full/IMG-20241018-WA0045.jpg"},
         {image: "/full/IMG-20241018-WA0046.jpg"},
-        {image: "/full/IMG-20241018-WA0050.jpg"},
         {image: "/full/IMG-20241018-WA0007.jpg"},
-        {image: "/full/IMG-20241018-WA0010.jpg"},
-        {image: "/full/IMG-20241018-WA0011.jpg"},
         {image: "/full/IMG-20241018-WA0012.jpg"},
         {image: "/full/IMG-20241018-WA0013.jpg"},
 
@@ -55,15 +52,12 @@ const Gallery = () => {
         {image: "/full/IMG-20241018-WA0003.jpg"},
         {image: "/full/IMG-20241018-WA0004.jpg"},
         {image: "/full/IMG-20241018-WA0026.jpg"},
-        {image: "/full/IMG-20241018-WA0027.jpg"},
         {image: "/full/IMG-20241018-WA0030.jpg"},
         {image: "/full/IMG-20241018-WA0031.jpg"},
         {image: "/full/IMG-20241018-WA0032.jpg"},
-        {image: "/full/IMG-20241018-WA0033.jpg"},
         {image: "/full/IMG-20241018-WA0034.jpg"},
         {image: "/full/IMG-20241018-WA0035.jpg"},
         {image: "/full/IMG-20241018-WA0047.jpg"},
-        {image: "/full/IMG-20241018-WA0048.jpg"},
         {image: "/full/IMG-20241018-WA0049.jpg"},
 
         //SOBE
