@@ -38,8 +38,8 @@ export default function Reservation() {
 
     const [dateRange, setDateRange] = useState([
         {
-            startDate: new Date(Date.now()),
-            endDate: new Date(Date.now()),
+            startDate: new Date(Date.now() + ((6 - new Date().getDay() + 7) % 7) * 24 * 60 * 60 * 1000),
+            endDate: new Date(Date.now() + ((6 - new Date().getDay() + 7) % 7) * 24 * 60 * 60 * 1000),
             disabled: false,
             key: 'selection'
         }
@@ -204,8 +204,8 @@ export default function Reservation() {
                 setPhone('')
                 setDateRange([
                     {
-                        startDate: new Date(Date.now()),
-                        endDate: new Date(Date.now()),
+                        startDate: new Date(Date.now() + ((6 - new Date().getDay() + 7) % 7) * 24 * 60 * 60 * 1000),
+                        endDate: new Date(Date.now() + ((6 - new Date().getDay() + 7) % 7) * 24 * 60 * 60 * 1000),
                         disabled: false,
                         key: 'selection'
                     }
