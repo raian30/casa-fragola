@@ -11,6 +11,8 @@ export default function Hero() {
         <>
             <section id={'home'} className={'bg-[#F5F5F5] relative px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28 h-[calc(100svh-20px)] w-screen'}>
                 <Image loading={'eager'}
+                       placeholder={'blur'}
+                       blurDataURL={'blur-placeholder.png'}
                        quality={50}
                        src={'/hero-image.png'}
                        className={'hidden sm:block h-full w-full object-cover !relative'}
@@ -19,6 +21,8 @@ export default function Hero() {
                        height={869}
                 />
                 <Image loading={'eager'}
+                       placeholder={'blur'}
+                       blurDataURL={'/blur-placeholder-mobile.png'}
                        quality={50}
                        src={'/hero-image-mobile.png'}
                        className={'block sm:hidden h-full w-full object-cover !relative'}
