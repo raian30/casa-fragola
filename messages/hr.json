@@ -54,6 +54,11 @@
     "error-previse-ljudi": "Kuća može primiti najviše 4 osobe.",
     "error-premalo-ljudi": "Odaberite broj osoba.",
     "error-premalo-odabranih-dana": "Nije moguće rezervirati manje od 7 dana.",
+    "error-popunite-sva-polja": "Popunite sva polja",
+    "error-prihvatite-uvjete": "Prihvatite naše uvjete",
+    "error-samo-od-subote": "Moguce je rezervirati samo od Subote do Subote",
+
+    "rezervirano": "Uspješno ste rezervirali Casa Fragolu.",
 
     "tumac-nedostupno": "Nedostupno",
     "tumac-dostupno": "Dostupno",
@@ -74,6 +79,7 @@
     "slazem-se": "Slažem se s",
     "odredbama-i-uvjetima": "uvjetima i odredbama"
   },
+
   "FeaturesModal": {
     "sve-za-vas": "Sve za vaš",
     "savsen-odmor": "savršen odmor",

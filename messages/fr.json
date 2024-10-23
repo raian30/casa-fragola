@@ -54,6 +54,10 @@
     "error-previse-ljudi": "La maison peut accueillir un maximum de 4 personnes.",
     "error-premalo-ljudi": "Veuillez sélectionner le nombre de personnes.",
     "error-premalo-odabranih-dana": "Il n'est pas possible de réserver moins de 7 jours.",
+    "error-popunite-sva-polja": "Remplissez tous les champs",
+    "error-prihvatite-uvjete": "Acceptez nos conditions",
+    "error-samo-od-subote": "Vous ne pouvez réserver que du samedi au samedi",
+    "rezervirano": "Vous avez réservé Casa Fragola avec succès.",
 
     "tumac-nedostupno": "Indisponible",
     "tumac-dostupno": "Disponible",

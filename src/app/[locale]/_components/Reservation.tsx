@@ -9,6 +9,9 @@ import 'react-date-range/dist/theme/default.css';
 import {LoaderCircle, MinusCircle, PlusCircle} from "lucide-react";
 import {trpc} from "@/app/_trpc/client";
 
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Reservation() {
     const [isPending, startTransition] = useTransition()
     let occupiedDates = trpc.GetOccupiedDates.useQuery();
@@ -152,12 +155,12 @@ export default function Reservation() {
 
             if(!name || !surname || !email || !phone) {
                 warningOccured = true
-                return setWarning('Popunite sva polja.')
+                return setWarning(t('popunite-sva-polja'))
             }
 
             if(!termsAgreed) {
                 warningOccured = true
-                return setWarning('Prihvatite naše uvjete.')
+                return setWarning(t('prihvatite-uvjete'))
             }
 
             if (warningOccured) {
@@ -210,7 +213,7 @@ export default function Reservation() {
                 setNumberOfAdults(0)
                 setNumberOfChildren(0)
                 setNumberOfInfants(0)
-                setSuccess('Uspješno ste rezervirali Casa Fragolu, kontaktirat cemo Vas za dalje.')
+                setSuccess(t('rezervirano'))
             }
         })
 
@@ -242,7 +245,12 @@ export default function Reservation() {
                             }
                             onChange={item => {
                                 //@ts-ignore
-                                return setDateRange([item.selection])
+                                if(item.selection.startDate.getDay() == 6 && item.selection.endDate.getDay() == 6) {
+                                    //@ts-ignore
+                                    return setDateRange([item.selection])
+                                } else {
+                                    toast.error(t('error-samo-od-subote'))
+                                }
                             }}
                             ranges={dateRange}
                         />
@@ -443,6 +451,7 @@ export default function Reservation() {
                     )}
                 </form>
             </div>
+            <ToastContainer position="bottom-right" theme="colored"/>
         </div>
     )
 }
