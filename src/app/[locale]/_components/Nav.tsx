@@ -142,7 +142,7 @@ export default function NavBar() {
                     <Image src={'/logo.svg'} alt={'Casa Fragola logo'} width={82} height={54} />
                 </Link>
 
-                <button onClick={toggleMenu} className={'lg:hidden'}>
+                <button onClick={toggleMenu} aria-label="Menu" className={'lg:hidden'}>
                     {isMenuOpenWithNoDelay ? (
                         <div className={'h-[50px] transition-all relative flex flex-col items-end m-auto justify-center overflow-x-hidden'}>
                             <div className={'w-[40px] h-[3px] bg-black rounded-xl transition-all mb-0 translate-y-[3px] rotate-45'}/>

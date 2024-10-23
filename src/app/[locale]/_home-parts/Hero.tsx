@@ -31,7 +31,7 @@ export default function Hero() {
                        height={944}
                 />
                 <h1 className={'z-10 absolute bottom-0 sm:bottom-12 top-0 sm:top-auto right-0 sm:right-auto left-0 m-auto md:m-0 w-fit h-fit sm:left-12 md:left-20 lg:left-24 xl:left-44 2xl:left-60 text-[#FFF1DD] font-[200] md:font-[150] text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[5rem] leading-normal lg:leading-[7rem] text-center sm:text-start'}>{t('text-prvi-dio')}<br/> {t('text-drugi-dio')}</h1>
-                <Link href={`/${localActive}#attractions`}
+                <Link aria-label="Scroll down" href={`/${localActive}#attractions`}
                     className={'group z-10 absolute bottom-4 md:bottom-[4rem] right-10 md:right-20 lg:right-24 xl:right-44 2xl:right-60 text-[#FFF1DD] inline-flex gap-5 justify-center items-center'}>
                     <p className={'sm:block hidden'}>{t('pogledajte-vise')}</p>
                         <CircleArrowDown strokeWidth={1} size={40}/>
