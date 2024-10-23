@@ -1,5 +1,4 @@
 'use client'
-import {FilledLink} from "@/app/[locale]/_components/Buttons";
 import Image from 'next/image'
 import {useLocale, useTranslations} from "next-intl";
 import Reservation from "@/app/[locale]/_components/Reservation";
@@ -7,13 +6,11 @@ import React, {useState} from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {trpc} from "@/app/_trpc/client";
 import {httpBatchLink} from "@trpc/client";
-import FeaturesModal from "@/app/[locale]/_components/FeaturesModal";
 import RulesModal from "@/app/[locale]/_components/RulesModal";
 import Gallery from "@/app/[locale]/_components/Gallery";
 
 export default function Third() {
     const t = useTranslations('Third')
-    const localActive = useLocale()
 
     const [queryClient] = useState(() => new QueryClient())
     const [trpcClient] = useState(() => trpc.createClient({

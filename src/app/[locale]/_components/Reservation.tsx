@@ -7,9 +7,7 @@ import {FormEvent, useEffect, useState, useTransition} from "react";
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import {LoaderCircle, MinusCircle, PlusCircle} from "lucide-react";
-import {getOccupiedDates} from "@/app/[locale]/cms/_actions/getOccupiedDates";
 import {trpc} from "@/app/_trpc/client";
-import {z} from "zod";
 
 export default function Reservation() {
     const [isPending, startTransition] = useTransition()
@@ -232,6 +230,7 @@ export default function Reservation() {
                             rangeColors={['#b96da8', '#b96da8', '#b96da8']}
                             // @ts-ignore
                             disabledDates={getDisabledDates()}
+
                             dateDisplayFormat='dd.MM.yyyy'
                             locale={
                                 localActive == 'en' ? enUS :

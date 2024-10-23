@@ -17,7 +17,7 @@ export default function Footer() {
             <div className={'flex flex-col justify-start items-start gap-5 w-[100%] lg:w-[24%]'}>
                 <Link href={`/${localActive}#home`}>
                     <Image src={'/logo.svg'}
-                           alt={'Logo Casa Fragola'} width={122} height={54}/>
+                           alt={'Logo Casa Fragola'} width={82} height={54}/>
                 </Link>
                 <p>Copyright {year} {t('copy')}</p>
                 <Link href={`/${localActive}#soon`} className={'hover:text-gray-500 transition-all'}>{t('politika-privatnosti')}</Link>
