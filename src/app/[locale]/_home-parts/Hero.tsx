@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <>
             <section id={'home'} className={'bg-[#F5F5F5] relative px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-28 h-[calc(100svh-20px)] w-screen'}>
-                <Image loading={'lazy'}
+                <Image loading={'eager'}
                        quality={50}
                        src={'/hero-image.png'}
                        className={'hidden sm:block h-full w-full object-cover !relative'}
@@ -18,7 +18,7 @@ export default function Hero() {
                        width={1684}
                        height={869}
                 />
-                <Image loading={'lazy'}
+                <Image loading={'eager'}
                        quality={50}
                        src={'/hero-image-mobile.png'}
                        className={'block sm:hidden h-full w-full object-cover !relative'}
