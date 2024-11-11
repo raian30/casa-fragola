@@ -134,11 +134,11 @@
     "pravila-kuce": "Regole della casa",
 
     "prijava": "Check-in",
-    "prijava-1": "Dalle 16:00 alle 20:00",
-    "prijava-2": "Si prega di informare la struttura in anticipo sull'orario di arrivo.",
+    "prijava-1": "Dalle 16:00",
+    "prijava-2": "",
 
     "odjava": "Check-out",
-    "odjava-1": "Dalle 07:00 alle 10:00",
+    "odjava-1": "alle 10:00",
 
     "otkazivanje": "Cancellazione / Pagamento anticipato",
     "otkazivanje-1": "Le condizioni di cancellazione e pagamento anticipato variano in base al tipo di alloggio.",

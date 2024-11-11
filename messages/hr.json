@@ -136,11 +136,11 @@
     "pravila-kuce": "Pravila Kuće",
 
     "prijava": "Prijava",
-    "prijava-1": "Od 16:00 do 20:00",
-    "prijava-2": "Molimo vas da unaprijed obavijestite objekt o vremenu dolaska.",
+    "prijava-1": "Od 16:00",
+    "prijava-2": "",
 
     "odjava": "Odjava",
-    "odjava-1": "Od 07:00 do 10:00",
+    "odjava-1": "do 10:00",
 
     "otkazivanje": "Otkazivanje / plaćanje unaprijed",
     "otkazivanje-1": "Pravila otkazivanja i plaćanja unaprijed razlikuju se ovisno o vrsti smještaja.",

@@ -134,11 +134,11 @@
     "pravila-kuce": "Règlement intérieur",
 
     "prijava": "Enregistrement",
-    "prijava-1": "De 16h00 à 20h00",
-    "prijava-2": "Veuillez informer l'établissement à l'avance de votre heure d'arrivée.",
+    "prijava-1": "De 16h00",
+    "prijava-2": "",
 
     "odjava": "Départ",
-    "odjava-1": "De 07h00 à 10h00",
+    "odjava-1": "à 10h00",
 
     "otkazivanje": "Annulation / Pré-paiement",
     "otkazivanje-1": "Les conditions d'annulation et de pré-paiement varient en fonction du type d'hébergement.",
