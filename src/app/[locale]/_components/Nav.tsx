@@ -139,7 +139,7 @@ export default function NavBar() {
                     setIsMenuOpen(false)
                     setIsMenuOpenWithNoDelay(false)
                 }} className={'flex justify-center items-center gap-5'}>
-                    <Image src={'/logo.svg'} alt={'Casa Fragola logo'} width={82} height={54} />
+                    <Image src={'/logo.svg'} alt={'Casa Fragola logo'} width={122} height={54} />
                 </Link>
 
                 <button onClick={toggleMenu} aria-label="Menu" className={'lg:hidden'}>

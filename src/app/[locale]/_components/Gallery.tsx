@@ -70,11 +70,6 @@ const Gallery = () => {
 
         //WC
         {image: "/full/IMG-20241018-WA0019.jpg"},
-
-
-
-
-
     ]
 
     const openModal = () => {
@@ -161,9 +156,12 @@ const Gallery = () => {
                         className={`w-screen h-[100dvh] md:h-[calc(100vh-7rem)] md:rounded-2xl mx-0 md:mx-14 lg:mx-12 xl:mx-[5.5rem] 2xl:mx-[7.5rem] bg-white shadow-lg relative transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`}
                         onClick={(e) => e.stopPropagation()}
                     >
+                        <div className={'absolute top-0 right-0 z-50 bg-white rounded-bl-3xl rounded-tr-2xl p-5 bg-opacity-70'}>
+                            <Image src={'/logo.svg'} alt={'Casa Fragola - Logo'} height={54} width={122} />
+                        </div>
                         <button
                             onClick={closeModal}
-                            className="absolute z-10 top-5 left-5 hover:text-gray-600 bg-gray-300 md:bg-white p-3 rounded-full bg-opacity-50 hover:bg-opacity-70 transition-all">
+                            className="absolute z-10 top-5 left-5 hover:text-gray-600 bg-gray-300 md:bg-white p-3 rounded-full hover:bg-opacity-70 transition-all">
                             <X size={20} strokeWidth={1.5}/>
                         </button>
 
