@@ -18,8 +18,8 @@ export const appRouter = router({
     })).mutation(async ({input}) => {
         try {
             const { data, error } = await resend.emails.send({
-                from: 'Casa Fragola <info@raianmelon.com>',
-                to: 'drkinezeri516@gmail.com', // TODO: rabi vrc na mladena pole
+                from: 'Casa Fragola <info@casa-fragola.com>',
+                to: 'mladen.radolovic@gmail.com',
                 subject: 'Nova rezervacija - Casa Fragola',
                 text: 'Nova rezervacija - Casa Fragola',
                 react: EmailNewReservationAdmin({ id:input.id, firstName: input.firstName, lastName: input.lastName, email: input.email }),
@@ -31,7 +31,7 @@ export const appRouter = router({
 
             if (data) {
                 await resend.emails.send({
-                    from: 'Casa Fragola <info@raianmelon.com>',
+                    from: 'Casa Fragola <info@casa-fragola.com>',
                     to: input.email,
                     subject: "We have received your reservation",
                     text: "We have received your reservation",
@@ -138,7 +138,7 @@ export const appRouter = router({
                 }
             }, )
             const { data, error } = await resend.emails.send({
-                from: 'Casa Fragola <info@raianmelon.com>',
+                from: 'Casa Fragola <info@casa-fragola.com>',
                 to: input.email,
                 subject: "Your booking status has been changed",
                 text: "Your booking status has been changed",
@@ -169,7 +169,7 @@ export const appRouter = router({
             }, )
 
             const { data, error } = await resend.emails.send({
-                from: 'Casa Fragola <info@raianmelon.com>',
+                from: 'Casa Fragola <info@casa-fragola.com>',
                 to: input.email,
                 subject: "Your booking status has been changed",
                 text: "Your booking status has been changed",
