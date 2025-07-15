@@ -21,10 +21,10 @@ export default function Footer() {
                                alt={'Logo Casa Fragola'} width={122} height={54}/>
                     </Link>
                     <p>Copyright {year} {t('copy')}</p>
-                    <Link href={`/${localActive}#soon`}
+                    <Link href={`/${localActive}/politika-privatnosti`}
                           className={'hover:text-gray-500 transition-all'}>{t('politika-privatnosti')}</Link>
-                    <Link href={`/${localActive}#soon`}
-                          className={'hover:text-gray-500 transition-all'}>{t('politika-kolacica')}</Link>
+                    <Link href={`/${localActive}/uvjeti`}
+                          className={'hover:text-gray-500 transition-all'}>Uvjeti i odredbe</Link>
                 </div>
                 <div
                     className={'flex flex-col gap-6 justify-start lg:justify-center items-start lg:items-center w-[100%] lg:w-[24%]'}>
