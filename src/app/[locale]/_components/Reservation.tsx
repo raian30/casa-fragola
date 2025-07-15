@@ -431,7 +431,7 @@ export default function Reservation() {
                             <input id="checkbox" checked={termsAgreed} onChange={() => setTermsAgreed(prev => !prev)} type="checkbox" value=""
                                    className="cursor-pointer w-4 h-4 mt-[4px] sm:mt-0 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"/>
                             <label htmlFor="checkbox"
-                                   className="cursor-pointer ml-2 font-medium text-gray-700">{t('slazem-se')} <a href="#" className="text-[#B96DA8] hover:underline">{t('odredbama-i-uvjetima')}</a>.</label>
+                                   className="cursor-pointer ml-2 font-medium text-gray-700">{t('slazem-se')} <a href="uvjeti" className="text-[#B96DA8] hover:underline">{t('odredbama-i-uvjetima')}</a>.</label>
                         </div>
                     </div>
                     <button disabled={!!error || isPending} type={'submit'}
